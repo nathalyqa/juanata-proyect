@@ -30,6 +30,7 @@
 .font-acme-cuerpo-gris-menu{
     font-family: 'Acme', sans-serif;
     color: rgb(116, 116, 116);
+    font-size: 1em;
 }
 
 .font-acme{
@@ -68,3 +69,33 @@ color: rgb(56, 141, 226);
 color: rgb(0, 0, 106);
 }
 /*Fin colores*/
+
+/*Efecto al pasar mouse encima de las opciones del menu*/
+a.badge-juanataColor:hover, a.badge-juanataColor:focus {
+    color: #fff;
+    background-color: rgb(0, 0, 106);
+}
+
+a.badge-juanataColor:focus, a.badge-juanataColor.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+/*Efecto al pasar mouse encima de las opciones del menu*/
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+}

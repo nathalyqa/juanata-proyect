@@ -1,19 +1,65 @@
 <!--INICIO NAVBAR - MENU-->
-<nav class="navbar fixed-top navbar-expand-lg bg-light" th:fragment="menu">
+<nav class="navbar fixed-top  navbar-expand-sm navbar-expand-lg bg-light" th:fragment="menu">
     <div class="mr-3">
         <img src="../img/logo.png">
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <!--HEADER-->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active font-acme-cuerpo-gris-menu" th:href="@{/home}">Inicio</a>
-            <a class="nav-item nav-link font-acme-cuerpo-gris-menu" th:href="@{/categorias/mujer}">Categorias</a>
-            <a class="nav-item nav-link font-acme-cuerpo-gris-menu" th:href="@{/home}">Salud del Sueño</a>
-            <a class="nav-item nav-link font-acme-cuerpo-gris-menu" th:href="@{/home}">Promociones</a>
-            <a class="nav-item nav-link font-acme-cuerpo-gris-menu" th:href="@{/home}">Diseña tu pijama</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
+                        th:href="@{/home}">INICIO</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" th:href="@{/categorias/mujer}">CATEGORIAS</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle"  id="navbarDropdown2">Submenu</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+
+
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
+                        th:href="@{/home}">SALUD DEL SUEÑO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
+                        th:href="@{/home}">PROMOCIONES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
+                        th:href="@{/home}">DISEÑA TU PIJAMA</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
