@@ -1,0 +1,70 @@
+/*Inicio Tipos de letras */
+/*Tipo de letra cursiva*/
+.font-dancing-script-footer-title{
+    font-family: 'Dancing Script', cursive;
+    color: rgb(0, 0, 106);
+    font-size: 2em;
+}
+
+.font-dancing-script{
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-dancing-script-menu{
+    font-family: 'Dancing Script', cursive;
+    color: rgb(0, 0, 106);
+    font-size: 1em;
+}
+
+.font-pacifico-menu{
+    font-family: 'Pacifico', cursive;
+    color: rgb(0, 0, 106);
+    font-size: 1em;
+}
+
+.font-acme-cuerpo-gris{
+    font-family: 'Acme', sans-serif;
+    color: rgb(116, 116, 116);
+}
+
+.font-acme-cuerpo-gris-menu{
+    font-family: 'Acme', sans-serif;
+    color: rgb(116, 116, 116);
+}
+
+.font-acme{
+    font-family: 'Acme', sans-serif;
+}
+
+.font-dancing-script{
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-permanent-marker-menu{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.font-oswald-menu{
+    font-family: 'Oswald', sans-serif;
+    color: rgb(116, 116, 116);
+    font-size: 1em;
+}
+/*Fin Tipos de letra*/
+
+/*Inicio colores*/
+.color-gris{
+color: rgb(116, 116, 116);
+}
+
+.color-rojo{
+color: #dc3545;
+}
+
+.color-azulTurqueza{
+color: rgb(56, 141, 226);
+}
+
+.color-azulJuanata{
+color: rgb(0, 0, 106);
+}
+/*Fin colores*/
