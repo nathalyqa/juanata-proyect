@@ -37,10 +37,22 @@
     <!--INICIO NAVBAR - MENU-->
     <div th:replace="fragments/menu :: menu"></div>
     <!--FIN NAVBAR - MENU-->
+
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="row" style="margin-top: 90px;">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent">
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" href="#">Inicio</a></li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" href="#">Mujer</a></li>
+                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page">Pijamas</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+                <div class="row">   
                     <div class="col-3">
                         <div class="card">
                             <img src="../img/categorias/mujeres/_MG_8109.jpg" class="card-img-top" alt="...">

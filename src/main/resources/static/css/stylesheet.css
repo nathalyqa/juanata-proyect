@@ -37,6 +37,12 @@
     font-family: 'Acme', sans-serif;
 }
 
+.font-acme-breadcrum-azul-juanata{
+    font-family: 'Acme', sans-serif;
+    color: rgb(0, 0, 106);
+    font-size: 1em;
+}
+
 .font-dancing-script{
     font-family: 'Dancing Script', cursive;
 }
@@ -82,20 +88,24 @@ a.badge-juanataColor:focus, a.badge-juanataColor.focus {
 }
 /*Efecto al pasar mouse encima de las opciones del menu*/
 
+a.badge-colorGris:hover, a.badge-colorGris:focus {
+    color: #fff;
+    background-color: rgb(116, 116, 116);
+}
+
+a.badge-colorGris:focus, a.badge-colorGris.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
 .dropdown-submenu {
-    position: relative;
+    position:relative;
 }
-
-.dropdown-submenu a::after {
-    transform: rotate(-90deg);
-    position: absolute;
-    right: 6px;
-    top: .8em;
-}
-
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-left: .1rem;
-    margin-right: .1rem;
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
 }
