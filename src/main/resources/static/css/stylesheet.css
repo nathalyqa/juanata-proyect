@@ -98,6 +98,10 @@ a.badge-colorGris:focus, a.badge-colorGris.focus {
     box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
 }
 
+a.badge-colorGris:hover i, a.badge-colorGris:focus i{
+    color: #fff;
+}
+
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
