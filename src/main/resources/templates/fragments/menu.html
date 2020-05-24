@@ -1,7 +1,7 @@
 <!--INICIO NAVBAR - MENU-->
 <nav class="navbar fixed-top  navbar-expand-sm navbar-expand-lg bg-light" th:fragment="menu">
     <div class="mr-3">
-        <img src="../img/logo.png">
+        <img th:src="@{/img/logo.png}">
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
                             <a th:href="@{/home}" class="dropdown-toggle nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" data-toggle="dropdown">MUJER</a>
                             <ul class="dropdown-menu">
                                 <li class="menu-item ">
-                                    <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" th:href="@{/categorias/mujer}">PIJAMAS</a>
+                                    <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" th:href="@{/categorias/mujer/pijamas}">PIJAMAS</a>
                                 </li>
                                 <li class="menu-item ">
                                     <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" href="#">PANTUFLAS</a>

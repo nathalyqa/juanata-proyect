@@ -113,3 +113,16 @@ a.badge-colorGris:hover i, a.badge-colorGris:focus i{
     left:100%;
     margin-top:-6px;
 }
+
+/*
+.inner{
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 1s ease;
+}
+
+.inner:hover img{
+    transform: scale(1);
+}*/
