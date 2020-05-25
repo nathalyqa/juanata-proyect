@@ -61,7 +61,7 @@
             leftoffset: 15, // отступ слева от tmb картинки
             rightoffset: 15, // отступ справа от tmb картинки
             switchsides: true, // учитывать край экрана
-            magnifierborder: '1px solid black', // внешний бордюр
+            magnifierborder: '0px solid black', // внешний бордюр
 
 
             // контейнер текста снизу к картинке
