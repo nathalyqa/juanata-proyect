@@ -99,14 +99,14 @@ public class CategoriasController {
 		coloresPijama8.add(getColor(3L));
 		coloresPijama8.add(getColor(4L));
 		
-		pijamasMujer.add(new Pijama(0L,"Pijama1",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama1));
-		pijamasMujer.add(new Pijama(1L,"Pijama2",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama2));
-		pijamasMujer.add(new Pijama(2L,"Pijama3",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama3));
-		pijamasMujer.add(new Pijama(3L,"Pijama4",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama4));
-		pijamasMujer.add(new Pijama(4L,"Pijama5",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama5));
-		pijamasMujer.add(new Pijama(5L,"Pijama6",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama6));
-		pijamasMujer.add(new Pijama(6L,"Pijama7",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama7));
-		pijamasMujer.add(new Pijama(7L,"Pijama8",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama8));
+		pijamasMujer.add(new Pijama(0L,"Pijama Alhena",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama1));
+		pijamasMujer.add(new Pijama(1L,"Pijama Alaya",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama2));
+		pijamasMujer.add(new Pijama(2L,"Pijama Bianca",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama3));
+		pijamasMujer.add(new Pijama(3L,"Pijama Larisa",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama4));
+		pijamasMujer.add(new Pijama(4L,"Pijama Vega",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama5));
+		pijamasMujer.add(new Pijama(5L,"Pijama Maia",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama6));
+		pijamasMujer.add(new Pijama(6L,"Pijama Miranda",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama7));
+		pijamasMujer.add(new Pijama(7L,"Pijama Adele",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama8));
 		
 		return pijamasMujer;
 	}
