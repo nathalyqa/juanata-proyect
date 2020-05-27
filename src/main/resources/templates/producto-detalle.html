@@ -70,19 +70,44 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div>
-                            <p class="font-dancing-script color-gris my-0" style="font-size: 2em;" th:text=${producto.nombre}></p>
-                            <p class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;">Línea: Clásica</p>
-                            <p class="font-acme-cuerpo-gris color-azulJuanata my-0" style="font-size: 1.5rem;">$30.000</p>
-                            <p class="font-acme-cuerpo-gris color-gris mt-2 mb-0" style="font-size: 1em;">Descripción: Manga larga pantalón largo</p>
-                            <p class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;">Materal: Tejido de punto</p>
+                            <p class="font-dancing-script color-gris my-0" style="font-size: 2em;" th:text="${producto.nombre}"></p>
+                            <p class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;" th:text="${'Línea: ' + producto.linea.linea}"></p>
+                            <p class="font-acme-cuerpo-gris color-azulJuanata my-0" style="font-size: 1.5rem;" th:text="${'$' + #numbers.formatDecimal(producto.precio,1,'DEFAULT',0,'DEFAULT')}"></p>
+                            <p class="font-acme-cuerpo-gris color-gris mt-2 mb-0" style="font-size: 1em;" th:text="${'Descripción: ' + producto.descripcion}"></p>
+                            <p class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;" th:text="${'Material: ' + producto.material}"></p>
                             <p class="font-acme-cuerpo-gris color-azulJuanata mt-3 mb-0" style="font-size: 1em;">Color</p>
                             <i th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
                             <p class="font-acme-cuerpo-gris color-azulJuanata mt-3 mb-0" style="font-size: 1em;">Tallas</p>
-                            <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;">XS</label>
-                            <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;">S</label>
-                            <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;">M</label>
-                            <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;">L</label>
-                            <label class="font-acme-cuerpo-gris" style="font-size: 1em;">XL</label>
+                            <label th:each="talla : ${producto.tallas}" class="font-acme-cuerpo-gris mr-1 badge badge-pill badge-colorBlanchedalmond px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="row pt-5">
+                            <div class="col-12 text-center">
+                                <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;">Más productos Mujer</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="inner">
+                                        <img th:src="@{/img/categorias/mujeres/} + ${producto.nombreFoto}" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
+                                        <p class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;">Pantuflas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="inner">
+                                        <img th:src="@{/img/categorias/mujeres/} + ${producto.nombreFoto}" class="card-img-top" alt="...">
+                                    </div>
+                                    <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
+                                        <p class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;">Bodys</p>
+                                    </div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

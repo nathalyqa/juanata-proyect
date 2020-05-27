@@ -11,6 +11,10 @@ public class Pijama {
 	private BigDecimal precio;
 	private String nombreFoto;
 	private List<Color> colores;
+	private Linea linea;
+	private String descripcion;
+	private String material;
+	private List<Talla> tallas;
 	
 	public Pijama(Long id, String nombre, String referencia, BigDecimal precio, String nombreFoto, List<Color> colores ) {
 		this.id = id;
@@ -19,6 +23,19 @@ public class Pijama {
 		this.precio = precio;
 		this.nombreFoto = nombreFoto;
 		this.colores = colores;
+	}
+	
+	public Pijama(Long id, String nombre, String referencia, BigDecimal precio, String nombreFoto, List<Color> colores, Linea linea, String descripcion, String material, List<Talla> tallas) {
+		this.id = id;
+		this.nombre = nombre;
+		this.referencia = referencia;
+		this.precio = precio;
+		this.nombreFoto = nombreFoto;
+		this.colores = colores;
+		this.linea = linea;
+		this.descripcion = descripcion;
+		this.material = material;
+		this.tallas = tallas;
 	}
 	
 	public Pijama() {
@@ -61,5 +78,37 @@ public class Pijama {
 
 	public void setColores(List<Color> colores) {
 		this.colores = colores;
+	}
+
+	public Linea getLinea() {
+		return linea;
+	}
+
+	public void setLinea(Linea linea) {
+		this.linea = linea;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	public List<Talla> getTallas() {
+		return tallas;
+	}
+
+	public void setTallas(List<Talla> tallas) {
+		this.tallas = tallas;
 	}
 }

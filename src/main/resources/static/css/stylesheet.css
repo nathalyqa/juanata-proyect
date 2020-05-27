@@ -110,6 +110,38 @@ a.badge-colorGris:hover i, a.badge-colorGris:focus i{
     color: #fff;
 }
 
+/*Efecto al pasar mouse encima del icono ojo*/
+
+a.badge-colorGris-ojo:hover, a.badge-colorGris-ojo:focus {
+    color: blanchedalmond;
+    background-color: rgb(116, 116, 116);
+}
+
+a.badge-colorGris-ojo:focus, a.badge-colorGris-ojo.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+
+a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
+    color: blanchedalmond;
+}
+
+/*Efecto al pasar mouse encima de las tallas del detalle del producto*/
+
+.badge-colorBlanchedalmond:hover, .badge-colorBlanchedalmond:focus {
+    color: blanchedalmond;
+    background-color: rgb(116, 116, 116);
+}
+
+.badge-colorBlanchedalmond:focus, .badge-colorBlanchedalmond.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+
+.badge-colorBlanchedalmond:hover label, .badge-colorBlanchedalmond:focus label{
+    color: blanchedalmond;
+}
+
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
@@ -122,7 +154,6 @@ a.badge-colorGris:hover i, a.badge-colorGris:focus i{
     margin-top:-6px;
 }
 
-/*
 .inner{
     overflow: hidden;
 }
@@ -133,4 +164,12 @@ a.badge-colorGris:hover i, a.badge-colorGris:focus i{
 
 .inner:hover img{
     transform: scale(1.5);
-}*/
+}
+
+.card-body:hover {
+    background-color: blanchedalmond !important;
+}
+
+.card-body:hover p, .card-body:hover h6{
+    color: rgb(116, 116, 116) !important;
+}
