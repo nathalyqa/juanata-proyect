@@ -12,8 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.project.juanata.core.configuration.Vistas;
 import com.project.juanata.core.model.Color;
+import com.project.juanata.core.model.Item;
 import com.project.juanata.core.model.Linea;
-import com.project.juanata.core.model.Pijama;
+import com.project.juanata.core.model.Producto;
 import com.project.juanata.core.model.Talla;
 import com.project.juanata.core.util.Constantes;
 
@@ -40,12 +41,12 @@ public class CategoriasController {
 	public ModelAndView getPijamaIndividual(@PathVariable(name = "idPijama") Long idPijama) {
 		ModelAndView modelAndView = new ModelAndView(Vistas.PRODUCTO_DETALLE);
 		
-		List<Pijama> pijamas = new ArrayList<Pijama>();
+		List<Producto> pijamas = new ArrayList<Producto>();
 		
 		pijamas = getPijamasMujer();
-		Pijama pijama = new Pijama();
+		Producto pijama = new Producto();
 		
-		for(Pijama eachPijama: pijamas) {
+		for(Producto eachPijama: pijamas) {
 			if(eachPijama.getId().equals(idPijama)) {
 				pijama = eachPijama;
 				break;
@@ -59,8 +60,8 @@ public class CategoriasController {
 		return modelAndView;
 	}
 	
-	private List<Pijama> getPijamasMujer(){
-		List<Pijama> pijamasMujer = new ArrayList<Pijama>();
+	private List<Producto> getPijamasMujer(){
+		List<Producto> pijamasMujer = new ArrayList<Producto>();
 		
 		List<Color> coloresPijama1 = new ArrayList<Color>();
 		
@@ -69,26 +70,26 @@ public class CategoriasController {
 		coloresPijama1.add(getColor(3L));
 		
 		List<Color> coloresPijama2 = new ArrayList<Color>();
-		coloresPijama2.add(getColor(4L));
+		coloresPijama2.add(getColor(2L));
 		coloresPijama2.add(getColor(3L));
 		
 		List<Color> coloresPijama3 = new ArrayList<Color>();
 		coloresPijama3.add(getColor(0L));
 		coloresPijama3.add(getColor(3L));
-		coloresPijama3.add(getColor(5L));
-		coloresPijama3.add(getColor(4L));
+		coloresPijama3.add(getColor(1L));
+		coloresPijama3.add(getColor(2L));
 		
 		List<Color> coloresPijama4 = new ArrayList<Color>();
 		coloresPijama4.add(getColor(2L));
 		coloresPijama4.add(getColor(0L));
-		coloresPijama4.add(getColor(5L));
+		coloresPijama4.add(getColor(3L));
 		
 		List<Color> coloresPijama5 = new ArrayList<Color>();
-		coloresPijama5.add(getColor(4L));
+		coloresPijama5.add(getColor(0L));
 		
 		
 		List<Color> coloresPijama6 = new ArrayList<Color>();
-		coloresPijama6.add(getColor(4L));
+		coloresPijama6.add(getColor(0L));
 		coloresPijama6.add(getColor(2L));
 		
 		List<Color> coloresPijama7 = new ArrayList<Color>();
@@ -99,7 +100,6 @@ public class CategoriasController {
 		coloresPijama8.add(getColor(1L));
 		coloresPijama8.add(getColor(2L));
 		coloresPijama8.add(getColor(3L));
-		coloresPijama8.add(getColor(4L));
 		
 		Linea lineaClasica = new Linea();
 		lineaClasica.setId(0L);
@@ -115,26 +115,25 @@ public class CategoriasController {
 		tallasPijama.add(new Talla(2L,"M"));
 		tallasPijama.add(new Talla(3L,"L"));
 		tallasPijama.add(new Talla(4L,"XL"));
-		
-		
-		pijamasMujer.add(new Pijama(0L,"Pijama Alhena",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama1, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(1L,"Pijama Alaya",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama2, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(2L,"Pijama Bianca",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama3, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(3L,"Pijama Larisa",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama4, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(4L,"Pijama Vega",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama5, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(5L,"Pijama Maia",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama6, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(6L,"Pijama Miranda",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama7, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
-		pijamasMujer.add(new Pijama(7L,"Pijama Adele",Constantes.REFERENCIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama8, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama));
+
+		pijamasMujer.add(new Producto(0L,"Pijama Alhena",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama1, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(1L,"Pijama Alaya",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama2, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(2L,"Pijama Bianca",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama3, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(3L,"Pijama Larisa",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama4, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(4L,"Pijama Vega",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama5, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(5L,"Pijama Maia",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama6, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(6L,"Pijama Miranda",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama7, lineaClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
+		pijamasMujer.add(new Producto(7L,"Pijama Adele",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "_MG_8109.jpg", coloresPijama8, lineaCatalogo, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"_MG_8109.jpg", Constantes.CATEGORIA_MUJER)));
 		
 		return pijamasMujer;
 	}
 	
 	private List<Color> getColores(){
 		List<Color> colores = new ArrayList<Color>();
-		colores.add(new Color(0L,"color-azulTurqueza"));
-		colores.add(new Color(2L,"color-rojo"));
-		colores.add(new Color(3L,"color-gris"));
-		colores.add(new Color(4L,"color-azulJuanata"));
+		colores.add(new Color(0L,"color-azulTurqueza", "Azul Turqueza"));
+		colores.add(new Color(1L,"color-rojo", "Rojo"));
+		colores.add(new Color(2L,"color-gris", "Gris"));
+		colores.add(new Color(3L,"color-azulJuanata", "Azul Oscuro"));
 		
 		return colores;
 		

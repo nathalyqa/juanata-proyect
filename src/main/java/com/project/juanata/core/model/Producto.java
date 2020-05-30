@@ -3,11 +3,12 @@ package com.project.juanata.core.model;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class Pijama {
+public class Producto {
 	
 	private Long id;
 	private String nombre;
-	private String referencia;
+	//Especifica si es producto Mujer, Hombre, Niño ó Niña
+	private String categoria;
 	private BigDecimal precio;
 	private String nombreFoto;
 	private List<Color> colores;
@@ -15,20 +16,15 @@ public class Pijama {
 	private String descripcion;
 	private String material;
 	private List<Talla> tallas;
+	//A que item pertenece, Pijama, Pantuflas, Chaquetas, Blodys, etc.
+	private Item item;
 	
-	public Pijama(Long id, String nombre, String referencia, BigDecimal precio, String nombreFoto, List<Color> colores ) {
+	
+	public Producto(Long id, String nombre, String categoria, BigDecimal precio, String nombreFoto,
+			List<Color> colores, Linea linea, String descripcion, String material, List<Talla> tallas, Item item) {
 		this.id = id;
 		this.nombre = nombre;
-		this.referencia = referencia;
-		this.precio = precio;
-		this.nombreFoto = nombreFoto;
-		this.colores = colores;
-	}
-	
-	public Pijama(Long id, String nombre, String referencia, BigDecimal precio, String nombreFoto, List<Color> colores, Linea linea, String descripcion, String material, List<Talla> tallas) {
-		this.id = id;
-		this.nombre = nombre;
-		this.referencia = referencia;
+		this.categoria = categoria;
 		this.precio = precio;
 		this.nombreFoto = nombreFoto;
 		this.colores = colores;
@@ -36,9 +32,10 @@ public class Pijama {
 		this.descripcion = descripcion;
 		this.material = material;
 		this.tallas = tallas;
+		this.item = item;
 	}
 	
-	public Pijama() {
+	public Producto() {
 	}
 	
 	public Long getId() {
@@ -52,12 +49,6 @@ public class Pijama {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getReferencia() {
-		return referencia;
-	}
-	public void setReferencia(String referencia) {
-		this.referencia = referencia;
 	}
 	public BigDecimal getPrecio() {
 		return precio;
@@ -110,5 +101,21 @@ public class Pijama {
 
 	public void setTallas(List<Talla> tallas) {
 		this.tallas = tallas;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public Item getItem() {
+		return item;
+	}
+
+	public void setItem(Item item) {
+		this.item = item;
 	}
 }

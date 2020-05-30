@@ -170,6 +170,10 @@ a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
     background-color: blanchedalmond !important;
 }
 
-.card-body:hover p, .card-body:hover h6{
+.card-body:hover label, .card-body:hover h6{
     color: rgb(116, 116, 116) !important;
+}
+
+label.texto-subrayado:hover{
+    text-decoration: underline rgb(0, 0, 106);
 }

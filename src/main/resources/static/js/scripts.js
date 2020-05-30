@@ -43,3 +43,7 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
   function hideElement(x){
     x.style.display = "none";
   }
+
+  function cambiarColorTooltip(x){
+    x.style.backgroundColor = "red";
+  }

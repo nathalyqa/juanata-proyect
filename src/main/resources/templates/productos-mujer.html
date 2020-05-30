@@ -57,7 +57,7 @@
                         <div class="card" onmouseover="masInfoPijama(this)" onmouseout="menosInfoPijama(this)">
                             <img th:src="@{/img/categorias/mujeres/} + ${pijama.nombreFoto}" class="card-img-top" alt="...">
                             <div class="card-body text-center">
-                                <Label class="font-dancing-script" style="margin-bottom: 10px; font-size: 1.5em;" th:text="${pijama.nombre}"></label>
+                                <p class="font-dancing-script" style="margin-bottom: 10px; font-size: 1.5em;" th:text="${pijama.nombre}"></p>
                                 <h6 th:text="${'$' + #numbers.formatDecimal(pijama.precio,1,'DEFAULT',0,'DEFAULT')}" ></h6>
                                 <div style="display: none;">
                                     <i th:each="color : ${pijama.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
