@@ -45,29 +45,60 @@
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" href="#">Inicio</a></li>
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" href="#">Mujer</a></li>
-                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page">Pijamas</li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/home}">Inicio</a></li>
+                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page">Mujer</li>
                             </ol>
                           </nav>
                     </div>
                 </div>
-                <div class="row">   
-                    <div th:each="pijama : ${pijamasMujer}" class="col-3">
-                        <div class="card" onmouseover="masInfoPijama(this)" onmouseout="menosInfoPijama(this)">
-                            <img th:src="@{/img/categorias/mujeres/} + ${pijama.nombreFoto}" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="font-dancing-script" style="margin-bottom: 10px; font-size: 1.5em;" th:text="${pijama.nombre}"></p>
-                                <h6 th:text="${'$' + #numbers.formatDecimal(pijama.precio,1,'DEFAULT',0,'DEFAULT')}" ></h6>
-                                <div style="display: none;">
-                                    <i th:each="color : ${pijama.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
-                                    <br>
-                                    <a th:href="@{/categorias/mujer/pijamas/} + ${pijama.id}" class="badge badge-pill badge-colorGris-ojo"><i class="fa fa-eye color-gris" style="font-size: 3em;"></i></a>
-                                </div>
+                <div class="row">
+                    <!--<div class="col-3" th:each="item : ${items}">
+                        <div class="card">
+                            <div class="inner">
+                                <img th:src="@{/img/categorias/mujeres/} + ${item.nombreFoto}" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
+                                <label class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;" th:text="${item.nombreItem}"></label>
                             </div>
                         </div>
+                    </div>-->
+
+<!--                         <div class="thumbex"> -->
+<!--                           <div class="thumbnail"> <img th:src="@{/img/categorias/mujeres/_MG_8109.jpg}"/><span>Beaches</span></div> -->
+<!--                         </div> -->
+<!--                         <div class="thumbex">  -->
+<!--                           <div class="thumbnail"><img th:src="@{/img/categorias/mujeres/_MG_8109.jpg}"/><span>Mountains</span></div> -->
+<!--                         </div> -->
+
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 figure">
+                    	<a th:href="@{/categorias/mujer}">
+                    		<img th:src="@{/img/categorias/mujeres/_MG_8109.jpg}" class="w-100 h-100" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                      		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Pijamas</label>
+                    	</a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 figure">
+                    	<a th:href="@{/categorias/mujer}">
+                    		<img th:src="@{/img/categorias/mujeres/_MG_8109.jpg}" class="w-100 h-100" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                      		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Pantuflas</label>
+                    	</a>
                     </div>
                 </div>
+                <!--<div class="row justify-content-center">
+                    <div class="card mt-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                          <div class="col-md-4">
+                            <img th:src="@{/img/categorias/mujeres/_MG_8109.jpg}" class="card-img" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>-->
             </div>
         </div>
     </div>

@@ -1,11 +1,48 @@
 /*Función para quitarle los colores a una imagen reemplazandolos por la escala de grises*/
 function escalaGrisesImagen(x){
     x.style.filter = "grayscale(100%)";
+    x.style.webkitTransform = "scale(0.9)";
+    x.style.transform = "scale(0.9)";
+    x.style.transition = "all .5s ease-in-out";
 }
 
 /*Función para quitar escala de grises en una imagen*/
 function sinEscalaGrisesImagen(x){
     x.style.filter = "grayscale(0%)";
+    x.style.webkitTransform = "scale(1)";
+    x.style.transform = "scale(1)";
+    x.style.transition = "all .5s ease-in-out";
+}
+
+/*Funcion para poner borrosa una imagen cuando*/
+function desenfocarImagen(x){
+    x.style.webkitTransform = "scale(0.9)";
+    x.style.transform = "scale(0.9)";
+    x.style.transition = "all .5s ease-in-out";
+    x.style.filter = "blur(5px)";
+}
+
+/*Funcion para poner nitida una imagen*/
+function enfocarImagen(x){
+	x.style.filter = "grayscale(0%)";
+    x.style.webkitTransform = "scale(1)";
+    x.style.transform = "scale(1)";
+    x.style.transition = "all .5s ease-in-out";
+}
+
+function saturacion(x){
+  x.style.filter = "saturate(150%)";
+  x.style.webkitTransform = "scale(0.9)";
+  x.style.transform = "scale(0.9)";
+  x.style.transition = "all .5s ease-in-out";
+}
+
+/*Función para quitar escala de grises en una imagen*/
+function sinSaturacion(x){
+  x.style.filter = "saturate(100%)";
+  x.style.webkitTransform = "scale(1)";
+  x.style.transform = "scale(1)";
+  x.style.transition = "all .5s ease-in-out";
 }
 
 /*Funcion para los submenus*/

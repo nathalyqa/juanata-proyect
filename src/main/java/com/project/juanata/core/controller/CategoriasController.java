@@ -23,8 +23,9 @@ import com.project.juanata.core.util.Constantes;
 public class CategoriasController {
 	
 	@GetMapping(path = "/mujer")
-	public ModelAndView mujer() {
+	public ModelAndView productosMujer() {
 		ModelAndView modelAndView = new ModelAndView(Vistas.CATEGORIA_MUJER);
+		modelAndView.addObject("items", getItemsMujer());
 		
 		return modelAndView;
 	}
@@ -39,7 +40,7 @@ public class CategoriasController {
 	
 	@GetMapping(path = "/mujer/pijamas/{idPijama}")
 	public ModelAndView getPijamaIndividual(@PathVariable(name = "idPijama") Long idPijama) {
-		ModelAndView modelAndView = new ModelAndView(Vistas.PRODUCTO_DETALLE);
+		ModelAndView modelAndView = new ModelAndView(Vistas.PRODUCTO_DETALLE_MUJER);
 		
 		List<Producto> pijamas = new ArrayList<Producto>();
 		
@@ -152,9 +153,16 @@ public class CategoriasController {
 		}
 		
 		return color;
-		
 	}
 	
-	
-
+	private List<Item> getItemsMujer(){
+		List<Item> items = new ArrayList<Item>();
+		
+		items.add(new Item(0L,"Pijamas","_MG_8109.jpg",Constantes.CATEGORIA_MUJER));
+		items.add(new Item(1L,"Pantuflas","_MG_8109.jpg",Constantes.CATEGORIA_MUJER));
+		items.add(new Item(1L,"Bodys","_MG_8109.jpg",Constantes.CATEGORIA_MUJER));
+		items.add(new Item(1L,"Chaquetas","_MG_8109.jpg",Constantes.CATEGORIA_MUJER));
+		
+		return items;
+	}
 }

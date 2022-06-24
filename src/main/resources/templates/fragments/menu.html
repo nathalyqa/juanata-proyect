@@ -1,5 +1,5 @@
 <!--INICIO NAVBAR - MENU-->
-<nav class="navbar fixed-top  navbar-expand-sm navbar-expand-lg bg-light" th:fragment="menu">
+<nav class="navbar fixed-top navbar-expand-sm navbar-expand-lg bg-light" style="opacity: 0.9;" th:fragment="menu">
     <div class="mr-3">
         <img th:src="@{/img/logo.png}">
     </div>
@@ -28,40 +28,23 @@
                                 <li class="menu-item ">
                                     <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" href="#">PANTUFLAS</a>
                                 </li>
-                                <li class="menu-item dropright dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" data-toggle="dropdown">Y ALGO MÁS</a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" href="#">CHAQUETAS</a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-item nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor" href="#">BODYS</a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <!--FIN OPCION MENU CATEGORIAS-->
-                <!--OPCION MENU SALUD DEL SUEÑO-->
+                <!--OPCION MENU SALUD DEL SUEÃ‘O-->
                 <li class="nav-item">
                     <a class="nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
-                        th:href="@{/home}">SALUD DEL SUEÑO</a>
+                        th:href="@{/saludDelSuenno}">SALUD DEL SUEÑO</a>
                 </li>
-                <!--FIN OPCION MENU SALUD DEL SUEÑO-->
+                <!--FIN OPCION MENU SALUD DEL SUEÃ‘O-->
                 <!--OPCION MENU PROMOCIONES-->
                 <li class="nav-item">
                     <a class="nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
                         th:href="@{/home}">PROMOCIONES</a>
                 </li>
                 <!--FIN OPCION MENU PROMOCIONES-->
-                <!--OPCION MENU DISEÑA TU PIJAMA-->
-                <li class="nav-item">
-                    <a class="nav-link font-acme-cuerpo-gris-menu badge badge-pill badge-juanataColor"
-                        th:href="@{/home}">DISEÑA TU PIJAMA</a>
-                </li>
-                <!--FIN OPCION MENU DISEÑA TU PIJAMA-->
             </ul>
         </div>
     </div>

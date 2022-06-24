@@ -31,6 +31,7 @@
     font-family: 'Acme', sans-serif;
     color: rgb(116, 116, 116);
     font-size: 1em;
+    opacity: 1;
 }
 
 .font-acme{
@@ -81,6 +82,10 @@ color: rgb(56, 141, 226);
 
 .color-azulJuanata{
 color: rgb(0, 0, 106);
+}
+
+.color-dorado{
+	color: rgb(204, 163, 82);
 }
 /*Fin colores*/
 
@@ -154,6 +159,10 @@ a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
     margin-top:-6px;
 }
 
+.opacidad{
+	opacity: 0.5;
+}
+
 .inner{
     overflow: hidden;
 }
@@ -168,12 +177,108 @@ a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
 
 .card-body:hover {
     background-color: blanchedalmond !important;
+    transition: all .5s ease-in-out;
 }
 
 .card-body:hover label, .card-body:hover h6{
     color: rgb(116, 116, 116) !important;
+    transition: all .5s ease-in-out;
 }
 
 label.texto-subrayado:hover{
     text-decoration: underline rgb(0, 0, 106);
+}
+
+.textoEncimaImg{
+	display:none; 
+  	transition: all .5s;
+}
+
+/* Visible texto */
+.figure:hover > a > label {
+  display:block;
+  transition: all .5s;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*PRUEBAAAA*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.row .thumbex {
+  width: 100%;
+  min-width: 250px;
+  max-width: 435px;
+  height: 300px;
+  outline: 2px solid white;
+  outline-offset: -15px;
+  background-color: blue;
+}
+.row .thumbex .thumbnail {
+  overflow: hidden;
+  min-width: 250px;
+  height: 300px;
+  position: relative;
+  opacity: 0.88;
+  backface-visibility: hidden;
+  transition: all 0.4s ease-out;
+}
+.row .thumbex .thumbnail img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  height: 115%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+}
+.row .thumbex .thumbnail span {
+  position: absolute;
+  z-index: 2;
+  top: calc(150px - 20px);
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 50px;
+  margin: 0 45px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease-out;
+}
+.row .thumbex .thumbnail:hover {
+  backface-visibility: hidden;
+  opacity: 1;
+}
+.row .thumbex .thumbnail:hover span {
+  opacity: 0;
+}
+
+.animacionLogosDomicilio{
+  animation-duration: 40s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 80%;
+    width: 80%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }

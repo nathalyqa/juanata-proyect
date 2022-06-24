@@ -5,6 +5,7 @@ public class Item {
 	private Long id;
 	private String nombreItem;
 	private String nombreFoto;
+	//Indica si pertenece a la categoria, Mujer, Hombre, Niño o Niña.
 	private String categoria;
 	
 	public Item(Long id, String nombreItem, String nombreFoto, String categoria) {
