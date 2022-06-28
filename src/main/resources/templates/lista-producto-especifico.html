@@ -45,24 +45,29 @@
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/home}">Inicio</a></li>
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/categorias/mujer}">Mujer</a></li>
-                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page">Pijamas</li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbInicio}" th:text="${tituloBreadcrumbInicio}"></a></li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbCategoria}" th:text="${tituloBreadcrumbCategoria}"></a></li>
+                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page" th:text="${tituloBreadcrumbProducto}"></li>
                             </ol>
                           </nav>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <H1 class="font-dancing-script color-azulJuanata text-left animacionTitulos" th:text="${item}"></H1>
+                    </div>
+                </div>
                 <div class="row">   
-                    <div th:each="pijama : ${pijamasMujer}" class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div th:each="producto : ${productos}" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mb-3">
                         <div class="card" onmouseover="masInfoPijama(this)" onmouseout="menosInfoPijama(this)">
-                            <img th:src="@{/img/categorias/mujeres/} + ${pijama.nombreFoto}" class="card-img-top" alt="...">
+                            <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
                             <div class="card-body text-center">
-                                <Label class="font-dancing-script" style="margin-bottom: 10px; font-size: 1.5em;" th:text="${pijama.nombre}"></label>
-                                <h6 th:text="${'$' + #numbers.formatDecimal(pijama.precio,1,'DEFAULT',0,'DEFAULT')}" ></h6>
+                                <Label class="font-dancing-script" style="margin-bottom: 10px; font-size: 1.5em;" th:text="${producto.nombre}"></label>
+                                <h6 th:text="${'$' + #numbers.formatDecimal(producto.precio,1,'DEFAULT',0,'DEFAULT')}" ></h6>
                                 <div style="display: none;">
-                                    <i th:each="color : ${pijama.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
+                                    <i th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
                                     <br>
-                                    <a th:href="@{/categorias/mujer/pijamas/} + ${pijama.id}" class="badge badge-pill badge-colorGris-ojo"><i class="fa fa-eye color-gris" style="font-size: 3em;"></i></a>
+                                    <a th:href="@{/producto} + ${producto.item.link} + @{/} + ${producto.id}" class="badge badge-pill badge-colorGris-ojo"><i class="fa fa-eye color-gris" style="font-size: 3em;"></i></a>
                                 </div>
                             </div>
                         </div>

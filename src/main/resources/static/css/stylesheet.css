@@ -87,6 +87,10 @@ color: rgb(0, 0, 106);
 .color-dorado{
 	color: rgb(204, 163, 82);
 }
+
+.color-negro{
+	color: rgb(0,0,0);
+}
 /*Fin colores*/
 
 /*Efecto al pasar mouse encima de las opciones del menu*/
@@ -271,6 +275,11 @@ label.texto-subrayado:hover{
   animation-iteration-count: infinite;
 }
 
+.animacionTitulos{
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
 @keyframes slidein {
   from {
     margin-left: 80%;
@@ -279,6 +288,6 @@ label.texto-subrayado:hover{
 
   to {
     margin-left: 0%;
-    width: 100%;
+    width: 80%;
   }
 }

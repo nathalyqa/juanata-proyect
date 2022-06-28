@@ -61,7 +61,7 @@
             <div class="col-12">
               <hr>
               <!--SECCIÓN INFORMATIVA SERVICIO A DOMICILIO-->
-              <div class="row">
+              <div class="row" style="flex-wrap: nowrap;">
                 <div class="col-12 animacionLogosDomicilio" style="overflow: hidden;">
                   <i class="fa fa-truck color-gris" style="font-size: 4em;"></i>
                   <i class="fa fa-gift color-dorado" style="font-size: 4em;"></i>
@@ -83,16 +83,16 @@
                     <div class="col-12">
                     </div>
                   </div>
-                  <div class="row " style="height: 540px;">
+                  <div class="row " style="height: 600px; position: relative; flex-wrap: nowrap;">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
                     	<a th:href="@{/categorias/mujer}">
-                    		<img src="../img/productosMujer.jpg" class=" w-100 h-75" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                    		<img src="../img/productosMujer.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
                       		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Mujer</label>
                     	</a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
-                    	<a th:href="@{/home}">
-                    		<img src="../img/productosHombre.jpg" class="w-100 h-75" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                    	<a th:href="@{/categorias/hombre}">
+                    		<img src="../img/productosHombre.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
                       		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Hombre</label>
                     	</a>
                     </div>

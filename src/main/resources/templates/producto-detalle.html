@@ -57,13 +57,13 @@
                 </div>
                 <!--<div class="row" style="width:850px;">
                     <div class="col-6 text-center">
-                        <img th:src="@{/img/categorias/mujeres/} + ${producto.nombreFoto}" class="d-block w-100 h-100" alt="...">
+                        <img th:src="${producto.rutaFoto}" class="d-block w-100 h-100" alt="...">
                     </div>
                 </div>-->
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 px-lg-0 px-md-0 px-sm-0 px-xs-3">
                         <div class="block">
-                            <img th:src="@{/img/categorias/mujeres/} + ${producto.nombreFoto}" alt="..." class="block__pic">
+                            <img th:src="${producto.rutaFoto}" alt="..." class="block__pic">
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -92,7 +92,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="inner">
-                                        <img th:src="@{/img/categorias/mujeres/} + ${producto.nombreFoto}" class="card-img-top" alt="...">
+                                        <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
                                         <label class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;">Pantuflas</label>
@@ -102,7 +102,7 @@
                             <div class="col-6">
                                 <div class="card">
                                     <div class="inner">
-                                        <img th:src="@{/img/categorias/mujeres/} + ${producto.nombreFoto}" class="card-img-top" alt="...">
+                                        <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
                                         <label class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;">Bodys</label>

@@ -4,15 +4,14 @@ public class Item {
 	
 	private Long id;
 	private String nombreItem;
-	private String nombreFoto;
-	//Indica si pertenece a la categoria, Mujer, Hombre, Niño o Niña.
-	private String categoria;
+	private String rutaFoto;
+	private String link;
 	
-	public Item(Long id, String nombreItem, String nombreFoto, String categoria) {
+	public Item(Long id, String nombreItem, String rutaFoto, String link) {
 		this.id = id;
 		this.nombreItem = nombreItem;
-		this.nombreFoto = nombreFoto;
-		this.categoria = categoria;
+		this.rutaFoto = rutaFoto;
+		this.link = link;
 	}
 	
 	public Item() {
@@ -31,16 +30,16 @@ public class Item {
 	public void setNombreItem(String nombreItem) {
 		this.nombreItem = nombreItem;
 	}
-	public String getNombreFoto() {
-		return nombreFoto;
+	public String getRutaFoto() {
+		return rutaFoto;
 	}
-	public void setNombreFoto(String nombreFoto) {
-		this.nombreFoto = nombreFoto;
+	public void setRutaFoto(String rutaFoto) {
+		this.rutaFoto = rutaFoto;
 	}
-	public String getCategoria() {
-		return categoria;
+	public String getLink() {
+		return link;
 	}
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setLink(String link) {
+		this.link = link;
 	}
 }

@@ -10,7 +10,7 @@ public class Producto {
 	//Especifica si es producto Mujer, Hombre, Niño ó Niña
 	private String categoria;
 	private BigDecimal precio;
-	private String nombreFoto;
+	private String rutaFoto;
 	private List<Color> colores;
 	private Linea linea;
 	private String descripcion;
@@ -20,13 +20,13 @@ public class Producto {
 	private Item item;
 	
 	
-	public Producto(Long id, String nombre, String categoria, BigDecimal precio, String nombreFoto,
+	public Producto(Long id, String nombre, String categoria, BigDecimal precio, String rutaFoto,
 			List<Color> colores, Linea linea, String descripcion, String material, List<Talla> tallas, Item item) {
 		this.id = id;
 		this.nombre = nombre;
 		this.categoria = categoria;
 		this.precio = precio;
-		this.nombreFoto = nombreFoto;
+		this.rutaFoto = rutaFoto;
 		this.colores = colores;
 		this.linea = linea;
 		this.descripcion = descripcion;
@@ -56,11 +56,11 @@ public class Producto {
 	public void setPrecio(BigDecimal precio) {
 		this.precio = precio;
 	}
-	public String getNombreFoto() {
-		return nombreFoto;
+	public String getRutaFoto() {
+		return rutaFoto;
 	}
-	public void setNombreFoto(String nombreFoto) {
-		this.nombreFoto = nombreFoto;
+	public void setRutaFoto(String rutaFoto) {
+		this.rutaFoto = rutaFoto;
 	}
 
 	public List<Color> getColores() {
