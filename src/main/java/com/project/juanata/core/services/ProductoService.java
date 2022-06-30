@@ -12,4 +12,7 @@ public interface ProductoService {
 	List<Producto> getPantuflasMujer();
 	
 	List<Producto> getPijamasHombre();
+	
+	List<Producto> getPantuflasHombre();
+	
 }

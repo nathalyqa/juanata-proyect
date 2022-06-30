@@ -30,7 +30,7 @@ public class CategoriasServiceImpl implements CategoriasService{
 		List<Item> items = new ArrayList<Item>();
 		
 		items.add(new Item(0L,"Pijamas","/img/categorias/hombres/productos/productosHombre.jpg","/producto/pijamas/hombre"));
-		items.add(new Item(1L,"Pantuflas","/img/categorias/hombres/productos/productosHombre.jpg","/producto/pijamas/hombre"));
+		items.add(new Item(1L,"Pantuflas","/img/categorias/hombres/productos/productosHombre.jpg","/producto/pantuflas/hombre"));
 		
 		return items;
 	}

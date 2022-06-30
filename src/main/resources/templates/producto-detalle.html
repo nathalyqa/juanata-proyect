@@ -47,10 +47,10 @@
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/home}">Inicio</a></li>
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/categorias/mujer}">Mujer</a></li>
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/categorias/mujer/pijamas}">Pijamas</a></li>
-                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page">Detalle Producto</li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbInicio}" th:text="${tituloBreadcrumbInicio}"></a></li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbCategoria}" th:text="${tituloBreadcrumbCategoria}"></a></li>
+                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbProducto}" th:text="${tituloBreadcrumbProducto}"></a></li>
+                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page" th:text="${tituloBreadcrumbDetalleProducto}"></li>
                             </ol>
                           </nav>   
                     </div>

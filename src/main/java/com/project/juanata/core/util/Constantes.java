@@ -38,5 +38,6 @@ public class Constantes {
 	public static final String LINK_BREADCRUMB_PANTUFLAS_MUJER = "/producto/pantuflas/mujer";
 	public static final String LINK_BREADCRUMB_CATEGORIA_HOMBRE = "/categorias/hombre";
 	public static final String LINK_BREADCRUMB_PIJAMAS_HOMBRE = "/producto/pijamas/hombre";
+	public static final String LINK_BREADCRUMB_PANTUFLAS_HOMBRE = "/producto/pantuflas/hombre";
 	
 }

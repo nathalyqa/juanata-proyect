@@ -67,7 +67,7 @@
                                 <div style="display: none;">
                                     <i th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
                                     <br>
-                                    <a th:href="@{/producto} + ${producto.item.link} + @{/} + ${producto.id}" class="badge badge-pill badge-colorGris-ojo"><i class="fa fa-eye color-gris" style="font-size: 3em;"></i></a>
+                                    <a th:href="${producto.item.link} + @{/} + ${producto.id}" class="badge badge-pill badge-colorGris-ojo"><i class="fa fa-eye color-gris" style="font-size: 3em;"></i></a>
                                 </div>
                             </div>
                         </div>
