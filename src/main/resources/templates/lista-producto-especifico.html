@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
 
     <!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -65,9 +66,9 @@
                                 <Label class="font-dancing-script" style="margin-bottom: 10px; font-size: 1.5em;" th:text="${producto.nombre}"></label>
                                 <h6 th:text="${'$' + #numbers.formatDecimal(producto.precio,1,'DEFAULT',0,'DEFAULT')}" ></h6>
                                 <div style="display: none;">
-                                    <i th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i>
-                                    <br>
-                                    <a th:href="${producto.item.link} + @{/} + ${producto.id}" class="badge badge-pill badge-colorGris-ojo"><i class="fa fa-eye color-gris" style="font-size: 3em;"></i></a>
+<!--                                     <i th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;"></i> -->
+<!--                                     <br> -->
+                                    <a th:href="${producto.item.link} + @{/} + ${producto.id}" class="badge badge-pill badge-colorBlanco-ojo"><i class="fa fa-eye" style="font-size: 3em; color: white;"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +76,11 @@
                 </div>
             </div>
         </div>
-    </div>
+        <!--INICIO ICONO WHATSAPP -->
+        <div class="row">
+			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
+        </div> 
+        <!--FIN ICONO WHATSAPP -->
     </div>
 
     <!--INICIO FOOTER-->

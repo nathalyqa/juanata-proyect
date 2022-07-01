@@ -5,6 +5,7 @@
       
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
+        <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
 
         <!--Favicons-->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -32,12 +33,12 @@
           <ol class="carousel-indicators">
             <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
             <li data-target="#carouselHome" data-slide-to="1"></li>
-            <li data-target="#carouselHome" data-slide-to="2"></li>
+<!--             <li data-target="#carouselHome" data-slide-to="2"></li> -->
           </ol>
-          <div class="carousel-inner" style="margin-top: 80px;height: 500px;">
-            <div class="carousel-item">
-              <img src="../img/pijama2jpg.jpg" class="d-block w-100" alt="...">
-            </div>
+          <div class="carousel-inner" style="margin-top: 80px;height: 400px;">
+<!--             <div class="carousel-item"> -->
+<!--               <img src="../img/pijama2jpg.jpg" class="d-block w-100" alt="..."> -->
+<!--             </div> -->
             <div class="carousel-item active">
               <img src="../img/inscribeteBanner.jpg" class="d-block w-100" alt="...">
             </div>
@@ -70,7 +71,7 @@
               <div class="row">
                 <div class="col-2"></div>
                 <div class="col-8" style="overflow: hidden;">
-                  <H1 class="font-acme-cuerpo-gris text-center">PARA MAYOR COMODIDAD LLEVAMOS LAS PRENDAS A TU CASA</H1>
+                  <H1 class="font-dancing-script text-center">Para mayor comodidad llevamos las prendas a tu casa. <a class="color-azulJuanata" target="_blank" href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20me%20interesan%20tus%20productos.">¡Haz tu pedido aquí!</a></H1>
                 </div>
                 <div class="col-2"></div>
               </div>
@@ -83,16 +84,16 @@
                     <div class="col-12">
                     </div>
                   </div>
-                  <div class="row mt-5 ml-5 mr-5" style="height: 500px; position: relative; flex-wrap: nowrap; padding-bottom: 2%">
+                  <div class="row mt-5 ml-5 mr-5" style="height: 540px; position: relative; flex-wrap: nowrap; padding-bottom: 2%">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
                     	<a th:href="@{/categorias/mujer}">
-                    		<img src="../img/productosMujer.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                    		<img src="../img/productosMujer2.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
                       		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Mujer</label>
                     	</a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
                     	<a th:href="@{/categorias/hombre}">
-                    		<img src="../img/productosHombre.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                    		<img src="../img/productosHombre2.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
                       		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Hombre</label>
                     	</a>
                     </div>
@@ -101,7 +102,11 @@
               </div>
               <!--FIN PRODUCTOS HOMBRE Y MUJER-->
               <hr>
-             
+             <!--INICIO ICONO WHATSAPP -->
+             <div class="row">
+				<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
+             </div> 
+             <!--FIN ICONO WHATSAPP -->
             </div>
           </div>
         </div>

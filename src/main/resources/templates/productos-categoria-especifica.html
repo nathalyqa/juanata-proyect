@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
 
     <!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -51,11 +52,6 @@
                           </nav>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <H1 class="font-dancing-script color-azulJuanata text-left animacionTitulos" th:text="${tituloProductosCategoria}"></H1>
-                    </div>
-                </div>
                 <div class="row">                    
                     <div th:each="item : ${items}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 figure mb-3">
                     	<a th:href="${item.link}">
@@ -66,6 +62,11 @@
                 </div>
             </div>
         </div>
+        <!--INICIO ICONO WHATSAPP -->
+        <div class="row">
+			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
+        </div> 
+        <!--FIN ICONO WHATSAPP -->
     </div>
     </div>
 

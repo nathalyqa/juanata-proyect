@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
 
     <!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -43,7 +44,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="row" style="margin-top: 90px;">
+                <div class="row" style="margin-top: 120px;">
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
@@ -60,7 +61,7 @@
                         <img th:src="${producto.rutaFoto}" class="d-block w-100 h-100" alt="...">
                     </div>
                 </div>-->
-                <div class="row">
+                <div class="row" style="margin-bottom: 4%; margin-top: 2%;">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 px-lg-0 px-md-0 px-sm-0 px-xs-3">
                         <div class="block">
                             <img th:src="${producto.rutaFoto}" alt="..." class="block__pic">
@@ -79,23 +80,23 @@
                             <label class="font-acme-cuerpo-gris color-azulJuanata mt-3 mb-0" style="font-size: 1em;">Color</label><br>
                             <i th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;" data-toggle="tooltip" th:title="${color.color}"></i><br>
                             <label class="font-acme-cuerpo-gris color-azulJuanata mt-3 mb-0" style="font-size: 1em;">Tallas</label><br>
-                            <label th:each="talla : ${producto.tallas}" class="font-acme-cuerpo-gris mr-1 badge badge-pill badge-colorBlanchedalmond px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
+                            <label th:each="talla : ${producto.tallas}" class="font-acme-cuerpo-gris mr-1 badge badge-pill badge-colorAzulPlata px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
                         <div class="row pt-5">
                             <div class="col-12 text-center">
                                 <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;"><strong>OTROS PRODUCTOS</strong></label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mb-5">
                             <div class="col-6">
                                 <div class="card">
                                     <div class="inner">
                                         <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
-                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;">Pantuflas</label>
+                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;">Pantuflas</label>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +106,7 @@
                                         <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
-                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:blanchedalmond; font-size: 2em;">Bodys</label>
+                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;">Bodys</label>
                                     </div>
                                 </div>
                             </div> 
@@ -114,7 +115,11 @@
                 </div>
             </div>
         </div>
-    </div>
+        <!--INICIO ICONO WHATSAPP -->
+        <div class="row">
+			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
+        </div> 
+        <!--FIN ICONO WHATSAPP -->
     </div>
 
     <!--INICIO FOOTER-->

@@ -17,7 +17,7 @@ public class CategoriasServiceImpl implements CategoriasService{
 		List<Item> items = new ArrayList<Item>();
 		
 		items.add(new Item(0L,"Pijamas","/img/categorias/mujeres/_MG_8109.jpg","/producto/pijamas/mujer"));
-		items.add(new Item(1L,"Pantuflas","/img/categorias/mujeres/_MG_8109.jpg","/producto/pijamas/mujer"));
+		items.add(new Item(1L,"Pantuflas","/img/categorias/mujeres/_MG_8109.jpg","/producto/pantuflas/mujer"));
 		items.add(new Item(1L,"Bodys","/img/categorias/mujeres/_MG_8109.jpg","/producto/pijamas/mujer"));
 		items.add(new Item(1L,"Chaquetas","/img/categorias/mujeres/_MG_8109.jpg","/producto/pijamas/mujer"));
 		

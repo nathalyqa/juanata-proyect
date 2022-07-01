@@ -135,6 +135,22 @@ a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
     color: blanchedalmond;
 }
 
+/*Efecto al pasar mouse encima del icono ojo blanco*/
+
+a.badge-colorBlanco-ojo:hover, a.badge-colorBlanco-ojo:focus {
+    color: rgb(110, 122, 147) !important;
+    background-color: white;
+}
+
+a.badge-colorBlanco-ojo:focus, a.badge-colorBlanco-ojo.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+
+a.badge-colorBlanco-ojo:hover i, a.badge-colorBlanco-ojo:focus i{
+    color: rgb(110, 122, 147) !important;
+}
+
 /*Efecto al pasar mouse encima de las tallas del detalle del producto*/
 
 .badge-colorBlanchedalmond:hover, .badge-colorBlanchedalmond:focus {
@@ -149,6 +165,20 @@ a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
 
 .badge-colorBlanchedalmond:hover label, .badge-colorBlanchedalmond:focus label{
     color: blanchedalmond;
+}
+
+.badge-colorAzulPlata:hover, .badge-colorAzulPlata:focus {
+    color: white;
+    background-color: rgb(110, 122, 147);
+}
+
+.badge-colorAzulPlata:focus, .badge-colorAzulPlata.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(180, 190, 201, 0.5);
+}
+
+.badge-colorAzulPlata:hover label, .badge-colorAzulPlata:focus label{
+    color: white;
 }
 
 .navbar-nav li:hover > ul.dropdown-menu {
@@ -180,12 +210,12 @@ a.badge-colorGris-ojo:hover i, a.badge-colorGris-ojo:focus i{
 }
 
 .card-body:hover {
-    background-color: blanchedalmond !important;
+    background-color: rgb(110, 122, 147) !important;
     transition: all .5s ease-in-out;
 }
 
 .card-body:hover label, .card-body:hover h6{
-    color: rgb(116, 116, 116) !important;
+    color: white !important;
     transition: all .5s ease-in-out;
 }
 
@@ -289,5 +319,29 @@ label.texto-subrayado:hover{
   to {
     margin-left: 0%;
     width: 80%;
-  }
+  } 
 }
+
+.btn-wsp{
+  	position: fixed;
+  	width: 55px;
+  	height: 55px;
+  	line-height: 55px;
+  	bottom: 30px;
+  	right: 30px;
+  	background: #0df053;
+  	color: #fff;
+  	border-radius: 50px;
+  	text-align: center;
+  	font-size: 30px;
+  	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  	z-index: 100;
+  	fa-animation-duration: 0.5s;
+}
+  
+.btn-wsp:hover{
+  	text-decoration: none;
+  	color: #0df053;
+  	background: #fff;
+}
+
