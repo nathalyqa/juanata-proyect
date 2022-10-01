@@ -18,8 +18,11 @@ public class Color implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	//El nombre de la clase de color creada en CSS
+	private String claseColor;
 	
 	private String color;
 
@@ -39,8 +42,16 @@ public class Color implements Serializable{
 		this.color = color;
 	}
 
+	public String getClaseColor() {
+		return claseColor;
+	}
+
+	public void setClaseColor(String claseColor) {
+		this.claseColor = claseColor;
+	}
+
 	@Override
 	public String toString() {
-		return "Color [id=" + id + ", color=" + color + "]";
+		return "Color [id=" + id + ", claseColor=" + claseColor + ", color=" + color + "]";
 	}
 }

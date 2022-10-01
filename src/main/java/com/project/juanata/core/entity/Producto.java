@@ -5,14 +5,15 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,7 +26,7 @@ public class Producto implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	private String nombre;
@@ -35,8 +36,7 @@ public class Producto implements Serializable{
 	
 	private BigDecimal precio;
 	
-	@Column(name = "NOMBRE_FOTO")
-	private String nombreFoto;
+	private String rutaFoto;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Linea linea;
@@ -49,10 +49,24 @@ public class Producto implements Serializable{
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Item item;
 	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+	@JoinTable(name = "producto_colores",
+    joinColumns = @JoinColumn(name = "producto_id"),
+    inverseJoinColumns = @JoinColumn(name = "color_id")
+	)
 	private List<Color> colores;
 	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+	@JoinTable(name = "producto_tallas",
+    joinColumns = @JoinColumn(name = "producto_id"),
+    inverseJoinColumns = @JoinColumn(name = "talla_id")
+	)
 	private List<Talla> tallas;
 
 	public Integer getId() {
@@ -87,12 +101,28 @@ public class Producto implements Serializable{
 		this.precio = precio;
 	}
 
-	public String getNombreFoto() {
-		return nombreFoto;
+	public String getRutaFoto() {
+		return rutaFoto;
 	}
 
-	public void setNombreFoto(String nombreFoto) {
-		this.nombreFoto = nombreFoto;
+	public void setRutaFoto(String rutaFoto) {
+		this.rutaFoto = rutaFoto;
+	}
+
+	public List<Color> getColores() {
+		return colores;
+	}
+
+	public void setColores(List<Color> colores) {
+		this.colores = colores;
+	}
+
+	public List<Talla> getTallas() {
+		return tallas;
+	}
+
+	public void setTallas(List<Talla> tallas) {
+		this.tallas = tallas;
 	}
 
 	public Linea getLinea() {

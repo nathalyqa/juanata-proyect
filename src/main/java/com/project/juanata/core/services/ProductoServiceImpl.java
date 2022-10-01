@@ -1,331 +1,149 @@
 package com.project.juanata.core.services;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.juanata.core.model.Color;
-import com.project.juanata.core.model.Item;
-import com.project.juanata.core.model.Linea;
-import com.project.juanata.core.model.Producto;
-import com.project.juanata.core.model.Talla;
-import com.project.juanata.core.util.Constantes;
+import com.project.juanata.core.entity.Categoria;
+import com.project.juanata.core.entity.Color;
+import com.project.juanata.core.entity.Item;
+import com.project.juanata.core.entity.Linea;
+import com.project.juanata.core.entity.Producto;
+import com.project.juanata.core.entity.Talla;
+import com.project.juanata.core.model.dto.ColorDTO;
+import com.project.juanata.core.model.dto.ItemDTO;
+import com.project.juanata.core.model.dto.LineaDTO;
+import com.project.juanata.core.model.dto.ProductoDTO;
+import com.project.juanata.core.model.dto.TallaDTO;
+import com.project.juanata.core.repository.CategoriaRepository;
+import com.project.juanata.core.repository.ItemRepository;
+import com.project.juanata.core.repository.ProductoRepository;
 
 @Service
 public class ProductoServiceImpl implements ProductoService{
-
-	@Override
-	public List<Producto> getPijamasMujer() {
-		List<Producto> pijamasMujer = new ArrayList<Producto>();
-		
-		List<Color> coloresPijama1 = new ArrayList<Color>();
-		
-		coloresPijama1.add(getColor(0L));
-		coloresPijama1.add(getColor(2L));
-		coloresPijama1.add(getColor(3L));
-		
-		List<Color> coloresPijama2 = new ArrayList<Color>();
-		coloresPijama2.add(getColor(2L));
-		coloresPijama2.add(getColor(3L));
-		
-		List<Color> coloresPijama3 = new ArrayList<Color>();
-		coloresPijama3.add(getColor(0L));
-		coloresPijama3.add(getColor(3L));
-		coloresPijama3.add(getColor(1L));
-		coloresPijama3.add(getColor(2L));
-		
-		List<Color> coloresPijama4 = new ArrayList<Color>();
-		coloresPijama4.add(getColor(2L));
-		coloresPijama4.add(getColor(0L));
-		coloresPijama4.add(getColor(3L));
-		
-		List<Color> coloresPijama5 = new ArrayList<Color>();
-		coloresPijama5.add(getColor(0L));
-		
-		
-		List<Color> coloresPijama6 = new ArrayList<Color>();
-		coloresPijama6.add(getColor(0L));
-		coloresPijama6.add(getColor(2L));
-		
-		List<Color> coloresPijama7 = new ArrayList<Color>();
-		coloresPijama7.add(getColor(1L));
-		
-		List<Color> coloresPijama8 = new ArrayList<Color>();
-		coloresPijama8.add(getColor(0L));
-		coloresPijama8.add(getColor(1L));
-		coloresPijama8.add(getColor(2L));
-		coloresPijama8.add(getColor(3L));
-		
-		Linea lineaPijamasClasica = new Linea();
-		lineaPijamasClasica.setId(0L);
-		lineaPijamasClasica.setLinea(Constantes.LINEA_PIJAMAS_CLASICA);
-		
-		Linea lineaPijamasJuvenil = new Linea();
-		lineaPijamasJuvenil.setId(0L);
-		lineaPijamasJuvenil.setLinea(Constantes.LINEA_PIJAMAS_JUVENIL);
-		
-		List<Talla> tallasPijama = new ArrayList<Talla>();
-		tallasPijama.add(new Talla(0L,"XS"));
-		tallasPijama.add(new Talla(1L,"S"));
-		tallasPijama.add(new Talla(2L,"M"));
-		tallasPijama.add(new Talla(3L,"L"));
-		tallasPijama.add(new Talla(4L,"XL"));
-
-		pijamasMujer.add(new Producto(0L,"Pijama Alhena",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama1, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(1L,"Pijama Alaya",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama2, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(2L,"Pijama Bianca",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama3, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(3L,"Pijama Larisa",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama4, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(4L,"Pijama Vega",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama5, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(5L,"Pijama Maia",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama6, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(6L,"Pijama Miranda",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama7, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		pijamasMujer.add(new Producto(7L,"Pijama Adele",Constantes.CATEGORIA_MUJER, new BigDecimal(30000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPijama8, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pijamas/mujer")));
-		
-		return pijamasMujer;
-	}
 	
-	private Color getColor(Long id) {
-
-		Color color = new Color();
-		List<Color> colores = getColores();
-
-		for (Color eachColor : colores) {
-			if (eachColor.getId().equals(id)) {
-				color = eachColor;
-				break;
-			}
+	@Autowired
+	CategoriaRepository categoriaRepository;
+	
+	@Autowired
+	ItemRepository itemRepository;
+	
+	@Autowired
+	ProductoRepository productoRepository;
+	
+	@Override
+	public List<ProductoDTO> getProductosPorItemYCategoria(String nombreCategoria, String nombreItem){
+		
+		Categoria categoria = new Categoria();
+		categoria = categoriaRepository.findByNombre(nombreCategoria).get(0);
+		
+		Item item = new Item();
+		item = itemRepository.findByNombreAndCategoria(nombreItem, categoria.getId());
+		
+		List<Producto> productos = productoRepository.obtenerProductosPorIdItemYIdCategoria(item.getId(), categoria.getId());
+		
+		List<ProductoDTO> productosDTO = new ArrayList<ProductoDTO>();
+		
+		for (Producto producto : productos) {
+			productosDTO.add(transformarObjetoProductoADTO(producto));
 		}
+			
+		return productosDTO;		
+	}
 
-		return color;
+	@Override
+	public ProductoDTO obtenerProductoPorId(Integer productoId) {
+		Producto producto = productoRepository.obtenerProductoPorId(productoId);
+		
+		return transformarObjetoProductoADTO(producto);
 	}
 	
-	private List<Color> getColores(){
-		List<Color> colores = new ArrayList<Color>();
-		colores.add(new Color(0L,"color-azulTurqueza", "Azul Turqueza"));
-		colores.add(new Color(1L,"color-rojo", "Rojo"));
-		colores.add(new Color(2L,"color-gris", "Gris"));
-		colores.add(new Color(3L,"color-azulJuanata", "Azul Oscuro"));
-		
-		return colores;
-		
-	}
-
 	@Override
-	public List<Producto> getPantuflasMujer() {
-		List<Producto> pantuflasMujer = new ArrayList<Producto>();
+	public ItemDTO obtenerItemPorNombreYCategoria(String nombreItem, Integer categoriaId) {
 		
-		List<Color> coloresPantuflas1 = new ArrayList<Color>();
+		Item item = itemRepository.findByNombreAndCategoria(nombreItem, categoriaId);
 		
-		coloresPantuflas1.add(getColor(0L));
-		coloresPantuflas1.add(getColor(2L));
-		coloresPantuflas1.add(getColor(3L));
+		ItemDTO itemDTO = transformarObjetoItemADTO(item);
 		
-		List<Color> coloresPantuflas2 = new ArrayList<Color>();
-		coloresPantuflas2.add(getColor(2L));
-		coloresPantuflas2.add(getColor(3L));
-		
-		List<Color> coloresPantuflas3 = new ArrayList<Color>();
-		coloresPantuflas3.add(getColor(0L));
-		coloresPantuflas3.add(getColor(3L));
-		coloresPantuflas3.add(getColor(1L));
-		coloresPantuflas3.add(getColor(2L));
-		
-		List<Color> coloresPantuflas4 = new ArrayList<Color>();
-		coloresPantuflas4.add(getColor(2L));
-		coloresPantuflas4.add(getColor(0L));
-		coloresPantuflas4.add(getColor(3L));
-		
-		List<Color> coloresPantuflas5 = new ArrayList<Color>();
-		coloresPantuflas5.add(getColor(0L));
-		
-		
-		List<Color> coloresPantuflas6 = new ArrayList<Color>();
-		coloresPantuflas6.add(getColor(0L));
-		coloresPantuflas6.add(getColor(2L));
-		
-		List<Color> coloresPantuflas7 = new ArrayList<Color>();
-		coloresPantuflas7.add(getColor(1L));
-		
-		List<Color> coloresPantuflas8 = new ArrayList<Color>();
-		coloresPantuflas8.add(getColor(0L));
-		coloresPantuflas8.add(getColor(1L));
-		coloresPantuflas8.add(getColor(2L));
-		coloresPantuflas8.add(getColor(3L));
-		
-		Linea lineaPantuflasAbuelitas = new Linea();
-		lineaPantuflasAbuelitas.setId(0L);
-		lineaPantuflasAbuelitas.setLinea(Constantes.LINEA_PANTUFLAS_ABUELITAS);
-		
-		Linea lineaPantuflasCerradas = new Linea();
-		lineaPantuflasCerradas.setId(0L);
-		lineaPantuflasCerradas.setLinea(Constantes.LINEA_PANTUFLAS_CERRADAS);
-		
-		List<Talla> tallasPantuflas = new ArrayList<Talla>();
-		tallasPantuflas.add(new Talla(0L,"35"));
-		tallasPantuflas.add(new Talla(1L,"36"));
-		tallasPantuflas.add(new Talla(2L,"37"));
-		tallasPantuflas.add(new Talla(3L,"38"));
-		tallasPantuflas.add(new Talla(4L,"39"));
-		tallasPantuflas.add(new Talla(4L,"40"));
-		tallasPantuflas.add(new Talla(4L,"41"));
-		tallasPantuflas.add(new Talla(4L,"42"));
-		tallasPantuflas.add(new Talla(4L,"43"));
-
-		pantuflasMujer.add(new Producto(0L,"Pantuflas 1",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas1, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(1L,"Pantuflas 2",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas2, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(2L,"Pantuflas 3",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas3, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(3L,"Pantuflas 4",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas4, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(4L,"Pantuflas 5",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas5, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(5L,"Pantuflas 6",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas6, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(6L,"Pantuflas 7",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas7, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		pantuflasMujer.add(new Producto(7L,"Pantuflas 8",Constantes.CATEGORIA_MUJER, new BigDecimal(15000), "/img/categorias/mujeres/_MG_8109.jpg", coloresPantuflas8, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/mujeres/_MG_8109.jpg", "/producto/pantuflas/mujer")));
-		
-		return pantuflasMujer;
+		return itemDTO;
 	}
+	
+	private ProductoDTO transformarObjetoProductoADTO(Producto producto) {
+		
+		ProductoDTO productoDTO = new ProductoDTO();
+		
+		productoDTO.setId(producto.getId());
+		productoDTO.setCategoria(producto.getCategoria().getNombre());
+		
+		List<ColorDTO> listaColoresDTOProducto = new ArrayList<>();
+		
+		for (Color color : producto.getColores()) {
+			
+			listaColoresDTOProducto.add(transformarObjetoColorADTO(color));
 
-	@Override
-	public List<Producto> getPijamasHombre() {
+		}
 		
-		List<Producto> pijamasHombre = new ArrayList<Producto>();
+		productoDTO.setColores(listaColoresDTOProducto);
+		productoDTO.setDescripcion(producto.getDescripcion());
+		productoDTO.setItem(transformarObjetoItemADTO(producto.getItem()));
+		productoDTO.setLinea(transformarObjetoLineaADTO(producto.getLinea()));
+		productoDTO.setMaterial(producto.getMaterial().getMaterial());
+		productoDTO.setNombre(producto.getNombre());
+		productoDTO.setPrecio(producto.getPrecio());
+		productoDTO.setRutaFoto(producto.getRutaFoto());
 		
-		List<Color> coloresPijama1 = new ArrayList<Color>();
+		List<TallaDTO> listaTallasDTOProducto = new ArrayList<>();
+		for (Talla talla : producto.getTallas()) {
+			
+			listaTallasDTOProducto.add(transformarObjetoTallaADTO(talla));
+			
+		}
 		
-		coloresPijama1.add(getColor(0L));
-		coloresPijama1.add(getColor(2L));
-		coloresPijama1.add(getColor(3L));
+		productoDTO.setTallas(listaTallasDTOProducto);
 		
-		List<Color> coloresPijama2 = new ArrayList<Color>();
-		coloresPijama2.add(getColor(2L));
-		coloresPijama2.add(getColor(3L));
-		
-		List<Color> coloresPijama3 = new ArrayList<Color>();
-		coloresPijama3.add(getColor(0L));
-		coloresPijama3.add(getColor(3L));
-		coloresPijama3.add(getColor(1L));
-		coloresPijama3.add(getColor(2L));
-		
-		List<Color> coloresPijama4 = new ArrayList<Color>();
-		coloresPijama4.add(getColor(2L));
-		coloresPijama4.add(getColor(0L));
-		coloresPijama4.add(getColor(3L));
-		
-		List<Color> coloresPijama5 = new ArrayList<Color>();
-		coloresPijama5.add(getColor(0L));
-		
-		
-		List<Color> coloresPijama6 = new ArrayList<Color>();
-		coloresPijama6.add(getColor(0L));
-		coloresPijama6.add(getColor(2L));
-		
-		List<Color> coloresPijama7 = new ArrayList<Color>();
-		coloresPijama7.add(getColor(1L));
-		
-		List<Color> coloresPijama8 = new ArrayList<Color>();
-		coloresPijama8.add(getColor(0L));
-		coloresPijama8.add(getColor(1L));
-		coloresPijama8.add(getColor(2L));
-		coloresPijama8.add(getColor(3L));
-		
-		Linea lineaPijamasClasica = new Linea();
-		lineaPijamasClasica.setId(0L);
-		lineaPijamasClasica.setLinea(Constantes.LINEA_PIJAMAS_CLASICA);
-		
-		Linea lineaPijamasJuvenil = new Linea();
-		lineaPijamasJuvenil.setId(0L);
-		lineaPijamasJuvenil.setLinea(Constantes.LINEA_PIJAMAS_JUVENIL);
-		
-		List<Talla> tallasPijama = new ArrayList<Talla>();
-		tallasPijama.add(new Talla(0L,"XS"));
-		tallasPijama.add(new Talla(1L,"S"));
-		tallasPijama.add(new Talla(2L,"M"));
-		tallasPijama.add(new Talla(3L,"L"));
-		tallasPijama.add(new Talla(4L,"XL"));
-
-		pijamasHombre.add(new Producto(0L,"Pijama Marcos",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama1, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(1L,"Pijama Miguel",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama2, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(2L,"Pijama Santiago",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama3, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(3L,"Pijama Felipe",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama4, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(4L,"Pijama Ulises",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama5, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(5L,"Pijama Fernando",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama6, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(6L,"Pijama Angel",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama7, lineaPijamasClasica, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		pijamasHombre.add(new Producto(7L,"Pijama Don Juan",Constantes.CATEGORIA_HOMBRE, new BigDecimal(30000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPijama8, lineaPijamasJuvenil, "Manga larga pantalón largo", "Tejido de punto", tallasPijama, new Item(0L,Constantes.ITEM_PIJAMAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pijamas/hombre")));
-		
-		return pijamasHombre;
+		return productoDTO;
 	}
-
-	@Override
-	public List<Producto> getPantuflasHombre() {
+	
+	private ColorDTO transformarObjetoColorADTO(Color color) {
 		
-		List<Producto> pantuflasHombre = new ArrayList<Producto>();
+		ColorDTO colorDTO = new ColorDTO();
+		colorDTO.setId(color.getId());
+		colorDTO.setColor(color.getColor());
+		colorDTO.setClaseColor(color.getClaseColor());
 		
-		List<Color> coloresPantuflas1 = new ArrayList<Color>();
+		return colorDTO;
+	}
+	
+	private ItemDTO transformarObjetoItemADTO(Item item) {
 		
-		coloresPantuflas1.add(getColor(0L));
-		coloresPantuflas1.add(getColor(2L));
-		coloresPantuflas1.add(getColor(3L));
+		ItemDTO itemDTO = new ItemDTO();
+		itemDTO.setId(item.getId());
+		itemDTO.setLink(item.getLink());
+		itemDTO.setNombreItem(item.getNombre());
+		itemDTO.setRutaFoto(item.getRutaFoto());
 		
-		List<Color> coloresPantuflas2 = new ArrayList<Color>();
-		coloresPantuflas2.add(getColor(2L));
-		coloresPantuflas2.add(getColor(3L));
+		return itemDTO;
+	}
+	
+	private LineaDTO transformarObjetoLineaADTO(Linea linea) {
 		
-		List<Color> coloresPantuflas3 = new ArrayList<Color>();
-		coloresPantuflas3.add(getColor(0L));
-		coloresPantuflas3.add(getColor(3L));
-		coloresPantuflas3.add(getColor(1L));
-		coloresPantuflas3.add(getColor(2L));
+		LineaDTO lineaDTO = new LineaDTO();
+		lineaDTO.setId(linea.getId());
+		lineaDTO.setLinea(linea.getNombre());
 		
-		List<Color> coloresPantuflas4 = new ArrayList<Color>();
-		coloresPantuflas4.add(getColor(2L));
-		coloresPantuflas4.add(getColor(0L));
-		coloresPantuflas4.add(getColor(3L));
+		return lineaDTO;	
+	}
+	
+	private TallaDTO transformarObjetoTallaADTO(Talla talla) {
 		
-		List<Color> coloresPantuflas5 = new ArrayList<Color>();
-		coloresPantuflas5.add(getColor(0L));
+		TallaDTO tallaDTO = new TallaDTO();
 		
+		tallaDTO.setId(talla.getId());
+		tallaDTO.setTalla(talla.getTalla());
 		
-		List<Color> coloresPantuflas6 = new ArrayList<Color>();
-		coloresPantuflas6.add(getColor(0L));
-		coloresPantuflas6.add(getColor(2L));
-		
-		List<Color> coloresPantuflas7 = new ArrayList<Color>();
-		coloresPantuflas7.add(getColor(1L));
-		
-		List<Color> coloresPantuflas8 = new ArrayList<Color>();
-		coloresPantuflas8.add(getColor(0L));
-		coloresPantuflas8.add(getColor(1L));
-		coloresPantuflas8.add(getColor(2L));
-		coloresPantuflas8.add(getColor(3L));
-		
-		Linea lineaPantuflasAbuelitas = new Linea();
-		lineaPantuflasAbuelitas.setId(0L);
-		lineaPantuflasAbuelitas.setLinea(Constantes.LINEA_PANTUFLAS_ABUELITAS);
-		
-		Linea lineaPantuflasCerradas = new Linea();
-		lineaPantuflasCerradas.setId(0L);
-		lineaPantuflasCerradas.setLinea(Constantes.LINEA_PANTUFLAS_CERRADAS);
-		
-		List<Talla> tallasPantuflas = new ArrayList<Talla>();
-		tallasPantuflas.add(new Talla(0L,"35"));
-		tallasPantuflas.add(new Talla(1L,"36"));
-		tallasPantuflas.add(new Talla(2L,"37"));
-		tallasPantuflas.add(new Talla(3L,"38"));
-		tallasPantuflas.add(new Talla(4L,"39"));
-		tallasPantuflas.add(new Talla(4L,"40"));
-		tallasPantuflas.add(new Talla(4L,"41"));
-		tallasPantuflas.add(new Talla(4L,"42"));
-		tallasPantuflas.add(new Talla(4L,"43"));
-
-		pantuflasHombre.add(new Producto(0L,"Pantuflas 1",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas1, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(1L,"Pantuflas 2",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas2, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(2L,"Pantuflas 3",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas3, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(3L,"Pantuflas 4",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas4, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(4L,"Pantuflas 5",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas5, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(5L,"Pantuflas 6",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas6, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(6L,"Pantuflas 7",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas7, lineaPantuflasAbuelitas, "Pantuflas para abuelitas", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		pantuflasHombre.add(new Producto(7L,"Pantuflas 8",Constantes.CATEGORIA_HOMBRE, new BigDecimal(15000), "/img/categorias/hombres/pantuflas/productosHombre.jpg", coloresPantuflas8, lineaPantuflasCerradas, "Pantuflas cerradas para todo publico", "Tejido de punto", tallasPantuflas, new Item(0L,Constantes.ITEM_PANTUFLAS,"/img/categorias/hombres/productos/productosHombre.jpg", "/producto/pantuflas/hombre")));
-		
-		return pantuflasHombre;
+		return tallaDTO;	
 	}
 
 }

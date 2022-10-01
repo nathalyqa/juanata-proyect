@@ -90,26 +90,26 @@
                             </div>
                         </div>
                         <div class="row mb-5">
-                            <div class="col-6">
+                            <div class="col-6" th:each="otroProducto : ${otrosProductos}">
                                 <div class="card">
                                     <div class="inner">
-                                        <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
+                                        <img th:src="${otroProducto.rutaFoto}" class="card-img-top" alt="...">
                                     </div>
                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
-                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;">Pantuflas</label>
+                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;" th:text="${otroProducto.nombreItem}"></label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="card">
-                                    <div class="inner">
-                                        <img th:src="${producto.rutaFoto}" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
-                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;">Bodys</label>
-                                    </div>
-                                </div>
-                            </div> 
+<!--                             <div class="col-6"> -->
+<!--                                 <div class="card"> -->
+<!--                                     <div class="inner"> -->
+<!--                                         <img th:src="${producto.rutaFoto}" class="card-img-top" alt="..."> -->
+<!--                                     </div> -->
+<!--                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);"> -->
+<!--                                         <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;">Bodys</label> -->
+<!--                                     </div> -->
+<!--                                 </div> -->
+<!--                             </div>  -->
                         </div>
                     </div>
                 </div>

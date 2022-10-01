@@ -2,7 +2,7 @@
 /*Tipo de letra cursiva*/
 .font-dancing-script-footer-title{
     font-family: 'Dancing Script', cursive;
-    color: rgb(0, 0, 106);
+    color: white;
     font-size: 2em;
 }
 
@@ -30,6 +30,13 @@
 .font-acme-cuerpo-gris-menu{
     font-family: 'Acme', sans-serif;
     color: rgb(116, 116, 116);
+    font-size: 1em;
+    opacity: 1;
+}
+
+.font-acme-cuerpo-blanco-menu{
+    font-family: 'Acme', sans-serif;
+    color: white;
     font-size: 1em;
     opacity: 1;
 }
@@ -226,6 +233,7 @@ label.texto-subrayado:hover{
 .textoEncimaImg{
 	display:none; 
   	transition: all .5s;
+  	text-align: center;
 }
 
 /* Visible texto */
@@ -310,6 +318,11 @@ label.texto-subrayado:hover{
   animation-name: slidein;
 }
 
+.animacionTituloTipsSuenno{
+  animation-duration: 10s;
+  animation-name: slidein-tips-suenno;
+}
+
 @keyframes slidein {
   from {
     margin-left: 80%;
@@ -319,6 +332,18 @@ label.texto-subrayado:hover{
   to {
     margin-left: 0%;
     width: 80%;
+  } 
+}
+
+@keyframes slidein-tips-suenno {
+  from {
+    margin-left: 90%;
+    width: 60%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   } 
 }
 
@@ -345,3 +370,897 @@ label.texto-subrayado:hover{
   	background: #fff;
 }
 
+
+/* Carta de colores */
+
+/*Amarillo Palido*/
+.carta-colores-amarillo-palido{
+	color: rgb(254, 249, 43);
+}
+
+/*Amarillo Canario*/
+.carta-colores-amarillo-canario{
+	color: rgb(250, 244, 0);
+}
+
+/*Amarillo Limon*/
+.carta-colores-amarillo-limon{
+	color: rgb(240, 227, 1);
+}
+
+/*Amarillo Princesa*/
+.carta-colores-amarillo-princesa{
+	color: rgb(243, 211, 1);
+}
+
+/*Amarillo Turpial*/
+.carta-colores-amarillo-turpial{
+	color: rgb(250, 198, 0);
+}
+
+/*Amarillo Primario*/
+.carta-colores-amarillo-primario{
+	color: rgb(253, 196, 0);
+}
+
+/*Vainilla*/
+.carta-colores-vainilla{
+	color: rgb(251, 209, 105);
+}
+
+/*Arena*/
+.carta-colores-arena{
+	color: rgb(255, 248, 185);
+}
+
+/*Ivory*/
+.carta-colores-ivory{
+	color: rgb(255, 250, 211);
+}
+
+/*Amanecer*/
+.carta-colores-amanecer{
+	color: rgb(251, 255, 202);
+}
+
+/*Marfil*/
+.carta-colores-marfil{
+	color: rgb(255, 253, 233);
+}
+
+/*Blanco Luna*/
+.carta-colores-blanco-luna{
+	color: rgb(255, 254, 225);
+}
+
+/*Durazno*/
+.carta-colores-durazno{
+	color: rgb(255, 199, 127);
+}
+
+/*Amarillo Auyama*/
+.carta-colores-amarillo-auyama{
+	color: rgb(254, 161, 47);
+}
+
+/*Zanahora*/
+.carta-colores-zanahoria{
+	color: rgb(255, 98, 12);
+}
+
+/*Melocoton*/
+.carta-colores-melocoton{
+	color: rgb(231, 197, 154);
+}
+
+/*Naranja*/
+.carta-colores-naranja{
+	color: rgb(255, 90, 32);
+}
+
+/*Camaron*/
+.carta-colores-camaron{
+	color: rgb(245, 111, 83);
+}
+
+/*Coral*/
+.carta-colores-coral{
+	color: rgb(253, 162, 145);
+}
+
+/*Salmon*/
+.carta-colores-salmon{
+	color: rgb(248, 215, 183);
+}
+
+/*Piel Catira*/
+.carta-colores-piel-catira{
+	color: rgb(255, 241, 216);
+}
+
+/*Piel Bronceada*/
+.carta-colores-piel-bronceada{
+	color: rgb(231, 197, 154);
+}
+
+/*Piel Nuñeca*/
+.carta-colores-piel-muneca{
+	color: rgb(254, 207, 159);
+}
+
+/*Rubor Piel*/
+.carta-colores-rubor-piel{
+	color: rgb(249, 159, 121);
+}
+
+/*Piel Angelical*/
+.carta-colores-piel-angelical{
+	color: rgb(242, 205, 179);
+}
+
+/*Piel*/
+.carta-colores-piel{
+	color: rgb(248, 215, 183);
+}
+
+/*Moreno Claro*/
+.carta-colores-moreno-claro{
+	color: rgb(213, 170, 98);
+}
+
+/*Crema*/
+.carta-colores-crema{
+	color: rgb(255, 223, 195);
+}
+
+/*Melon*/
+.carta-colores-melon{
+	color: rgb(255, 206, 159);
+}
+
+/*Arequipe*/
+.carta-colores-arequipe{
+	color: rgb(177, 97, 67);
+}
+
+/*Tamarindo*/
+.carta-colores-tamarindo{
+	color: rgb(154, 73, 9);
+}
+
+/*Marron Rosy*/
+.carta-colores-marron-rosy{
+	color: rgb(149, 51, 20);
+}
+
+/*Marron Yogui*/
+.carta-colores-marron-yogui{
+	color: rgb(111, 47, 5);
+}
+
+/*Marron peluche*/
+.carta-colores-marron-peluche{
+	color: rgb(87, 41, 0);
+}
+
+/*Marron Coco*/
+.carta-colores-marron-coco{
+	color: rgb(75, 27, 2);
+}
+
+/*Canela*/
+.carta-colores-canela{
+	color: rgb(100, 35, 0);
+}
+
+/*Terracota Roja*/
+.carta-colores-terracota-roja{
+	color: rgb(102, 13, 0);
+}
+
+/*Rojo Indigena*/
+.carta-colores-rojo-indigena{
+	color: rgb(111, 15, 2);
+}
+
+/*Caramelo*/
+.carta-colores-caramelo{
+	color: rgb(73, 38, 0);
+}
+
+/*Marron tabaco*/
+.carta-colores-marron-tabaco{
+	color: rgb(66, 30, 1);
+}
+
+/*Chocolate*/
+.carta-colores-chocolate{
+	color: rgb(66, 45, 6);
+}
+
+/*Marron intenso*/
+.carta-colores-marron-intenso{
+	color: rgb(67, 20, 0);
+}
+
+/*Rojo Ladrillo*/
+.carta-colores-rojo-ladrillo{
+	color: rgb(149, 62, 35);
+}
+
+/*Arabico*/
+.carta-colores-arabico{
+	color: rgb(224, 173, 67);
+}
+
+/*Medano*/
+.carta-colores-medano{
+	color: rgb(189, 154, 31);
+}
+
+/*Malteada*/
+.carta-colores-malteada{
+	color: rgb(205, 169, 137);
+}
+
+/*Ocre*/
+.carta-colores-ocre{
+	color: rgb(207, 161, 69);
+}
+
+/*Wengue*/
+.carta-colores-wengue{
+	color: rgb(20, 8, 8);
+}
+
+/*Hueso*/
+.carta-colores-hueso{
+	color: rgb(209, 195, 145);
+}
+
+/*Beige Oscuro*/
+.carta-colores-beige-oscuro{
+	color: rgb(200, 147, 78);
+}
+
+/*Piel Canela*/
+.carta-colores-piel-canela{
+	color: rgb(188, 113, 27);
+}
+
+/*Terracota Amarilla*/
+.carta-colores-terracota-amarilla{
+	color: rgb(171, 104, 0);
+}
+
+/*Nispero*/
+.carta-colores-nispero{
+	color: rgb(146, 110, 13);
+}
+
+/*Mostaza*/
+.carta-colores-mostaza{
+	color: rgb(165, 117, 6);
+}
+
+/*Beige*/
+.carta-colores-beige{
+	color: rgb(221, 179, 104);
+}
+
+/*Avena*/
+.carta-colores-avena{
+	color: rgb(242, 235, 210);
+}
+
+/*Rosa Añejo*/
+.carta-colores-rosa-anejo{
+	color: rgb(207, 161, 69);
+}
+
+/*Rosa Country*/
+.carta-colores-rosa-country{
+	color: rgb(187, 70, 91);
+}
+
+/*Rosa Vieja*/
+.carta-colores-rosa-vieja{
+	color: rgb(203, 76, 100);
+}
+
+/*Mostaza Suave*/
+.carta-colores-mostaza-suave{
+	color: rgb(197, 145, 1);
+
+}
+
+/*Rojo Primario*/
+.carta-colores-rojo-primario{
+	color: rgb(234, 22, 37);
+}
+
+/*Carmin*/
+.carta-colores-carmin{
+	color: rgb(162, 3, 2);
+}
+
+/*Rojo Navidad*/
+.carta-colores-rojo-navidad{
+	color: rgb(201, 20, 26);
+}
+
+/*Rojo Santa*/
+.carta-colores-rojo-santa{
+	color: rgb(104, 0, 12);
+}
+
+/*Rojo Cereza*/
+.carta-colores-rojo-cereza{
+	color: rgb(153, 1, 25);
+}
+
+/*Vino Tinto*/
+.carta-colores-vino-tinto{
+	color: rgb(78, 0, 20);
+}
+
+/*Escarlata*/
+.carta-colores-escarlata{
+	color: rgb(230, 35, 35);
+}
+
+/*Escarlata Country*/
+.carta-colores-escarlata-country{
+	color: rgb(225, 69, 78);
+}
+
+/*Coralina*/
+.carta-colores-coralina{
+	color: rgb(246, 83, 102);
+}
+
+/*Rosado*/
+.carta-colores-rosado{
+	color: rgb(255, 111, 141);
+}
+
+/*Crema Rosa*/
+.carta-colores-crema-rosa{
+	color: rgb(245, 203, 222);
+}
+
+/*Vino Añejo*/
+.carta-colores-vino-anejo{
+	color: rgb(106, 20, 26);
+}
+
+/*Magenta*/
+.carta-colores-magenta{
+	color: rgb(180, 1, 107);
+}
+
+/*Uva*/
+.carta-colores-uva{
+	color: rgb(129, 27, 95);
+}
+
+/*Fucsia*/
+.carta-colores-fucsia{
+	color: rgb(205, 50, 123);
+}
+
+/*Rosita*/
+.carta-colores-rosita{
+	color: rgb(255, 221, 233);
+}
+
+/*Fresita*/
+.carta-colores-fresita{
+	color: rgb(245, 203, 222);
+}
+
+/*Mora*/
+.carta-colores-mora{
+	color: rgb(223, 122, 186);
+}
+
+/*Purpura*/
+.carta-colores-purpura{
+	color: rgb(102, 54, 111);
+}
+
+/*Violeta Suave*/
+.carta-colores-violeta-suave{
+	color: rgb(85, 77, 157);
+}
+
+/*Violeta Intenso*/
+.carta-colores-violeta-intenso{
+	color: rgb(44, 28, 111);
+}
+
+/*Morado*/
+.carta-colores-morado{
+	color: rgb(79, 39, 114);
+}
+
+/*Lila*/
+.carta-colores-lila{
+	color: rgb(127, 110, 186);
+}
+
+/*Orquidea*/
+.carta-colores-orquidea{
+	color: rgb(177, 163, 207);
+}
+
+/*Azul Cobalto*/
+.carta-colores-azul-cobalto{
+	color: rgb(6, 4, 55);
+}
+
+/*Azul Nocturno*/
+.carta-colores-azul-nocturno{
+	color: rgb(7, 32, 62);
+}
+
+/*Azul Intenso*/
+.carta-colores-azul-intenso{
+	color: rgb(0, 5, 85);
+}
+
+/*Azul Ultramar*/
+.carta-colores-azul-ultramar{
+	color: rgb(17, 0, 158);
+}
+
+/*Cobalto claro*/
+.carta-colores-cobalto-claro{
+	color: rgb(79, 113, 211);
+}
+
+/*Azul Seda*/
+.carta-colores-azul-seda{
+	color: rgb(91, 95, 182);
+}
+
+/*Azul Zafiro*/
+.carta-colores-azul-zafiro{
+	color: rgb(7, 18, 64);
+}
+
+/*Cobalto Medio*/
+.carta-colores-cobalto-medio{
+	color: rgb(13, 32, 128);
+}
+
+/*Zafiro Medio*/
+.carta-colores-zafiro-medio{
+	color: rgb(0, 62, 139);
+}
+
+/*Azul Royal*/
+.carta-colores-azul-royal{
+	color: rgb(42, 50, 124);
+}
+
+/*Azul Petunia*/
+.carta-colores-azul-petunia{
+	color: rgb(53, 56, 92);
+}
+
+/*Azul Country*/
+.carta-colores-azul-country{
+	color: rgb(31, 70, 109);
+}
+
+/*Azul rey*/
+.carta-colores-azul-rey{
+	color: rgb(0, 51, 143);
+}
+
+/*Azul Primario*/
+.carta-colores-azul-primario{
+	color: rgb(11, 6, 94);
+}
+
+/*Celeste*/
+.carta-colores-celeste{
+	color: rgb(55, 130, 218);
+}
+
+/*Azul Suave*/
+.carta-colores-azul-suave{
+	color: rgb(89, 158, 212);
+}
+
+/*Azul bebe*/
+.carta-colores-azul-bebe{
+	color: rgb(105, 150, 199);
+}
+
+/*Azul Cielo*/
+.carta-colores-azul-cielo{
+	color: rgb(0, 92, 172);
+}
+
+/*Azul Bahia*/
+.carta-colores-azul-bahia{
+	color: rgb(19, 76, 91);
+}
+
+/*Turquesa Intenso*/
+.carta-colores-turquesa-intenso{
+	color: rgb(0, 37, 65);
+}
+
+/*Turquesa Suave*/
+.carta-colores-turquesa-suave{
+	color: rgb(0, 119, 129);
+}
+
+/*Azul Turquesa*/
+.carta-colores-azul-turquesa{
+	color: rgb(22, 172, 149);
+}
+
+/*Cielo*/
+.carta-colores-cielo{
+	color: rgb(176, 207, 231);
+}
+
+/*Azul Pastel*/
+.carta-colores-azul-pastel{
+	color: rgb(194, 225, 242);
+}
+
+/*Iris*/
+.carta-colores-iris{
+	color: rgb(172, 218, 164);
+}
+
+/*Verde Menta*/
+.carta-colores-verde-menta{
+	color: rgb(0, 56, 46);
+}
+
+/*Aguamarina*/
+.carta-colores-aguamarina{
+	color: rgb(77, 209, 181);
+}
+
+/*Verde Turquesa*/
+.carta-colores-verde-turquesa{
+	color: rgb(22, 172, 149);
+}
+
+/*Verde Bahia*/
+.carta-colores-verde-bahia{
+	color: rgb(59, 94, 85);
+}
+
+/*Verde Mar*/
+.carta-colores-verde-mar{
+	color: rgb(197, 237, 228);
+}
+
+/*Verde Lima*/
+.carta-colores-verde-lima{
+	color: rgb(181, 227, 76);
+}
+
+/*Periquito*/
+.carta-colores-periquito{
+	color: rgb(213, 230, 102);
+}
+
+/*Verde Agua*/
+.carta-colores-verde-agua{
+	color: rgb(118, 194, 103);
+}
+
+/*Verde Manzana*/
+.carta-colores-verde-manzana{
+	color: rgb(44, 150, 0);
+}
+
+/*Verde Limon*/
+.carta-colores-verde-limon{
+	color: rgb(59, 117, 41);
+}
+
+/*Verde Esmeralda*/
+.carta-colores-verde-esmeralda{
+	color: rgb(0, 102, 26);
+}
+
+/*Verde Botella*/
+.carta-colores-verde-botella{
+	color: rgb(0, 57, 42);
+}
+
+/*Verde Pascua*/
+.carta-colores-verde-pascua{
+	color: rgb(0, 60, 48);
+}
+
+/*Verde Fiesta*/
+.carta-colores-verde-fiesta{
+	color: rgb(6, 28, 7);
+}
+
+/*Verde Navidad*/
+.carta-colores-verde-navidad{
+	color: rgb(0, 87, 19);
+}
+
+/*Verde Bosque*/
+.carta-colores-verde-bosque{
+	color: rgb(60, 87, 44);
+}
+
+/*Piedra de rio*/
+.carta-colores-piedra-de-rio{
+	color: rgb(110, 112, 75);
+}
+
+/*Verde Amazonas*/
+.carta-colores-verde-amazonas{
+	color: rgb(10, 51, 35);
+}
+
+/*Verde Tropical*/
+.carta-colores-verde-tropical{
+	color: rgb(0, 65, 23);
+}
+
+/*Verde Sombra*/
+.carta-colores-verde-sombra{
+	color: rgb(6, 28, 7);
+}
+
+/*Verde Olivia*/
+.carta-colores-verde-olivia{
+	color: rgb(57, 64, 30);
+}
+
+/*Verde Aceituna*/
+.carta-colores-verde-aceituna{
+	color: rgb(79, 79, 17);
+}
+
+/*Verde Salvia*/
+.carta-colores-verde-salvia{
+	color: rgb(127, 122, 56);
+}
+
+/*Gris Plomo*/
+.carta-colores-gris-plomo{
+	color: rgb(92, 92, 92);
+}
+
+/*Gris Humo*/
+.carta-colores-gris-humo{
+	color: rgb(115, 115, 115);
+}
+
+/*Gris Sage*/
+.carta-colores-gris-sage{
+	color: rgb(193, 201, 180);
+}
+
+/*Verde Sábila*/
+.carta-colores-verde-sabila{
+	color: rgb(77, 120, 103);
+}
+
+/*Amarillo Oliva*/
+.carta-colores-amarillo-oliva{
+	color: rgb(196, 188, 64);
+}
+
+/*Carbon Ceniza*/
+.carta-colores-carbon-ceniza{
+	color: rgb(56, 56, 66);
+}
+
+/*Gris Claro*/
+.carta-colores-gris-claro{
+	color: rgb(231, 233, 222);
+}
+
+/*Gris Azulado*/
+.carta-colores-gris-azulado{
+	color: rgb(46, 70, 94);
+}
+
+/*Gris Violeta*/
+.carta-colores-gris-violeta{
+	color: rgb(52, 12, 10);
+}
+
+/*Negro*/
+.carta-colores-negro{
+	color: rgb(0, 0, 0);
+}
+
+/*Crema de Piña*/
+.carta-colores-crema-de-pinna{
+	color: rgb(240, 255, 164);
+}
+
+/*Rojo Tinto*/
+.carta-colores-rojo-tinto{
+	color: rgb(89, 0, 4);
+}
+
+/*Piel Africana*/
+.carta-colores-piel-africana{
+	color: rgb(36, 17, 10);
+}
+
+/*Piel Mulata*/
+.carta-colores-piel-mulata{
+	color: rgb(52, 12, 10);
+}
+
+/*Acrilfondo*/
+.carta-colores-acrilfondo{
+	color: rgb(204, 180, 118);
+}
+
+/*Blanco Extra*/
+.carta-colores-blanco-extra{
+	color: rgb(209, 209, 207);
+}
+
+/*Crema de Lima*/
+.carta-colores-crema-de-lima{
+	color: rgb(204, 232, 148);
+}
+
+/*Crema de Limon*/
+.carta-colores-crema-de-limon{
+	color: rgb(164, 219, 161);
+}
+
+/*Crema de Parchita*/
+.carta-colores-crema-de-parchita{
+	color: rgb(255, 227, 159);
+}
+
+/*Crema de Melon*/
+.carta-colores-crema-de-melon{
+	color: rgb(255, 162, 121);
+}
+
+/*Crema de Cereza*/
+.carta-colores-crema-de-cereza{
+	color: rgb(245, 130, 159);
+}
+
+/*Crema de Fresa*/
+.carta-colores-crema-de-fresa{
+	color: rgb(255, 135, 192);
+}
+
+/*Amarillo Neón fluorescente*/
+.carta-colores-amarillo-neon-fluorescente{
+	color: rgb(223, 247, 1);
+}
+
+/*Maracuya Neón fluorescente*/
+.carta-colores-maracuya-neon-fluorescente{
+	color: rgb(254, 169, 42);
+}
+
+/*Naranja Neón fluorescente*/
+.carta-colores-naranja-neon-fluorescente{
+	color: rgb(255, 74, 9);
+}
+
+/*Verde Neón fluorescente*/
+.carta-colores-verde-neon-fluorescente{
+	color: rgb(2, 126, 2);
+}
+
+/*Rojo Neón Fluorescente*/
+.carta-colores-rojo-neon-fluorescente{
+	color: rgb(255, 0, 42);
+}
+
+/*Rosa Neón fluorescente*/
+.carta-colores-rosa-neon-fluroescente{
+	color: rgb(255, 2, 108);
+}
+
+/*Magenta Neón fluorescente*/
+.carta-colores-magenta-neon-fluorescente{
+	color: rgb(217, 0, 89);
+}
+	
+
+/* Fin Carta de colores */
+
+body {
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 100vh;
+}
+
+footer {
+	margin-top: auto;
+}
+
+.fondo-salud-del-suenno{
+	background: rgb(0, 0, 50);
+}
+
+.estrellas-parpadeando-1{
+	animation-duration: 3s;
+  	animation-name: papadear;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+	
+}
+
+.estrellas-parpadeando-2{
+	animation-duration: 3500ms;
+  	animation-name: papadear;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+	
+}
+
+.estrellas-parpadeando-3{
+	animation-duration: 4s;
+  	animation-name: papadear;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+	
+}
+
+.estrellas-parpadeando-4{
+	animation-duration: 4500s;
+  	animation-name: papadear;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;	
+}
+
+.estrellas-parpadeando-5{
+	animation-duration: 5s;
+  	animation-name: papadear;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;	
+}
+
+.aurora-boreal{
+	position: absolute;
+	animation-duration: 10s;
+  	animation-name: papadear;
+}
+
+@keyframes papadear{
+	0% { opacity: 0; }
+	5% { opacity: 0,5; }
+	10% { opacity: 0,1; }
+	15% { opacity: 0,15; }
+  	20% { opacity: 0,2; }
+  	25% { opacity: 0,25; }
+  	30% { opacity: 0,3; }
+  	35% { opacity: 0,35; }
+  	40% { opacity: 0,4; }
+  	45% { opacity: 0,45; }
+  	50% { opacity: 0,5; }
+  	55% { opacity: 0,55; }
+  	60% { opacity: 0,6; }
+  	65% { opacity: 0,65; }
+  	70% { opacity: 0,7; }
+  	75% { opacity: 0,75; }
+  	80% { opacity: 0,8; }
+  	85% { opacity: 0,85; }
+  	90% { opacity: 0,9; }
+  	95% { opacity: 0,95; }
+  	100% { opacity: 1; }
+}

@@ -2,11 +2,15 @@ package com.project.juanata.core.services;
 
 import java.util.List;
 
-import com.project.juanata.core.model.Item;
+import com.project.juanata.core.model.dto.ItemDTO;
 
 public interface CategoriasService {
 	
-	public List<Item> getItemsMujer();
+	public List<ItemDTO> getItemsMujer();
 	
-	public List<Item> getItemsHombre();
+	public List<ItemDTO> getItemsHombre();
+	
+	List<ItemDTO> get2ItemsAleatorios(List<Integer> itemsIdsNoRetornable);
+	
+	Integer obtenerIdCategoriaPorNombre(String nombreCategoria);
 }

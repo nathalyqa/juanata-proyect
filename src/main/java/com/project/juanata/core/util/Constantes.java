@@ -15,6 +15,7 @@ public class Constantes {
 	public static final String ITEM_PANTUFLAS = "Pantuflas";
 	public static final String ITEM_CHAQUETAS = "Chaquetas";
 	public static final String ITEM_BODYS = "Bodys";
+	public static final String ITEM_SALIDAS_DE_BANIO = "Salidas de Baño";
 	public static final String TITULO_PRODUCTOS_CATEGORIA_MUJER = "Productos Mujer";
 	public static final String TITULO_PRODUCTOS_CATEGORIA_HOMBRE = "Productos Hombre";
 	
@@ -26,8 +27,12 @@ public class Constantes {
 	public static final String TITULO_BREADCRUMB_PIJAMAS = "Pijamas";
 	public static final String TITULO_BREADCRUMB_PANTUFLAS = "Pantuflas";
 	public static final String TITULO_BREADCRUMB_DETALLE_PRODUCTO = "Detalle Producto";
+	public static final String TITULO_BREADCRUMB_SALIDAS_DE_BANIO = "Salidas de Baño";
+	public static final String TITULO_BREADCRUMB_BODY = "Body";
+	public static final String TITULO_BREADCRUMB_CHAQUETAS = "Chaquetas";
 	
 	public static final String TITULO_BREADCRUMB_HOMBRE = "Hombre";
+	public static final String TITULO_BREADCRUMB_CARTA_DE_COLORES = "Carta de Colores";
 	
 	/**
 	 * Rutas navegación
@@ -39,5 +44,8 @@ public class Constantes {
 	public static final String LINK_BREADCRUMB_CATEGORIA_HOMBRE = "/categorias/hombre";
 	public static final String LINK_BREADCRUMB_PIJAMAS_HOMBRE = "/producto/pijamas/hombre";
 	public static final String LINK_BREADCRUMB_PANTUFLAS_HOMBRE = "/producto/pantuflas/hombre";
+	public static final String LINK_BREADCRUMB_SALIDAS_DE_BANIO_MUJER = "/producto/salidasDeBaño/mujer";
+	public static final String LINK_BREADCRUMB_BODY_MUJER = "/producto/bosy/mujer";
+	public static final String LINK_BREADCRUMB_CHAQUETAS_MUJER = "/producto/chaquetas/mujer";
 	
 }

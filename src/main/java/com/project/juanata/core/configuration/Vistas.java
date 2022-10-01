@@ -7,5 +7,6 @@ public class Vistas {
 	public static String LISTA_PRODUCTO_ESPECIFICO = "lista-producto-especifico";
 	public static String PRODUCTO_DETALLE = "producto-detalle";
 	public static String SALUD_DEL_SUENNO = "salud-del-suenno";
+	public static String CARTA_DE_COLORES = "carta-de-colores";
 
 }
