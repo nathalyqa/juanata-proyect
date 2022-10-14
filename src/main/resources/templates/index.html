@@ -14,6 +14,22 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script th:src="@{/js/scripts.js}" src="../static/js/scripts.js"></script>
+        <script type="text/javascript">
+        toggleDropdown (e) => {
+        	  const _d = $(e.target).closest('.dropdown'),
+        	    _m = $('.dropdown-menu', _d);
+        	  setTimeout(function(){
+        	    const shouldOpen = e.type !== 'click' && _d.is(':hover');
+        	    _m.toggleClass('show', shouldOpen);
+        	    _d.toggleClass('show', shouldOpen);
+        	    $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+        	  }, e.type === 'mouseleave' ? 300 : 0);
+        	}
+
+        	$('body')
+        	  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
+        	  .on('click', '.dropdown-menu a', toggleDropdown);
+        </script>
 
         <!--Google Font-->
         <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
@@ -33,9 +49,10 @@
           <ol class="carousel-indicators">
             <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
             <li data-target="#carouselHome" data-slide-to="1"></li>
+            <li data-target="#carouselHome" data-slide-to="5"></li>
 <!--             <li data-target="#carouselHome" data-slide-to="2"></li> -->
           </ol>
-          <div class="carousel-inner" style="margin-top: 80px;height: 400px;">
+          <div class="carousel-inner altura-por-dispositivo" style="margin-top: 100px;">
 <!--             <div class="carousel-item"> -->
 <!--               <img src="../img/pijama2jpg.jpg" class="d-block w-100" alt="..."> -->
 <!--             </div> -->
@@ -44,6 +61,9 @@
             </div>
             <div class="carousel-item">
               <img src="../img/tapabocas.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/BannerNew3.jpg" class="d-block w-100 h-100" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
@@ -55,25 +75,26 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        
         <!--FIN BANNER-->
 
         <div class="container overflow-hidden">
-          <div class="row">
+          <div class="row mt-5 mb-5 pb-5">
             <div class="col-12">
               <hr>
               <!--SECCIÓN INFORMATIVA SERVICIO A DOMICILIO-->
               <div class="row" style="flex-wrap: nowrap;">
-                <div class="col-12 animacionLogosDomicilio" style="overflow: hidden;">
-                  <i class="fa fa-truck color-gris" style="font-size: 4em;"></i>
-                  <i class="fa fa-gift color-dorado" style="font-size: 4em;"></i>
+                <div class="col-12 animacionLogosDomicilio mt-5" style="overflow: hidden;">
+                  <i class="fa fa-truck color-negro" style="font-size: 10em;"></i>
+                  <i class="fa fa-gift color-rojo" style="font-size: 10em;"></i>
                 </div>
               </div>
               <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8" style="overflow: hidden;">
-                  <H1 class="font-dancing-script text-center">Para mayor comodidad llevamos las prendas a tu casa. <a class="color-azulJuanata" target="_blank" href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20me%20interesan%20tus%20productos.">¡Haz tu pedido aquí!</a></H1>
+				<div class="col-lg-1 col-md-1 "></div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 mt-5 pb-5 mb-5" style="overflow: hidden;">
+                  <H1 class="font-dancing-script text-center">Para mayor comodidad llevamos las prendas a tu casa. <a class="color-azulJuanata" target="_blank" href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20me%20interesan%20tus%20productos."><span class="animacion-escribir" style="width: 0; overflow: hidden; white-space: nowrap;">¡Haz tu pedido aquí!</span></a></H1>
                 </div>
-                <div class="col-2"></div>
+                <div class="col-lg-1 col-md-1 "></div>
               </div>
               <!--FIN SECCIÓN INFORMATIVA SERVICIO A DOMICILIO-->
               <hr>
@@ -84,7 +105,7 @@
                     <div class="col-12">
                     </div>
                   </div>
-                  <div class="row mt-5 ml-5 mr-5" style="height: 540px; position: relative; flex-wrap: nowrap; padding-bottom: 2%">
+                  <div class="row" style="position: relative; flex-wrap: nowrap; padding-bottom: 2%">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
                     	<a th:href="@{/categorias/mujer}">
                     		<img src="../img/productosMujer2.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
@@ -109,8 +130,17 @@
              <!--FIN ICONO WHATSAPP -->
             </div>
           </div>
+          
         </div>
-    
+        <div class="row overflow-hidden">
+	        <div class="col-12 altura-texto-nueva-coleccion" style="overflow: hidden;">
+	        	<h2 class='elegantshadow textos-elegantes'>Colección 2022</h2>
+	        </div>
+	        
+	    	<div class="inner col-12" style="overflow: hidden;">
+	        	<img src="../img/BannerSecundario.png" class="w-100 h-100">
+	        </div>
+        </div>
         <!--INICIO FOOTER-->
         <div th:replace="fragments/footer :: footer"></div>
         <!--FIN FOOTER-->

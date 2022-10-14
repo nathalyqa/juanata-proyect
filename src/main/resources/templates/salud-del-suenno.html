@@ -32,7 +32,7 @@
     <title>Pijamas y Pantuflas juanata</title>
 
 </head>
-<body class="fondo-salud-del-suenno">
+<body class="fondo-salud-del-suenno" style="display: grid;">
     <!--INICIO NAVBAR - MENU-->
     <div th:replace="fragments/menu :: menu"></div>
     <!--FIN NAVBAR - MENU-->
@@ -40,219 +40,435 @@
     <div class="container-fluid overflow-hidden pl-5 pr-5">
         <div class="row">
             <div class="col-12">
-                <div class="row" style="margin-top: 90px;">
-                    <div class="col-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb bg-transparent">
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="@{/home}">Inicio</a></li>
-                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page">Salud del sueño</li>
-                            </ol>
-                          </nav>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4 aurora-boreal">
+                <div class="row" style="margin-top: 100px;">
+                    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 aurora-boreal">
             			<img src="../img/aurora_boreal3.png">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 80px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 40px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 70px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-3">
             			<img src="../img/estrella.png" style="padding-top: 30px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 90px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 10px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 50px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
-            			<img src="../img/estrella.png" style="padding-top: 45px; padding-left: 20%">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+            			<img src="../img/estrella-grande.png" style="padding-top: 45px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 15px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 20%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-3">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 80px; padding-right: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 40px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 70px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 30px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 90px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-3">
             			<img src="../img/estrella.png" style="padding-top: 10px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 50px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 45px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 15px; padding-left: 35%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 35%">
             		</div>
             		<div class="col-12">
                         <p class="font-dancing-script text-center color-dorado animacionTituloTipsSuenno" style="font-size: 90px">Tips del Sueño</p>
                     </div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-3">
             			<img src="../img/estrella.png" style="padding-top: 80px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 40px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 70px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 30px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 90px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 10px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-3">
             			<img src="../img/estrella.png" style="padding-top: 50px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 45px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 15px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 15%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 80px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 40px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 70px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 30px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-3">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-3">
             			<img src="../img/estrella.png" style="padding-top: 90px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 10px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 50px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 45px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 15px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 2%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 80px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 40px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 70px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 30px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 90px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 10px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 50px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-4">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-2">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 45px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
+            		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-1">
             			<img src="../img/estrella.png" style="padding-top: 15px; padding-left: 45%">
             		</div>
-            		<div class="col-1 estrellas-parpadeando-1">
-            			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 45%">
+            		<div class="col-12" style="height: 200px">
             		</div>
-            		           
-<!-- 					<div class="col-12"> -->
-<!--                         <img src="../img/saludDelSueñoPortada.png" class="d-block w-100 h-100" alt="..." onmouseover="escalaGrisesImagen(this)" onmouseout="sinEscalaGrisesImagen(this)"> -->
-<!--                     </div> -->
                 </div>
-            </div>
+             </div>            
         </div>
+        
         <!--INICIO ICONO WHATSAPP -->
         <div class="row">
 			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
         </div> 
         <!--FIN ICONO WHATSAPP -->
     </div>
+    <div class="overflow-hidden pr-0 pl-0">
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeRight">
+				<div class="row">
+					<img src="../img/Nube2.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 8vh;">
+			<div class="scroll-content fadeLeft texto-oculto-circulo">
+		      <span>1</span>
+		      <h1>Tip 1</h1>
+		      <p>Evita que tus siestas excedan un tiempo mayor a 45 minutos.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/siesta.png">
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row" style="flex-direction: row-reverse;">
+					<img src="../img/Nube3_1.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 130vh;">
+		   <div class="scroll-content fadeRight texto-oculto-circulo">
+		      <span>2</span>
+		      <h1>Tip 2</h1>
+		      <p>Trata de programar una hora estandar para ir a dormir todos los días.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/horarioDormir.png" style="margin-left: 5vh">
+		    </div>   
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube8.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 20vh;">
+		  <div class="scroll-content fadeRight texto-oculto-circulo">
+		      <span>3</span>
+		      <h1>Tip 3</h1>
+		      <p>Practica algun deporte con frecuencia.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/ejercicio.png" style="margin-left: 6vh">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube7_2.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 80vh;">
+		   <div class="scroll-content fadeLeft texto-oculto-circulo">
+		      <span>4</span>
+		      <h1>Tip 4</h1>
+		      <p>Si eres fiel amante del cafe, té o bebidas que contengan cafeina intenta evitarlas por lo menos 6 horas antes de ir a dormir.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/evitarCafeina.png" style="margin-left: 6vh">
+		    </div>  
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube9_2.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 140vh;">
+		  <div class="scroll-content fadeRight texto-oculto-circulo">
+		      <span>5</span>
+		      <h1>Tip 5</h1>
+		      <p>Que tu cena sea ligera, intenta no ir a la cama con llenura excesiva pero tampoco con hambre, maneja el equilibrio.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/comidaLiviana.png" style="margin-left: 1.5vh">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes-2">
+			<div class="scroll-content fadeLeft">
+				<div class="row" style="flex-direction: row-reverse;">
+					<img src="../img/NubeLluviosa1_1.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-sin-contenido-1"></div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeRight">
+				<div class="row">
+					<img src="../img/NubeLluviosa2.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 90vh;">
+		  <div class="scroll-content fadeLeft texto-oculto-circulo">
+		      <span>6</span>
+		      <h1>Tip 6</h1>
+		      <p>Reemplaza las pantallas por libros o musica relajante al menos 1 hora antes de ir a dormir.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/evitarPantallas.png">
+		  </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/NubeLluviosa3.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-sin-contenido-2"></div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/NubeLluviosa4.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 30vh;">
+		  <div class="scroll-content fadeRight texto-oculto-circulo">
+		      <span>7</span>
+		      <h1>Tip 7</h1>
+		      <p>Evita el consumo de liquidos al final del día.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/EvitarLiquidos.png" style="margin-left: 5vh">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeRight" style="margin-left: 80vh;">
+				<div class="row">
+					<img src="../img/Nube13_1.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 70vh;">
+		  <div class="scroll-content fadeLeft texto-oculto-circulo">
+		      <span>8</span>
+		      <h1>Tip 8</h1>
+		      <p>Evita fumar e ingerir excesivamente licor 4 horas antes de ir a dormir.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/evitarFumarLicor.png" style="margin-left: 5vh">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube14_1.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 10vh;">
+		  <div class="scroll-content fadeRight texto-oculto-circulo">
+		      <span>9</span>
+		      <h1>Tip 9</h1>
+		      <p>Adecua tu habitación lo más oscura que puedas y aisla todo el ruido.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/sinLuz.png" style="margin-left: 3vh">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube15_1.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips" style="margin-left: 90vh;">
+		  <div class="scroll-content fadeLeft texto-oculto-circulo">
+		      <span>10</span>
+		      <h1>Tip 10</h1>
+		      <p>Usa ropa de cama comoda que acaricie tus sueños por ejemplo una acogedora prenda de Juanata.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/pijamaComoda.png" style="margin-left: 4vh">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeRight">
+				<div class="row" style="flex-direction: row-reverse;">
+					<img src="../img/Nube16.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips-2" style="margin-left: 140vh;">
+		  <div class="scroll-content fadeLeft texto-oculto-circulo">
+		      <span>11</span>
+		      <h1>Tip 11</h1>
+		      <p>Asegurate de encontrar la temperatura ideal para ti, acogedora, calientita pero con buena ventilación.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/calor.png">
+		    </div>    
+		</div>
+		<div class="div-salud-del-suenno-nubes">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube14.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-sin-contenido-2">
+			<div class="scroll-content fadeLeft">
+				<div class="row">
+					<img src="../img/Nube13.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-sin-contenido-2">
+			<div class="scroll-content fadeTop">
+				<div class="row">
+					<img src="../img/sol.png">
+				</div>
+		    </div>
+		</div>
+		<div class="div-salud-del-suenno-circulos-con-tips-2" style="margin-left: 60vh;">
+		  <div class="scroll-content fadeRight texto-oculto-circulo">
+		      <span>12</span>
+		      <h1>Tip 12</h1>
+		      <p>Programate y levantante de la cama a una misma hora todos los días.</p>
+		      <img src="../img/Salud_del_Suenno/imagenes-tips/despertarse.png" style="margin-left: 2vh">
+		    </div>    
+		</div>
+    </div>
 
     <!--INICIO FOOTER-->
     <div th:replace="fragments/footer :: footer"></div>
     <!--FIN FOOTER-->
+    
+    <script type="text/javascript">
+    
+    	window.addEventListener('scroll', function()  {
+    	  let elements = document.getElementsByClassName('scroll-content');
+    	  let screenSize = window.innerHeight;
+    	  
+    	    for(var i = 0; i < elements.length; i++) {
+    	      let element = elements[i];
+
+    	      if(element.getBoundingClientRect().top < screenSize) {
+    	        element.classList.add('visible');
+    	      } else {
+    	        element.classList.remove('visible');
+    	      }
+    	    }
+    	});
+    </script>
 </body>
 </html>
