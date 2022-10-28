@@ -9,11 +9,13 @@
 
         <!--Favicons-->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/icono-pestanna-pagina-web.png" />
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script th:src="@{/js/scripts.js}" src="../static/js/scripts.js"></script>
+        <script th:src="@{/js/lottie-player.js}" src="../static/js/lottie-player.js"></script>
         <script type="text/javascript">
         toggleDropdown (e) => {
         	  const _d = $(e.target).closest('.dropdown'),
@@ -49,21 +51,25 @@
           <ol class="carousel-indicators">
             <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
             <li data-target="#carouselHome" data-slide-to="1"></li>
-            <li data-target="#carouselHome" data-slide-to="5"></li>
+            <li data-target="#carouselHome" data-slide-to="2"></li>
+            <li data-target="#carouselHome" data-slide-to="3"></li>
 <!--             <li data-target="#carouselHome" data-slide-to="2"></li> -->
           </ol>
-          <div class="carousel-inner altura-por-dispositivo" style="margin-top: 100px;">
+          <div class="carousel-inner altura-por-dispositivo" style="margin-top: 130px;">
 <!--             <div class="carousel-item"> -->
 <!--               <img src="../img/pijama2jpg.jpg" class="d-block w-100" alt="..."> -->
 <!--             </div> -->
             <div class="carousel-item active">
-              <img src="../img/inscribeteBanner.jpg" class="d-block w-100" alt="...">
+              <img src="../img/BannerNew3_3.jpg" class="d-block w-100 h-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="../img/tapabocas.jpg" class="d-block w-100" alt="...">
+              <img src="../img/Banner4.jpg" class="d-block w-100 h-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="../img/BannerNew3.jpg" class="d-block w-100 h-100" alt="...">
+              <img src="../img/Banner6.jpg" class="d-block w-100 h-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/Banner7.jpg" class="d-block w-100 h-100" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
@@ -83,16 +89,25 @@
             <div class="col-12">
               <hr>
               <!--SECCIÓN INFORMATIVA SERVICIO A DOMICILIO-->
-              <div class="row" style="flex-wrap: nowrap;">
-                <div class="col-12 animacionLogosDomicilio mt-5" style="overflow: hidden;">
+              <div class="row animacionLogosDomicilio" style="flex-wrap: nowrap;">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  mt-5" >
+                	<lottie-player th:src="@{/json/Index/Camion_de_entrega.json}" src="../static/json/Index/Camion_de_entrega.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px; margin-left:10%;"  loop  autoplay></lottie-player>
+                <!--  
+                
                   <i class="fa fa-truck color-negro" style="font-size: 10em;"></i>
                   <i class="fa fa-gift color-rojo" style="font-size: 10em;"></i>
+                  -->
                 </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 mt-3 margin-left-dispositivo">
+                	<lottie-player th:src="@{/json/Index/PaqueteParacaidas.json}" src="../static/json/Index/PaqueteParacaidas.json"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 animacionLogosDomicilio mt-5" ></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 animacionLogosDomicilio mt-5" ></div>
               </div>
               <div class="row">
 				<div class="col-lg-1 col-md-1 "></div>
-                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 mt-5 pb-5 mb-5" style="overflow: hidden;">
-                  <H1 class="font-dancing-script text-center">Para mayor comodidad llevamos las prendas a tu casa. <a class="color-azulJuanata" target="_blank" href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20me%20interesan%20tus%20productos."><span class="animacion-escribir" style="width: 0; overflow: hidden; white-space: nowrap;">¡Haz tu pedido aquí!</span></a></H1>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 mt-0 pb-5 mb-5" style="overflow: hidden;">
+                  <H1 class="font-dancing-script text-center">Para mayor comodidad llevamos las prendas a tu casa. Contamos con servicio contraentrega. Pagas cuando recibas. <a class="color-azulJuanata" target="_blank" href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20me%20interesan%20tus%20productos."><span class="animacion-escribir" style="width: 0; overflow: hidden; white-space: nowrap;">¡Haz tu pedido aquí!</span></a></H1>
                 </div>
                 <div class="col-lg-1 col-md-1 "></div>
               </div>
@@ -105,16 +120,16 @@
                     <div class="col-12">
                     </div>
                   </div>
-                  <div class="row" style="position: relative; flex-wrap: nowrap; padding-bottom: 2%">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
+                  <div class="row" style="position: relative; padding-bottom: 2%">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mb-5 figure" style="padding-right: 5px;">
                     	<a th:href="@{/categorias/mujer}">
-                    		<img src="../img/productosMujer2.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                    		<img src="../img/portadaMujer_blanco.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)" style="border-radius: 10px;">
                       		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Mujer</label>
                     	</a>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 figure">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mb-5 figure" style="padding-left: 5px;">
                     	<a th:href="@{/categorias/hombre}">
-                    		<img src="../img/productosHombre2.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
+                    		<img src="../img/portadaHombre_blanco.jpg" class="w-100 h-100 img-fluid" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)" style="border-radius: 10px;">
                       		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em">Hombre</label>
                     	</a>
                     </div>
@@ -123,6 +138,15 @@
               </div>
               <!--FIN PRODUCTOS HOMBRE Y MUJER-->
               <hr>
+              
+              <div class="row" style="justify-content: center;">
+              	<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12" style="display: flex; justify-content: center;">
+	              	<a href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20me%20interesan%20las%20tarjetas%20de%20regalo,%20¿Me%20podrías%20brindar%20información?%20Gracias." target="_blank"><lottie-player th:src="@{/json/Index/Tarjeta_regalo2.json}" src="../static/json/Index/Tarjeta_regalo2.json"  background="transparent"  speed="0.5"  style="width: 370px; height: 370px;"  loop  autoplay></lottie-player></a>
+              	</div>
+              	<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              		<H1 class="font-dancing-script text-center margin-top-texto-tarjeta-regalo-dispositivos">¿No sabes que pijama regalar? ¡No te preocupes! regala una GiftCard.</H1>
+              	</div>
+              </div>
              <!--INICIO ICONO WHATSAPP -->
              <div class="row">
 				<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
@@ -132,13 +156,13 @@
           </div>
           
         </div>
-        <div class="row overflow-hidden">
-	        <div class="col-12 altura-texto-nueva-coleccion" style="overflow: hidden;">
+        <div class="row overflow-hidden" style="width: 100vw;">
+	        <div class="col-12 altura-texto-nueva-coleccion pr-0 pl-0" style="overflow: hidden;">
 	        	<h2 class='elegantshadow textos-elegantes'>Colección 2022</h2>
 	        </div>
 	        
-	    	<div class="inner col-12" style="overflow: hidden;">
-	        	<img src="../img/BannerSecundario.png" class="w-100 h-100">
+	    	<div class="inner col-12 pr-0 pl-0" style="overflow: hidden;">
+	        	<img src="../img/BannerSecundario2.png" class="w-100 h-100">
 	        </div>
         </div>
         <!--INICIO FOOTER-->

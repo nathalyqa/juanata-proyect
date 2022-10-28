@@ -8,6 +8,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
     <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
+    
+    <link rel="shortcut icon" href="../img/icono-pestanna-pagina-web.png" />
 
     <!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -42,7 +44,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="row" style="margin-top: 120px;">
+                <div class="row" style="margin-top: 140px;">
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
@@ -58,7 +60,7 @@
                     </div>
                 </div>
                 <div class="row pb-5">                    
-                    <div th:each="item : ${items}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 figure mb-3">
+                    <div th:each="item : ${items}" class="col-lg-4 col-md-12 col-sm-12 col-12 figure mb-3">
                     	<a th:href="${item.link}">
                     		<img th:src="${item.rutaFoto}" class="w-100 h-100" alt="..." onmouseover="desenfocarImagen(this)" onmouseout="enfocarImagen(this)">
 	                   		<label class="textoEncimaImg font-dancing-script color-gris" style="font-size: 3em" th:text="${item.nombreItem}"></label>

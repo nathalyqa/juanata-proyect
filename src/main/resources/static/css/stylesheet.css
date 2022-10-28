@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Big+Shoulders+Display:wght@100&family=Major+Mono+Display&display=swap');
+
 /*Inicio Tipos de letras */
 /*Tipo de letra cursiva*/
 .font-dancing-script-footer-title{
     font-family: 'Dancing Script', cursive;
-    color: #e7e5e4;
+    color: white;
     font-size: 2em;
+}
+
+.font-Major-Mono-Display-footer{
+	font-family: 'Major Mono Display', monospace;
+	font-size: 12px;
+}
+
+.font-Big-Shoulders-Display-footer{
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 30px;
 }
 
 .font-dancing-script{
@@ -76,7 +88,11 @@
 
 /*Inicio colores*/
 .color-gris{
-color: rgb(116, 116, 116);
+	color: rgb(116, 116, 116);
+}
+
+.color-blanco{
+	color: white;
 }
 
 .color-azulPlata{
@@ -1656,19 +1672,19 @@ footer {
 .fadeTop {
   opacity: 0; 
   transform: translate(0, 20vh);
-  transition: all 40s;
+  transition: all 20s;
 }
 
 .fadeRight {
   opacity: 0;
   transform: translate(-100vh, 0vh);
-  transition: all 40s;
+  transition: all 20s;
 }
 
 .fadeLeft {
   opacity: 0;
   transform: translate(50vh, 0vh);
-  transition: all 40s;
+  transition: all 20s;
 }
 
 .visible {
@@ -1676,29 +1692,6 @@ footer {
   transform: translate(0, 0);
 }
 
-.div-salud-del-suenno-nubes {
-  height: 30vh;
-}
-
-.div-salud-del-suenno-nubes-2 {
-  height: 3vh;
-}
-
-.div-salud-del-suenno-circulos-con-tips {
-  height: 70vh;
-}
-
-.div-salud-del-suenno-circulos-con-tips-2 {
-  height: 35vh;
-}
-
-.div-salud-del-suenno-sin-contenido-1 {
-  height: 40vh;
-}
-
-.div-salud-del-suenno-sin-contenido-2 {
-  height: 15vh;
-}
 
 .content {
 /*   display: grid;  */
@@ -1737,9 +1730,10 @@ footer {
 
 
 /* Media Query for Mobile Devices */
- @media (max-width: 480px) {
+ @media screen and (max-width: 480) {
+ 
      .altura-por-dispositivo{
-     	height: 250px;
+     	height: 20vh;
      }
      
      .altura-texto-nueva-coleccion{
@@ -1754,13 +1748,50 @@ footer {
 		text-align: center;
 		text-transform: uppercase;
 		text-rendering: optimizeLegibility;
+	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 30vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 35vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 15vh;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 80vh;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 10%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 30px;
 	}
  }
    
  /* Media Query for low resolution  Tablets, Ipads */
- @media (min-width: 481px) and (max-width: 767px) {
+ @media screen and (min-width: 481px) and (max-width: 767px) {
+ 
      .altura-por-dispositivo{
-     	height: 250px;
+     	height: 20vh;
      }
      
      .altura-texto-nueva-coleccion{
@@ -1776,12 +1807,48 @@ footer {
 		text-transform: uppercase;
 		text-rendering: optimizeLegibility;
 	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 30vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 35vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 15vh;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 80vh;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 10%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 30px;
+	}
  }
    
  /* Media Query for Tablets Ipads portrait mode */
- @media (min-width: 768px) and (max-width: 1024px){
+ @media screen and (min-width: 768px) and (max-width: 1023px){
      .altura-por-dispositivo{
-     	height: 250px;
+     	height: auto;
      }
      
      .altura-texto-nueva-coleccion{
@@ -1797,12 +1864,273 @@ footer {
 		  text-transform: uppercase;
 		  text-rendering: optimizeLegibility;
 	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 39vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 45vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 20vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 0vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 10%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 10px;
+	}
+ }
+ 
+ /* Media Query for Tablets Ipads portrait mode */
+ @media screen and (min-width: 1024px) and (max-width: 1279px){
+     .altura-por-dispositivo{
+     	height: auto;
+     }
+     
+     .altura-texto-nueva-coleccion{
+     	height: 200px
+     }
+     
+     .textos-elegantes {
+		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+		    "AppleGothic", sans-serif;
+		  font-size: 40px;
+		  padding: 80px 50px;
+		  text-align: center;
+		  text-transform: uppercase;
+		  text-rendering: optimizeLegibility;
+	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 39vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 45vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 20vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 0vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 0%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 130px;
+	}
+ }
+ 
+  /* Media Query for Tablets Ipads portrait mode */
+ @media screen and (min-width: 1280px) and (max-width: 1520px){
+     .altura-por-dispositivo{
+     	height: auto;
+     }
+     
+     .altura-texto-nueva-coleccion{
+     	height: 200px
+     }
+     
+     .textos-elegantes {
+		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+		    "AppleGothic", sans-serif;
+		  font-size: 40px;
+		  padding: 80px 50px;
+		  text-align: center;
+		  text-transform: uppercase;
+		  text-rendering: optimizeLegibility;
+	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 39vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 45vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 20vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 0vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 0%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 130px;
+	}
  }
    
  /* Media Query for Laptops and Desktops */
- @media (min-width: 1025px) and (max-width: 1280px){
+ @media screen and (min-width: 1521px) and (max-width: 1600px){
      .altura-por-dispositivo{
-     	height: 50vh;
+     	height: auto;
      }
      
      .altura-texto-nueva-coleccion{
@@ -1812,19 +2140,187 @@ footer {
      .textos-elegantes {
 		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
 		    "AppleGothic", sans-serif;
-		  font-size: 92px;
+		  font-size: 80px;
 		  padding: 80px 50px;
 		  text-align: center;
 		  text-transform: uppercase;
 		  text-rendering: optimizeLegibility;
+	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 39vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 20vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 10vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 60vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 25vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 0%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 130px;
+	}
+     
+ }
+ 
+ /* Media Query for Laptops and Desktops */
+ @media screen and (min-width: 1601px) and (max-width: 2000px){
+     .altura-por-dispositivo{
+     	height: auto;
+     }
+     
+     .altura-texto-nueva-coleccion{
+     	height: 250px
+     }
+     
+     .textos-elegantes {
+		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+		    "AppleGothic", sans-serif;
+		  font-size: 80px;
+		  padding: 80px 50px;
+		  text-align: center;
+		  text-transform: uppercase;
+		  text-rendering: optimizeLegibility;
+	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 39vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 20vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 10vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 60vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 25vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 0%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 130px;
 	}
      
  }
    
  /* Media Query for Large screens */
- @media (min-width: 1281px) {   
+ @media screen and (min-width: 2001px){   
      .altura-por-dispositivo{
-     	height: 50vh;
+     	height: auto;
      }
      
      .altura-texto-nueva-coleccion{
@@ -1834,13 +2330,87 @@ footer {
      .textos-elegantes {
 		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
 		    "AppleGothic", sans-serif;
-		  font-size: 92px;
+		  font-size: 80px;
 		  padding: 80px 50px;
 		  text-align: center;
 		  text-transform: uppercase;
 		  text-rendering: optimizeLegibility;
 	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 30vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 55vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 8vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 4vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 63vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 10vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 39vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 68vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 45vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 35vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 44vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 68vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 30vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 40vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 0%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 130px;
+	}
  }
+ 
 
 .elegantshadow {
     color: #131313;
@@ -1880,7 +2450,7 @@ footer {
     text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
   }
   
-  .container-fluid {
+.container-fluid {
   margin: 0;
   padding: 0;
 }
@@ -1907,7 +2477,7 @@ footer {
 	background: rgb(140, 66, 142);
 	padding: 1em;
 	border-radius: 10px;
-	width: 250px;
+	width: 400px;
 	clip-path: circle(9% at 90% 13%);
 	transition: all 0.5s ease-in-out;
 	cursor: pointer;
@@ -1928,7 +2498,6 @@ footer {
   font-weight: bold;
   transition: color 0.5s;
   position: relative;
-  margin-right: 4%;
 }
 .texto-oculto-circulo:hover span {
   color: rgba(255, 255, 255, 0);

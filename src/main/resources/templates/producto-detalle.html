@@ -11,6 +11,8 @@
 
     <!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="/img/icono-pestanna-pagina-web.png" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -20,6 +22,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script th:src="@{/js/scripts.js}" src="../static/js/scripts.js"></script>
+    <script th:src="@{/js/lottie-player.js}" src="../static/js/lottie-player.js"></script>
 
     <!--Google Font-->
     <link
@@ -44,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="row" style="margin-top: 120px;">
+                <div class="row" style="margin-top: 140px;">
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
@@ -61,7 +64,7 @@
                         <img th:src="${producto.rutaFoto}" class="d-block w-100 h-100" alt="...">
                     </div>
                 </div>-->
-                <div class="row" style="margin-bottom: 4%; margin-top: 2%;">
+                <div class="row" style="margin-bottom: 4%; margin-top: 2%; justify-content: center; align-items: center;">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 px-lg-0 px-md-0 px-sm-0 px-xs-3">
                         <div class="block">
                             <img th:src="${producto.rutaFoto}" alt="..." class="block__pic">
@@ -83,40 +86,32 @@
                             <label th:each="talla : ${producto.tallas}" class="font-acme-cuerpo-gris mr-1 badge badge-pill badge-colorAzulPlata px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
-                        <div class="row pt-5">
-                            <div class="col-12 text-center">
-                                <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;"><strong>OTROS PRODUCTOS</strong></label>
-                            </div>
-                        </div>
-                        <div class="row mb-5">
-                            <div class="col-6" th:each="otroProducto : ${otrosProductos}">
-                                <div class="card">
-                                
-                                    <div class="inner">
-                                        <img th:src="${otroProducto.rutaFoto}" class="card-img-top" alt="...">
-                                    </div>
-                                    <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
-                                        <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;" th:text="${otroProducto.nombreItem}"></label>
-                                    </div>
-                                </div>
-                                
-                            </div>
-<!--                             <div class="col-6"> -->
-<!--                                 <div class="card"> -->
-<!--                                     <div class="inner"> -->
-<!--                                         <img th:src="${producto.rutaFoto}" class="card-img-top" alt="..."> -->
-<!--                                     </div> -->
-<!--                                     <div class="card-body text-center" style="background-color: rgb(116, 116, 116);"> -->
-<!--                                         <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;">Bodys</label> -->
-<!--                                     </div> -->
-<!--                                 </div> -->
-<!--                             </div>  -->
-                        </div>
-                    </div>
                 </div>
+                <div class="row" style="justify-content: center;">
+                     <div class="row pt-5" style="justify-content: center; align-items: center;">
+                         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                             <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;"><strong>OTROS PRODUCTOS</strong></label>
+                         </div>
+                     </div>
+                     <div class="row" style="justify-content: center; align-items: center;">
+                         <div class="mb-5 col-lg-3 col-md-4 col-sm-4" th:each="otroProducto : ${otrosProductos}">
+                             <div class="card">
+                             
+                                 <div class="inner">
+                                     <a th:href="${otroProducto.link}"><img th:src="${otroProducto.rutaFoto}" class="card-img-top" alt="..."></a>
+                                 </div>
+                                 <div class="card-body text-center" style="background-color: rgb(116, 116, 116);">
+                                     <label class="font-dancing-script" style="margin-bottom: 10px; color:white; font-size: 2em;" th:text="${otroProducto.nombreItem}"></label>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+                
+                
             </div>
         </div>
+        
         <!--INICIO ICONO WHATSAPP -->
         <div class="row">
 			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
@@ -124,9 +119,13 @@
         <!--FIN ICONO WHATSAPP -->
     </div>
 
+    <div class="row" style="justify-content: center; width: 100%">
+    	<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/ilustracion-luna/ilustracion-luna3.json}" src="../static/json/ilustracion-luna/ilustracion-luna3.json"  background="transparent"  speed="1"  style="width: 450px; height: 450px;" loop autoplay></lottie-player></a>
+    </div>
     <!--INICIO FOOTER-->
     <div th:replace="fragments/footer :: footer"></div>
     <!--FIN FOOTER-->
+    
 
     
     <script th:src="@{/assets/zoomsl.js}"></script>
