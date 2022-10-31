@@ -10,6 +10,7 @@
     <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
     
     <link rel="shortcut icon" href="../img/icono-pestanna-pagina-web.png" />
+    <script th:src="@{/js/lottie-player.js}" src="../static/js/lottie-player.js"></script>
 
     <!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -74,6 +75,12 @@
 			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
         </div> 
         <!--FIN ICONO WHATSAPP -->
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-5">
+       		<H1 class="font-dancing-script text-center">Ademas de una acogedora pijama, meditar es una buena práctica para dormir mejor. Dirigete a la sección <a class="color-azulJuanata" th:href="@{/saludDelSuenno}"><span style="width: 0; overflow: hidden;"><strong>Salud del Sueño</strong></span></a> y descubriras habitos buenos para la higiene de tus sueños.</H1>
+       	</div>
+        <div class="row mb-5 mr-5" style="justify-content: center;">
+        	<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/menu/meditacion.json}" src="../static/json/menu/meditacion.json"  background="transparent"  speed="1"  style="width: 500x; height: 500px; margin-left:10%;"  loop  autoplay></lottie-player></a>
+        </div>
     </div>
 
     <!--INICIO FOOTER-->

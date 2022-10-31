@@ -1785,6 +1785,23 @@ footer {
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 30px;
 	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 23px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 40px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 101.5vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 300px;
+		height: 300px;
+	}
  }
    
  /* Media Query for low resolution  Tablets, Ipads */
@@ -1842,6 +1859,23 @@ footer {
 	
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 30px;
+	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 23px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 40px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 101.5vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 300px;
+		height: 300px;
 	}
  }
    
@@ -1937,6 +1971,31 @@ footer {
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 10px;
 	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 23px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 40px;
+	}
+	
+	/*
+	.col-lg-4 {
+    	-ms-flex: 0 0 33.333333%;
+    	flex: 0 0 33.333333%;
+    	max-width: 23.333333%;
+	}
+	*/
+	
+	.width-coleccion-banner-secundario{
+		width: 101.5vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 300px;
+		height: 300px;
+	}
  }
  
  /* Media Query for Tablets Ipads portrait mode */
@@ -2030,6 +2089,22 @@ footer {
 	
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 130px;
+	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 0px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 0px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 101.5vw;
+	}
+	.tamaño-culumpio-animado-dispositivos{
+		width: 300px;
+		height: 300px;
 	}
  }
  
@@ -2125,6 +2200,23 @@ footer {
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 130px;
 	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 0px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 0px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 100vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 300px;
+		height: 300px;
+	}
  }
    
  /* Media Query for Laptops and Desktops */
@@ -2218,6 +2310,23 @@ footer {
 	
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 130px;
+	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 0px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 0px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 100vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 500px;
+		height: 500px;
 	}
      
  }
@@ -2314,6 +2423,23 @@ footer {
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 130px;
 	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 0px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 0px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 100vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 500px;
+		height: 500px;
+	}
      
  }
    
@@ -2408,6 +2534,23 @@ footer {
 	
 	.margin-top-texto-tarjeta-regalo-dispositivos{
 		margin-top: 130px;
+	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 0px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 0px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 100vw;
+	}
+	
+	.tamaño-culumpio-animado-dispositivos{
+		width: 500px;
+		height: 500px;
 	}
  }
  

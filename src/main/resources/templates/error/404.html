@@ -7,27 +7,12 @@
 	<link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
 	<script th:src="@{/js/lottie-player.js}" src="../static/js/lottie-player.js"></script>
 	<script th:src="@{/js/scripts.js}" src="../static/js/scripts.js"></script>
+	<script th:src="@{/js/lottie-player.js}" src="../static/js/lottie-player.js"></script>
 	
 	<!--Favicons-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../img/icono-pestanna-pagina-web.png" />
     
-    <script type="text/javascript">
-        toggleDropdown (e) => {
-        	  const _d = $(e.target).closest('.dropdown'),
-        	    _m = $('.dropdown-menu', _d);
-        	  setTimeout(function(){
-        	    const shouldOpen = e.type !== 'click' && _d.is(':hover');
-        	    _m.toggleClass('show', shouldOpen);
-        	    _d.toggleClass('show', shouldOpen);
-        	    $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-        	  }, e.type === 'mouseleave' ? 300 : 0);
-        	}
-
-        	$('body')
-        	  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-        	  .on('click', '.dropdown-menu a', toggleDropdown);
-        </script>
 </head>
 <body>
 	<!--INICIO NAVBAR - MENU-->

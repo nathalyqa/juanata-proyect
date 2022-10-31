@@ -120,8 +120,13 @@
             		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 35%">
             		</div>
-            		<div class="col-12">
-                        <p class="font-dancing-script text-center color-dorado animacionTituloTipsSuenno" style="font-size: 90px">Tips del Sueño</p>
+            		<div class="row" style="margin-left: 20%;">
+            			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 " style="margin-top: 20px">
+                        	<p class="font-dancing-script text-center color-dorado" style="font-size: 90px">Tips del Sueño</p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        	<lottie-player th:src="@{/json/menu/buenas_noches.json}" src="../static/json/menu/buenas_noches.json"  background="transparent"  speed="1"  style="width: 200x; height: 200px; margin-left:10%;"  loop  autoplay></lottie-player>
+                        </div>
                     </div>
             		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
             			<img src="../img/estrella.png" style="padding-top: 20px; padding-left: 15%">
@@ -238,6 +243,10 @@
         <div class="row">
 			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
         </div> 
+        
+        <div class="row" style="justify-content: flex-end;">
+        	
+        </div>
         <!--FIN ICONO WHATSAPP -->
     </div>
     <div class="overflow-hidden pr-0 pl-0">
