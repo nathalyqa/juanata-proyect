@@ -1575,12 +1575,24 @@ label.texto-subrayado:hover{
 	color: rgb(217, 0, 89);
 }
 
+/*Neon*/
 .carta-colores-neon{
 	color: rgb(221, 141, 150);
 }
 
+/*Juanata Azul turquesa*/
 .carta-colores-juanata-azul-turquesa{
 	color: rgb(43, 121, 162);
+}
+
+/*Gris hombre*/
+.carta-colores-gris-hombre{
+	color: rgb(174, 168, 182);
+}
+
+/*Azul hombre*/
+.carta-colores-azul-hombre{
+	color: rgb(42, 104, 146);
 }
 	
 

@@ -87,6 +87,12 @@ public class ProductoController {
 		
 		if(pijama.getId() != null) {			
 			modelAndView.addObject("producto", pijama);
+			
+			if(!pijama.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
@@ -142,6 +148,12 @@ public class ProductoController {
 
 		if(pantuflas.getId() != null) {			
 			modelAndView.addObject("producto", pantuflas);
+			
+			if(!pantuflas.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
@@ -199,6 +211,12 @@ public class ProductoController {
 	
 		if(pijama.getId() != null) {			
 			modelAndView.addObject("producto", pijama);
+			
+			if(!pijama.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
@@ -255,6 +273,12 @@ public class ProductoController {
 		
 		if(pantuflas.getId() != null) {			
 			modelAndView.addObject("producto", pantuflas);
+			
+			if(!pantuflas.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
@@ -309,6 +333,12 @@ public class ProductoController {
 		
 		if(salidaDeBanio.getId() != null) {			
 			modelAndView.addObject("producto", salidaDeBanio);
+			
+			if(!salidaDeBanio.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
@@ -364,6 +394,12 @@ public class ProductoController {
 		
 		if(body.getId() != null) {			
 			modelAndView.addObject("producto", body);
+			
+			if(!body.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
@@ -419,6 +455,12 @@ public class ProductoController {
 		
 		if(chacketa.getId() != null) {			
 			modelAndView.addObject("producto", chacketa);
+			
+			if(!chacketa.getColores().isEmpty()) {
+				modelAndView.addObject("hayColores", Boolean.TRUE);
+			}else {
+				modelAndView.addObject("hayColores", Boolean.FALSE);
+			}
 		}
 		
 		return modelAndView;
