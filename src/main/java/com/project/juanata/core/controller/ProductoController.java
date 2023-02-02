@@ -1,8 +1,6 @@
 package com.project.juanata.core.controller;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +16,6 @@ import com.project.juanata.core.model.dto.ProductoDTO;
 import com.project.juanata.core.services.CategoriasService;
 import com.project.juanata.core.services.ProductoService;
 import com.project.juanata.core.util.Constantes;
-
-import jdk.internal.org.jline.utils.Log;
 
 @Controller
 @RequestMapping("/producto")
