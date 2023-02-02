@@ -91,6 +91,10 @@
 	color: rgb(116, 116, 116);
 }
 
+.color-plateado{
+	color: rgb(192, 192, 192);
+}
+
 .color-blanco{
 	color: white;
 }
@@ -706,7 +710,7 @@ label.texto-subrayado:hover{
 }
 
 .animacionTitulos{
-  animation-duration: 5s;
+  animation-duration: 13s;
   animation-name: slidein;
 }
 
@@ -1570,6 +1574,14 @@ label.texto-subrayado:hover{
 .carta-colores-magenta-neon-fluorescente{
 	color: rgb(217, 0, 89);
 }
+
+.carta-colores-neon{
+	color: rgb(221, 141, 150);
+}
+
+.carta-colores-juanata-azul-turquesa{
+	color: rgb(43, 121, 162);
+}
 	
 
 /* Fin Carta de colores */
@@ -1751,7 +1763,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-nubes {
-	  height: 30vh;
+	  height: 9vh;
 	}
 	
 	.div-salud-del-suenno-nubes-2 {
@@ -1759,11 +1771,11 @@ footer {
 	}
 	
 	.div-salud-del-suenno-circulos-con-tips {
-	  height: 70vh;
+	  height: 50vh;
 	}
 	
 	.div-salud-del-suenno-circulos-con-tips-2 {
-	  height: 35vh;
+	  height: 15vh;
 	}
 	
 	.div-salud-del-suenno-sin-contenido-1 {
@@ -1771,7 +1783,44 @@ footer {
 	}
 	
 	.div-salud-del-suenno-sin-contenido-2 {
-	  height: 15vh;
+	  height: 3vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 20vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 40vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
 	}
 	
 	.margin-salud-del-suenno-nube-13_1{
@@ -1795,12 +1844,24 @@ footer {
 	}
 	
 	.width-coleccion-banner-secundario{
-		width: 101.5vw;
+		width: 100vw;
 	}
 	
 	.tamaño-culumpio-animado-dispositivos{
 		width: 300px;
 		height: 300px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 22px;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 40px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 30px
 	}
  }
    
@@ -1826,7 +1887,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-nubes {
-	  height: 30vh;
+	  height: 9vh;
 	}
 	
 	.div-salud-del-suenno-nubes-2 {
@@ -1834,11 +1895,11 @@ footer {
 	}
 	
 	.div-salud-del-suenno-circulos-con-tips {
-	  height: 70vh;
+	  height: 50vh;
 	}
 	
 	.div-salud-del-suenno-circulos-con-tips-2 {
-	  height: 35vh;
+	  height: 15vh;
 	}
 	
 	.div-salud-del-suenno-sin-contenido-1 {
@@ -1846,7 +1907,44 @@ footer {
 	}
 	
 	.div-salud-del-suenno-sin-contenido-2 {
-	  height: 15vh;
+	  height: 3vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 20vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 40vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
 	}
 	
 	.margin-salud-del-suenno-nube-13_1{
@@ -1870,12 +1968,24 @@ footer {
 	}
 	
 	.width-coleccion-banner-secundario{
-		width: 101.5vw;
+		width: 100vw;
 	}
 	
 	.tamaño-culumpio-animado-dispositivos{
 		width: 300px;
 		height: 300px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 22px;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 40px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 30px
 	}
  }
    
@@ -1900,7 +2010,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-nubes {
-	  height: 39vh;
+	  height: 9vh;
 	}
 	
 	.div-salud-del-suenno-nubes-2 {
@@ -1908,11 +2018,11 @@ footer {
 	}
 	
 	.div-salud-del-suenno-circulos-con-tips {
-	  height: 70vh;
+	  height: 50vh;
 	}
 	
 	.div-salud-del-suenno-circulos-con-tips-2 {
-	  height: 45vh;
+	  height: 15vh;
 	}
 	
 	.div-salud-del-suenno-sin-contenido-1 {
@@ -1920,7 +2030,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-sin-contenido-2 {
-	  height: 20vh;
+	  height: 3vh;
 	}
 	
 	.margin-salud-del-suenno-circulo-con-tip-1{
@@ -1936,7 +2046,7 @@ footer {
 		margin-left: 49vw;
 	}
 	.margin-salud-del-suenno-circulo-con-tip-5{
-		margin-left: 65vw;
+		margin-left: 20vw;
 	}
 	.margin-salud-del-suenno-circulo-con-tip-6{
 		margin-left: 30vw;
@@ -1954,7 +2064,7 @@ footer {
 		margin-left: 57vw;
 	}
 	.margin-salud-del-suenno-circulo-con-tip-11{
-		margin-left: 65vw;
+		margin-left: 40vw;
 	}
 	.margin-salud-del-suenno-circulo-con-tip-12{
 		margin-left: 25vw;
@@ -1980,21 +2090,31 @@ footer {
 		margin-top: 40px;
 	}
 	
-	/*
-	.col-lg-4 {
-    	-ms-flex: 0 0 33.333333%;
-    	flex: 0 0 33.333333%;
+	
+	.col-lg-4-configured {
     	max-width: 23.333333%;
 	}
-	*/
+	
 	
 	.width-coleccion-banner-secundario{
-		width: 101.5vw;
+		width: 100vw;
 	}
 	
 	.tamaño-culumpio-animado-dispositivos{
 		width: 300px;
 		height: 300px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 22px;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 35px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 25px
 	}
  }
  
@@ -2019,7 +2139,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-nubes {
-	  height: 39vh;
+	  height: 50vh;
 	}
 	
 	.div-salud-del-suenno-nubes-2 {
@@ -2039,117 +2159,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-sin-contenido-2 {
-	  height: 20vh;
-	}
-	
-	.margin-salud-del-suenno-circulo-con-tip-1{
-		margin-left: 5vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-2{
-		margin-left: 54vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-3{
-		margin-left: 13vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-4{
-		margin-left: 49vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-5{
-		margin-left: 65vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-6{
-		margin-left: 30vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-7{
-		margin-left: 15vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-8{
-		margin-left: 32vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-9{
-		margin-left: 5vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-10{
-		margin-left: 57vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-11{
-		margin-left: 65vw;
-	}
-	.margin-salud-del-suenno-circulo-con-tip-12{
-		margin-left: 25vw;
-	}
-	
-	.margin-salud-del-suenno-nube-13_1{
-		margin-left: 0vw;
-	}
-	
-	.margin-left-dispositivo{
-		margin-left: 0%;
-	}
-	
-	.margin-top-texto-tarjeta-regalo-dispositivos{
-		margin-top: 130px;
-	}
-	
-	.margin-left-menu-dispositivo{
-		margin-left: 0px;
-	}
-	
-	.margint-top-menu-dispositivo{
-		margin-top: 0px;
-	}
-	
-	.width-coleccion-banner-secundario{
-		width: 101.5vw;
-	}
-	.tamaño-culumpio-animado-dispositivos{
-		width: 300px;
-		height: 300px;
-	}
- }
- 
-  /* Media Query for Tablets Ipads portrait mode */
- @media screen and (min-width: 1280px) and (max-width: 1520px){
-     .altura-por-dispositivo{
-     	height: auto;
-     }
-     
-     .altura-texto-nueva-coleccion{
-     	height: 200px
-     }
-     
-     .textos-elegantes {
-		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
-		    "AppleGothic", sans-serif;
-		  font-size: 40px;
-		  padding: 80px 50px;
-		  text-align: center;
-		  text-transform: uppercase;
-		  text-rendering: optimizeLegibility;
-	}
-	
-	.div-salud-del-suenno-nubes {
-	  height: 39vh;
-	}
-	
-	.div-salud-del-suenno-nubes-2 {
-	  height: 3vh;
-	}
-	
-	.div-salud-del-suenno-circulos-con-tips {
-	  height: 70vh;
-	}
-	
-	.div-salud-del-suenno-circulos-con-tips-2 {
-	  height: 45vh;
-	}
-	
-	.div-salud-del-suenno-sin-contenido-1 {
-	  height: 40vh;
-	}
-	
-	.div-salud-del-suenno-sin-contenido-2 {
-	  height: 20vh;
+	  height: 10vh;
 	}
 	
 	.margin-salud-del-suenno-circulo-con-tip-1{
@@ -2212,10 +2222,144 @@ footer {
 	.width-coleccion-banner-secundario{
 		width: 100vw;
 	}
+	.tamaño-culumpio-animado-dispositivos{
+		width: 300px;
+		height: 300px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 0.8rem;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 20px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 15px
+	}
+ }
+ 
+  /* Media Query for Tablets Ipads portrait mode */
+ @media screen and (min-width: 1280px) and (max-width: 1520px){
+     .altura-por-dispositivo{
+     	height: auto;
+     }
+     
+     .altura-texto-nueva-coleccion{
+     	height: 200px
+     }
+     
+     .textos-elegantes {
+		  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+		    "AppleGothic", sans-serif;
+		  font-size: 40px;
+		  padding: 80px 50px;
+		  text-align: center;
+		  text-transform: uppercase;
+		  text-rendering: optimizeLegibility;
+	}
+	
+	.div-salud-del-suenno-nubes {
+	  height: 39vh;
+	}
+	
+	.div-salud-del-suenno-nubes-2 {
+	  height: 3vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips {
+	  height: 70vh;
+	}
+	
+	.div-salud-del-suenno-circulos-con-tips-2 {
+	  height: 45vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-1 {
+	  height: 40vh;
+	}
+	
+	.div-salud-del-suenno-sin-contenido-2 {
+	  height: 10vh;
+	}
+	
+	.margin-salud-del-suenno-circulo-con-tip-1{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-2{
+		margin-left: 54vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-3{
+		margin-left: 13vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-4{
+		margin-left: 49vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-5{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-6{
+		margin-left: 30vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-7{
+		margin-left: 15vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-8{
+		margin-left: 32vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-9{
+		margin-left: 5vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-10{
+		margin-left: 57vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-11{
+		margin-left: 65vw;
+	}
+	.margin-salud-del-suenno-circulo-con-tip-12{
+		margin-left: 25vw;
+	}
+	
+	.margin-salud-del-suenno-nube-13_1{
+		margin-left: 0vw;
+	}
+	
+	.margin-left-dispositivo{
+		margin-left: 0%;
+	}
+	
+	.margin-top-texto-tarjeta-regalo-dispositivos{
+		margin-top: 130px;
+	}
+	
+	.margin-left-menu-dispositivo{
+		margin-left: 0px;
+	}
+	
+	.margint-top-menu-dispositivo{
+		margin-top: 0px;
+	}
+	
+	.width-coleccion-banner-secundario{
+		width: 101vw;
+	}
 	
 	.tamaño-culumpio-animado-dispositivos{
 		width: 300px;
 		height: 300px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 0.8rem;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 25px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 15px
 	}
  }
    
@@ -2240,7 +2384,7 @@ footer {
 	}
 	
 	.div-salud-del-suenno-nubes {
-	  height: 39vh;
+	  height: 30vh;
 	}
 	
 	.div-salud-del-suenno-nubes-2 {
@@ -2327,6 +2471,18 @@ footer {
 	.tamaño-culumpio-animado-dispositivos{
 		width: 500px;
 		height: 500px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 0.8rem;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 25px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 15px
 	}
      
  }
@@ -2440,6 +2596,18 @@ footer {
 		width: 500px;
 		height: 500px;
 	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 0.8rem;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 25px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 15px
+	}
      
  }
    
@@ -2545,12 +2713,24 @@ footer {
 	}
 	
 	.width-coleccion-banner-secundario{
-		width: 100vw;
+		width: 100.6vw;
 	}
 	
 	.tamaño-culumpio-animado-dispositivos{
 		width: 500px;
 		height: 500px;
+	}
+	
+	.tamanio-letra-tips-por-dispositivo{
+		font-size: 0.8rem;
+	}
+	
+	.tamanio-letra-producto-por-dispositivo{
+		font-size: 25px
+	}
+	
+	.tamanio-letra-precio-por-dispositivo{
+		font-size: 15px
 	}
  }
  
@@ -2651,5 +2831,4 @@ footer {
 }
 .texto-oculto-circulo p {
   color: white;
-  font-size: 0.8rem;
 }

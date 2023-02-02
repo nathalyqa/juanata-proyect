@@ -32,7 +32,7 @@ public class CategoriasServiceImpl implements CategoriasService{
 		Categoria categoria = new Categoria();
 		categoria = categoriaRepository.findByNombre(NOMBRE_CATEGORIA_MUJER).get(0);
 		
-		Iterable<Item> itemsBD = itemRepository.findByCategoria(categoria);
+		Iterable<Item> itemsBD = itemRepository.findByCategoria(categoria.getId());
 		
 		for (Item item : itemsBD) {			
 			items.add(transformarObjectItemADTO(item));
@@ -49,7 +49,7 @@ public class CategoriasServiceImpl implements CategoriasService{
 		Categoria categoria = new Categoria();
 		categoria = categoriaRepository.findByNombre(NOMBRE_CATEGORIA_HOMBRE).get(0);
 		
-		Iterable<Item> itemsBD = itemRepository.findByCategoria(categoria);
+		Iterable<Item> itemsBD = itemRepository.findByCategoria(categoria.getId());
 		
 		for (Item item : itemsBD) {			
 			items.add(transformarObjectItemADTO(item));

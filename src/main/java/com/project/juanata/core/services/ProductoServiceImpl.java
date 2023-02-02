@@ -1,5 +1,6 @@
 package com.project.juanata.core.services;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +37,8 @@ public class ProductoServiceImpl implements ProductoService{
 	@Override
 	public List<ProductoDTO> getProductosPorItemYCategoria(String nombreCategoria, String nombreItem){
 		
+		System.out.println("Inicio obtener pijamas:" + LocalDateTime.now());
+		
 		Categoria categoria = new Categoria();
 		categoria = categoriaRepository.findByNombre(nombreCategoria).get(0);
 		
@@ -46,9 +49,7 @@ public class ProductoServiceImpl implements ProductoService{
 		
 		List<ProductoDTO> productosDTO = new ArrayList<ProductoDTO>();
 		
-		for (Producto producto : productos) {
-			productosDTO.add(transformarObjetoProductoADTO(producto));
-		}
+		productosDTO = transformarListaObjetoPijamasAListaPijamasProductoDTO(productos);
 			
 		return productosDTO;		
 	}
@@ -68,6 +69,29 @@ public class ProductoServiceImpl implements ProductoService{
 		ItemDTO itemDTO = transformarObjetoItemADTO(item);
 		
 		return itemDTO;
+	}
+	
+	private List<ProductoDTO> transformarListaObjetoPijamasAListaPijamasProductoDTO(List<Producto> pijamas) {
+		
+		List<ProductoDTO> listaPijamasProductoDTO = new ArrayList<>();
+		ProductoDTO pijamaProductoDTO = new ProductoDTO();
+		for (Producto producto : pijamas) {
+			
+			pijamaProductoDTO = new ProductoDTO();
+			
+			pijamaProductoDTO.setId(producto.getId());
+			pijamaProductoDTO.setNombre(producto.getNombre());
+			pijamaProductoDTO.setPrecio(producto.getPrecio());
+			pijamaProductoDTO.setRutaFoto(producto.getRutaFoto());
+			pijamaProductoDTO.setItem(transformarObjetoItemADTO(producto.getItem()));
+			
+			
+			listaPijamasProductoDTO.add(pijamaProductoDTO);
+			
+		}
+		
+		return listaPijamasProductoDTO;
+		
 	}
 	
 	private ProductoDTO transformarObjetoProductoADTO(Producto producto) {

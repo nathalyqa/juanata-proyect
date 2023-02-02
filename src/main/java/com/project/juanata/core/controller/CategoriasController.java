@@ -38,6 +38,8 @@ public class CategoriasController {
 		
 		modelAndView.addObject("tituloProductosCategoria", Constantes.TITULO_PRODUCTOS_CATEGORIA_MUJER);
 		
+		modelAndView.addObject("esCategoriaMujer", Boolean.TRUE);
+		
 		return modelAndView;
 	}
 	
@@ -52,6 +54,8 @@ public class CategoriasController {
 		modelAndView.addObject("tituloBreadcrumbCategoria", Constantes.TITULO_BREADCRUMB_HOMBRE);
 		
 		modelAndView.addObject("tituloProductosCategoria", Constantes.TITULO_PRODUCTOS_CATEGORIA_HOMBRE);
+		
+		modelAndView.addObject("esCategoriaMujer", Boolean.FALSE);
 		
 		return modelAndView;
 	}

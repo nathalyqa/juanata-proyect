@@ -64,7 +64,7 @@
                         <img th:src="${producto.rutaFoto}" class="d-block w-100 h-100" alt="...">
                     </div>
                 </div>-->
-                <div class="row" style="margin-bottom: 4%; margin-top: 2%; justify-content: center; align-items: center;">
+                <div class="row" style="margin-bottom: 0%; margin-top: 2%; justify-content: center; align-items: center;">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 px-lg-0 px-md-0 px-sm-0 px-xs-3">
                         <div class="block">
                             <img th:src="${producto.rutaFoto}" alt="..." class="block__pic">
@@ -86,8 +86,13 @@
                             <label th:each="talla : ${producto.tallas}" class="font-acme-cuerpo-gris mr-1 badge badge-pill badge-colorAzulPlata px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    	<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/menu/culumpio_luna.json}" src="../static/json/menu/culumpio_luna.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;" loop autoplay></lottie-player></a>
+                    <div class="row col-lg-6 col-md-6 col-sm-6 col-xs-12" style="justify-content: center;">
+                    	<div th:if="${esCategoriaMujer}">
+                    		<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/menu/culumpio_luna.json}" src="../static/json/menu/culumpio_luna.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player></a>
+                    	</div>
+                    	<div th:unless="${esCategoriaMujer}">
+                    		<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/menu/relax_hombre.json}" src="../static/json/menu/relax_hombre.json"  background="transparent"  speed="1"  style="width: 700px; height: 700px;" loop autoplay></lottie-player></a>
+                    	</div>
                     </div>
                     
                 </div>
@@ -124,7 +129,12 @@
     </div>
 
     <div class="row" style="justify-content: center; width: 100%">
-    	<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/ilustracion-luna/ilustracion-luna3.json}" src="../static/json/ilustracion-luna/ilustracion-luna3.json"  background="transparent"  speed="1"  style="width: 450px; height: 450px;" loop autoplay></lottie-player></a>
+    	<div th:if="${esCategoriaMujer}">
+    		<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/ilustracion-luna/ilustracion-luna3.json}" src="../static/json/ilustracion-luna/ilustracion-luna3.json"  background="transparent"  speed="1"  style="width: 450px; height: 450px;" loop autoplay></lottie-player></a>
+    	</div>
+    	<div th:unless="${esCategoriaMujer}">
+    		<a th:href="@{/saludDelSuenno}"><lottie-player th:src="@{/json/ilustracion-luna/ilustracion-luna-hombre.json}" src="../static/json/ilustracion-luna/ilustracion-luna-hombre.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player></a>
+    	</div>
     </div>
     <!--INICIO FOOTER-->
     <div th:replace="fragments/footer :: footer"></div>

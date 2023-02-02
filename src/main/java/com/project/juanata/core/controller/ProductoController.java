@@ -1,6 +1,8 @@
 package com.project.juanata.core.controller;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,8 @@ import com.project.juanata.core.services.CategoriasService;
 import com.project.juanata.core.services.ProductoService;
 import com.project.juanata.core.util.Constantes;
 
+import jdk.internal.org.jline.utils.Log;
+
 @Controller
 @RequestMapping("/producto")
 public class ProductoController {
@@ -30,7 +34,9 @@ public class ProductoController {
 	@GetMapping(path = "/pijamas/mujer")
 	public ModelAndView pijamasMujer() {
 		ModelAndView modelAndView = new ModelAndView(Vistas.LISTA_PRODUCTO_ESPECIFICO);
+		
 		modelAndView.addObject("productos", productoService.getProductosPorItemYCategoria(Constantes.CATEGORIA_MUJER, Constantes.ITEM_PIJAMAS));
+		
 		modelAndView.addObject("item", Constantes.ITEM_PIJAMAS);
 	
 		modelAndView.addObject("tituloBreadcrumbInicio", Constantes.TITULO_BREADCRUMB_INICIO);
@@ -62,6 +68,8 @@ public class ProductoController {
 		modelAndView.addObject("linkBreadcrumbProducto", Constantes.LINK_BREADCRUMB_PIJAMAS_MUJER);
 		
 		modelAndView.addObject("tituloBreadcrumbDetalleProducto", Constantes.TITULO_BREADCRUMB_DETALLE_PRODUCTO);
+		
+		modelAndView.addObject("esCategoriaMujer", Boolean.TRUE);
 		
 		ProductoDTO pijama = new ProductoDTO();
 		
@@ -118,6 +126,8 @@ public class ProductoController {
 		
 		modelAndView.addObject("tituloBreadcrumbDetalleProducto", Constantes.TITULO_BREADCRUMB_DETALLE_PRODUCTO);
 		
+		modelAndView.addObject("esCategoriaMujer", Boolean.TRUE);
+		
 		ProductoDTO pantuflas = productoService.obtenerProductoPorId(idPantuflas);
 		
 		Integer categoriaId = categoriaService.obtenerIdCategoriaPorNombre(pantuflas.getCategoria());
@@ -173,6 +183,8 @@ public class ProductoController {
 		
 		modelAndView.addObject("tituloBreadcrumbDetalleProducto", Constantes.TITULO_BREADCRUMB_DETALLE_PRODUCTO);
 		
+		modelAndView.addObject("esCategoriaMujer", Boolean.FALSE);
+		
 		ProductoDTO pijama = productoService.obtenerProductoPorId(idPijama);
 		
 		Integer categoriaId = categoriaService.obtenerIdCategoriaPorNombre(Constantes.CATEGORIA_MUJER);
@@ -226,6 +238,8 @@ public class ProductoController {
 		modelAndView.addObject("linkBreadcrumbProducto", Constantes.LINK_BREADCRUMB_PANTUFLAS_HOMBRE);
 		
 		modelAndView.addObject("tituloBreadcrumbDetalleProducto", Constantes.TITULO_BREADCRUMB_DETALLE_PRODUCTO);
+		
+		modelAndView.addObject("esCategoriaMujer", Boolean.FALSE);
 		
 		ProductoDTO pantuflas = productoService.obtenerProductoPorId(idPantuflas);
 		
@@ -281,6 +295,8 @@ public class ProductoController {
 		modelAndView.addObject("linkBreadcrumbProducto", Constantes.LINK_BREADCRUMB_SALIDAS_DE_BANIO_MUJER);
 		
 		modelAndView.addObject("tituloBreadcrumbDetalleProducto", Constantes.TITULO_BREADCRUMB_DETALLE_PRODUCTO);
+		
+		modelAndView.addObject("esCategoriaMujer", Boolean.TRUE);
 		
 		ProductoDTO salidaDeBanio = productoService.obtenerProductoPorId(idSalidaDeBanio);
 		

@@ -13,7 +13,9 @@ import com.project.juanata.core.entity.Item;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer>{
 	
-	List<Item> findByCategoria(Categoria categoria);
+	@Query(value = "select i from Item i where i.categoria.id = :categoriaId order by i.orden asc")
+	List<Item> findByCategoria(@Param("categoriaId") Integer categoriaId);
+	
 	
 	@Query(value = "select i from Item i where i.nombre = :nombre and i.categoria.id = :categoriaId")
 	Item findByNombreAndCategoria(@Param("nombre") String nombreItem, @Param("categoriaId") Integer categoriaId);

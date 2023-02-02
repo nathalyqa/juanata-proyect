@@ -32,6 +32,8 @@ public class Item implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Categoria categoria;
+	
+	private Integer orden;
 
 	public Integer getId() {
 		return id;
@@ -71,5 +73,13 @@ public class Item implements Serializable{
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public Integer getOrden() {
+		return orden;
+	}
+
+	public void setOrden(Integer orden) {
+		this.orden = orden;
 	}
 }

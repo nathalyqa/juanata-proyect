@@ -44,7 +44,7 @@
     <div class="container-fluid overflow-hidden pl-5 pr-5">
         <div class="row">
             <div class="col-12">
-                <div class="row" style="margin-top: 100px;">
+                <div class="row" style="margin-top: 130px;">
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 aurora-boreal">
             			<img src="../img/aurora_boreal3.png">
             		</div>
@@ -120,12 +120,12 @@
             		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-4">
             			<img src="../img/estrella.png" style="padding-top: 85px; padding-left: 35%">
             		</div>
-            		<div class="row" style="margin-left: 20%;">
+            		<div class="row" style="margin-left: 20%; justify-content: center;">
             			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 " style="margin-top: 20px">
                         	<p class="font-dancing-script text-center color-dorado" style="font-size: 90px">Tips del Sueño</p>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                        	<lottie-player th:src="@{/json/menu/buenas_noches.json}" src="../static/json/menu/buenas_noches.json"  background="transparent"  speed="1"  style="width: 200x; height: 200px; margin-left:10%;"  loop  autoplay></lottie-player>
+                        	<lottie-player th:src="@{/json/menu/buenas_noches.json}" src="../static/json/menu/buenas_noches.json"  background="transparent"  speed="0.5"  style="width: 200x; height: 200px;"  loop  autoplay></lottie-player>
                         </div>
                     </div>
             		<div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 estrellas-parpadeando-2">
@@ -244,9 +244,6 @@
 			<div th:replace="fragments/icono-whatsapp :: icono-whatsapp"></div>
         </div> 
         
-        <div class="row" style="justify-content: flex-end;">
-        	
-        </div>
         <!--FIN ICONO WHATSAPP -->
     </div>
     <div class="overflow-hidden pr-0 pl-0">
@@ -261,9 +258,9 @@
 			<div class="scroll-content fadeLeft texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 6%;">1</span>
 		      <h1>Tip 1</h1>
-		      <p style="margin-top: 6%;">Evita que tus siestas excedan un tiempo mayor a 45 minutos.</p>
+		      <p style="margin-top: 6%;" class="tamanio-letra-tips-por-dispositivo">Procura que tus siestas sean máximo de 45 minutos.</p>
 		      <!-- <img src="../img/Salud_del_Suenno/imagenes-tips/siesta.png">-->
-		      <lottie-player th:src="@{/json/salud-del-suenno/siesta.json}" src="../static/json/salud-del-suenno/siesta.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:10%;"  loop  autoplay></lottie-player>
+		      <lottie-player th:src="@{/json/salud-del-suenno/Siesta4.json}" src="../static/json/salud-del-suenno/Siesta4.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:10%;"  loop  autoplay></lottie-player>
 		    </div>
 		</div>
 		<div class="div-salud-del-suenno-nubes">
@@ -277,14 +274,14 @@
 		   <div class="scroll-content fadeRight texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 6%">2</span>
 		      <h1>Tip 2</h1>
-		      <p style="margin-top: 6%;">Trata de programar una hora estandar para ir a dormir todos los días.</p>
+		      <p style="margin-top: 6%;" class="tamanio-letra-tips-por-dispositivo">Trata de programar una hora estándar para ir a dormir todas las noches.</p>
 		      <lottie-player th:src="@{/json/salud-del-suenno/dormir-misma-hora.json}" src="../static/json/salud-del-suenno/dormir-misma-hora.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:15%;"  loop  autoplay></lottie-player>
 		      <!-- <img src="../img/Salud_del_Suenno/imagenes-tips/horarioDormir.png" style="margin-left: 5vh">-->
 		    </div>   
 		</div>
 		<div class="div-salud-del-suenno-nubes">
 			<div class="scroll-content fadeLeft">
-				<div class="row">
+				<div class="row" style="justify-content: flex-end;">
 					<img src="../img/Nube8.png">
 				</div>
 		    </div>
@@ -293,7 +290,7 @@
 		  <div class="scroll-content fadeRight texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 6%">3</span>
 		      <h1>Tip 3</h1>
-		      <p style="margin-top: 6%;">Practica algun deporte con frecuencia.</p>
+		      <p style="margin-top: 6%;" class="tamanio-letra-tips-por-dispositivo">Practica algún deporte con frecuencia.</p>
 		      <!-- <img src="../img/Salud_del_Suenno/imagenes-tips/ejercicio.png" style="margin-left: 6vh"> -->
 		      <lottie-player th:src="@{/json/salud-del-suenno/Exercise_1.json}" src="../static/json/salud-del-suenno/Exercise_1.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:15%;"  loop  autoplay></lottie-player>
 		    </div>    
@@ -309,14 +306,14 @@
 		   <div class="scroll-content fadeLeft texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 6%">4</span>
 		      <h1>Tip 4</h1>
-		      <p style="margin-top: 6%;">Si eres fiel amante del cafe, té o bebidas que contengan cafeina intenta evitarlas por lo menos 6 horas antes de ir a dormir.</p>
+		      <p style="margin-top: 6%;" class="tamanio-letra-tips-por-dispositivo">Si eres fiel amante del cafe, té o bebidas que contengan cafeína intenta evitarlas por lo menos 6 horas antes de ir a dormir.</p>
 		      <!--  <img src="../img/Salud_del_Suenno/imagenes-tips/evitarCafeina.png" style="margin-left: 6vh">-->
 		      <lottie-player th:src="@{/json/salud-del-suenno/Evitar-cafe_1.json}" src="../static/json/salud-del-suenno/Evitar-cafe_1.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:15%;"  loop  autoplay></lottie-player>
 		    </div>  
 		</div>
 		<div class="div-salud-del-suenno-nubes">
 			<div class="scroll-content fadeLeft">
-				<div class="row">
+				<div class="row" style="justify-content: flex-end;">
 					<img src="../img/Nube9_2.png">
 				</div>
 		    </div>
@@ -325,7 +322,7 @@
 		  <div class="scroll-content fadeRight texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 8%">5</span>
 		      <h1>Tip 5</h1>
-		      <p style="margin-top: 10%;">Que tu cena sea ligera, intenta no ir a la cama con llenura excesiva pero tampoco con hambre, maneja el equilibrio.</p>
+		      <p style="margin-top: 10%;" class="tamanio-letra-tips-por-dispositivo">Que tu cena sea ligera, intenta no ir a la cama con llenura excesiva pero tampoco con hambre, maneja el equilibrio.</p>
 		      <!--  <img src="../img/Salud_del_Suenno/imagenes-tips/comidaLiviana.png" style="margin-left: 1.5vh">-->
 		      <lottie-player th:src="@{/json/salud-del-suenno/Comida-saludable.json}" src="../static/json/salud-del-suenno/Comida-saludable.json"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px; margin-left:10%;"  loop  autoplay></lottie-player>	
 		    </div>    
@@ -349,7 +346,7 @@
 		  <div class="scroll-content fadeLeft texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 8%">6</span>
 		      <h1>Tip 6</h1>
-		      <p style="margin-top: 10%;">Reemplaza las pantallas por libros o musica relajante al menos 1 hora antes de ir a dormir.</p>
+		      <p style="margin-top: 10%;" class="tamanio-letra-tips-por-dispositivo">Reemplaza las pantallas por libros o musica relajante al menos 1 hora antes de ir a dormir.</p>
 		      <!--<img src="../img/Salud_del_Suenno/imagenes-tips/evitarPantallas.png">-->
 		      <lottie-player th:src="@{/json/salud-del-suenno/Reemplazar-pantallas.json}" src="../static/json/salud-del-suenno/Reemplazar-pantallas.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; margin-left:10%;"  loop  autoplay></lottie-player>
 		  </div>    
@@ -374,9 +371,9 @@
 		  <div class="scroll-content fadeRight texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 7%">7</span>
 		      <h1>Tip 7</h1>
-		      <p style="margin-top: 7%; margin-bottom: 10%">Evita el consumo de liquidos al final del día.</p>
+		      <p style="margin-top: 7%; margin-bottom: 10%" class="tamanio-letra-tips-por-dispositivo">Evita el consumo de líquidos al final del día.</p>
 		      <!--<img src="../img/Salud_del_Suenno/imagenes-tips/EvitarLiquidos.png" style="margin-left: 5vh">-->
-		      <lottie-player th:src="@{/json/salud-del-suenno/Evitar-liquidos.json}" src="../static/json/salud-del-suenno/Evitar-liquidos.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; margin-left:10%;"  loop  autoplay></lottie-player>
+		      <lottie-player th:src="@{/json/salud-del-suenno/Evitar-liquidos3.json}" src="../static/json/salud-del-suenno/Evitar-liquidos3.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; margin-left:10%;"  loop  autoplay></lottie-player>
 		    </div>    
 		</div>
 		<div class="div-salud-del-suenno-nubes">
@@ -390,14 +387,14 @@
 		  <div class="scroll-content fadeLeft texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 7%">8</span>
 		      <h1>Tip 8</h1>
-		      <p style="margin-top: 10%;">Evita fumar e ingerir excesivamente licor 4 horas antes de ir a dormir.</p>
+		      <p style="margin-top: 10%;" class="tamanio-letra-tips-por-dispositivo">Evita fumar e ingerir licor en exceso 4 horas antes de ir a dormir.</p>
 		      <!--<img src="../img/Salud_del_Suenno/imagenes-tips/evitarFumarLicor.png" style="margin-left: 5vh">-->
 		      <lottie-player th:src="@{/json/salud-del-suenno/Evitar-fumar.json}" src="../static/json/salud-del-suenno/Evitar-fumar.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:15%;"  loop  autoplay></lottie-player>
 		    </div>    
 		</div>
 		<div class="div-salud-del-suenno-nubes">
 			<div class="scroll-content fadeLeft">
-				<div class="row">
+				<div class="row" style="justify-content: flex-end;">
 					<img src="../img/Nube14_1.png">
 				</div>
 		    </div>
@@ -406,7 +403,7 @@
 		  <div class="scroll-content fadeRight texto-oculto-circulo">
 		      <span style="margin-right: 5%; margin-top: 7%">9</span>
 		      <h1>Tip 9</h1>
-		      <p style="margin-top: 10%;">Adecua tu habitación lo más oscura que puedas y aisla todo el ruido.</p>
+		      <p style="margin-top: 10%;" class="tamanio-letra-tips-por-dispositivo">Adecúa tu habitación lo más oscura que puedas y aisla todo el ruido.</p>
 		      <!--<img src="../img/Salud_del_Suenno/imagenes-tips/sinLuz.png" style="margin-left: 3vh">-->
 		      <lottie-player th:src="@{/json/salud-del-suenno/habitacion-adecuada.json}" src="../static/json/salud-del-suenno/habitacion-adecuada.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:15%;"  loop  autoplay></lottie-player>
 		    </div>    
@@ -422,7 +419,7 @@
 		  <div class="scroll-content fadeLeft texto-oculto-circulo">
 		      <span style="margin-right: 4%; margin-top: 7%">10</span>
 		      <h1>Tip 10</h1>
-		      <p style="margin-top: 10%; margin-bottom: 10%">Usa ropa de cama comoda que acaricie tus sueños por ejemplo una acogedora prenda de Juanata.</p>
+		      <p style="margin-top: 10%; margin-bottom: 10%;" class="tamanio-letra-tips-por-dispositivo">Usa ropa de cama cómoda por ejemplo una acogedora prenda de Juanata que acaricia tus sueños.</p>
 		      <img src="../img/Salud_del_Suenno/imagenes-tips/pijamaComoda.png" style="margin-left: 4vh">
 		    </div>    
 		</div>
@@ -437,7 +434,7 @@
 		  <div class="scroll-content fadeLeft texto-oculto-circulo">
 		      <span style="margin-right: 4%; margin-top: 7%">11</span>
 		      <h1>Tip 11</h1>
-		      <p style="margin-top: 10%">Asegurate de encontrar la temperatura ideal para ti, acogedora, calientita pero con buena ventilación.</p>
+		      <p style="margin-top: 10%;" class="tamanio-letra-tips-por-dispositivo">Asegúrate de encontrar la temperatura ideal para ti, acogedora, calientita pero con buena ventilación.</p>
 		      <!--<img src="../img/Salud_del_Suenno/imagenes-tips/calor.png">-->
 		      <lottie-player th:src="@{/json/salud-del-suenno/temperatura-ideal.json}" src="../static/json/salud-del-suenno/temperatura-ideal.json"  background="transparent"  speed="1"  style="width: 250px; height: 250px; margin-left:15%;"  loop  autoplay></lottie-player>
 		    </div>    
@@ -467,7 +464,7 @@
 		  <div class="scroll-content fadeRight texto-oculto-circulo">
 		      <span style="margin-right: 4%; margin-top: 8%">12</span>
 		      <h1>Tip 12</h1>
-		      <p style="margin-top: 10%">Programate y levantante de la cama a una misma hora todos los días.</p>
+		      <p style="margin-top: 10%;" class="tamanio-letra-tips-por-dispositivo">Prográmate y levántante de la cama a una misma hora todos los días.</p>
 		      <img src="../img/Salud_del_Suenno/imagenes-tips/despertarse.png" style="margin-left: 2vh">
 		    </div>    
 		</div>
