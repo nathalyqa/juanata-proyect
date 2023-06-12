@@ -23,6 +23,21 @@ public class Material implements Serializable{
 	
 	private String material;
 
+	public Material(Integer id, String material) {
+		super();
+		this.id = id;
+		this.material = material;
+	}
+
+	public Material(String material) {
+		super();
+		this.material = material;
+	}
+
+	public Material() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

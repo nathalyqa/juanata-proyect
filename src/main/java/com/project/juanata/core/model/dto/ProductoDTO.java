@@ -34,6 +34,21 @@ public class ProductoDTO {
 		this.tallas = tallas;
 		this.item = item;
 	}
+
+	public ProductoDTO(String nombre, String categoria, BigDecimal precio, String rutaFoto, List<ColorDTO> colores,
+			LineaDTO linea, String descripcion, String material, List<TallaDTO> tallas, ItemDTO item) {
+		super();
+		this.nombre = nombre;
+		this.categoria = categoria;
+		this.precio = precio;
+		this.rutaFoto = rutaFoto;
+		this.colores = colores;
+		this.linea = linea;
+		this.descripcion = descripcion;
+		this.material = material;
+		this.tallas = tallas;
+		this.item = item;
+	}
 	
 	public ProductoDTO() {
 	}

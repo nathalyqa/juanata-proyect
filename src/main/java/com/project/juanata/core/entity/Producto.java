@@ -69,6 +69,41 @@ public class Producto implements Serializable{
 	)
 	private List<Talla> tallas;
 
+	public Producto(Integer id, String nombre, Categoria categoria, BigDecimal precio, String rutaFoto, Linea linea,
+			String descripcion, Material material, Item item, List<Color> colores, List<Talla> tallas) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.categoria = categoria;
+		this.precio = precio;
+		this.rutaFoto = rutaFoto;
+		this.linea = linea;
+		this.descripcion = descripcion;
+		this.material = material;
+		this.item = item;
+		this.colores = colores;
+		this.tallas = tallas;
+	}
+
+	public Producto(String nombre, Categoria categoria, BigDecimal precio, String rutaFoto, Linea linea,
+			String descripcion, Material material, Item item, List<Color> colores, List<Talla> tallas) {
+		super();
+		this.nombre = nombre;
+		this.categoria = categoria;
+		this.precio = precio;
+		this.rutaFoto = rutaFoto;
+		this.linea = linea;
+		this.descripcion = descripcion;
+		this.material = material;
+		this.item = item;
+		this.colores = colores;
+		this.tallas = tallas;
+	}
+
+	public Producto() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

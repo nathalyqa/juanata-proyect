@@ -16,8 +16,14 @@ public class ItemDTO {
 	
 	public ItemDTO() {
 	}
-	
-	
+
+	public ItemDTO(String nombreItem, String rutaFoto, String link) {
+		super();
+		this.nombreItem = nombreItem;
+		this.rutaFoto = rutaFoto;
+		this.link = link;
+	}
+
 	public Integer getId() {
 		return id;
 	}

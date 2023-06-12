@@ -1,24 +1,9 @@
-package com.project.juanata.core.entity;
+package com.project.juanata.core.model.dto;
 
-import java.io.Serializable;
+import com.project.juanata.core.entity.Role;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "USUARIO")
-public class Usuario implements Serializable{
-
-
-	private static final long serialVersionUID = 1L;
+public class UsuarioDTO {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nombre;
@@ -33,10 +18,11 @@ public class Usuario implements Serializable{
 	
 	private Boolean activo;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
 	private Role role;
+	
+	
 
-	public Usuario(Long id, String nombre, String apellido, String username, String contrasenna, String correo,
+	public UsuarioDTO(Long id, String nombre, String apellido, String username, String contrasenna, String correo,
 			Boolean activo, Role role) {
 		super();
 		this.id = id;
@@ -49,8 +35,8 @@ public class Usuario implements Serializable{
 		this.role = role;
 	}
 	
-	public Usuario(String nombre, String apellido, String username, String contrasenna, String correo, Boolean activo,
-			Role role) {
+	public UsuarioDTO(String nombre, String apellido, String username, String contrasenna, String correo,
+			Boolean activo, Role role) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -61,9 +47,8 @@ public class Usuario implements Serializable{
 		this.role = role;
 	}
 
-	public Usuario() {
+	public UsuarioDTO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
@@ -114,19 +99,19 @@ public class Usuario implements Serializable{
 		this.correo = correo;
 	}
 
-	public Role getRole() {
-		return role;
-	}
-
-	public void setRole(Role role) {
-		this.role = role;
-	}
-
 	public Boolean getActivo() {
 		return activo;
 	}
 
 	public void setActivo(Boolean activo) {
 		this.activo = activo;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }

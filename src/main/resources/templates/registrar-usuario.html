@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/stylesheet.css}" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" th:href="@{/css/fontello.css}" href="../static/css/fontello.css">
+
+    <!--Favicons-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/icono-pestanna-pagina-web.png" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script th:src="@{/js/scripts.js}" src="../static/js/scripts.js"></script>
+    <script th:src="@{/js/lottie-player.js}" src="../static/js/lottie-player.js"></script>
+    <script type="text/javascript">
+    toggleDropdown (e) => {
+    	  const _d = $(e.target).closest('.dropdown'),
+    	    _m = $('.dropdown-menu', _d);
+    	  setTimeout(function(){
+    	    const shouldOpen = e.type !== 'click' && _d.is(':hover');
+    	    _m.toggleClass('show', shouldOpen);
+    	    _d.toggleClass('show', shouldOpen);
+    	    $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+    	  }, e.type === 'mouseleave' ? 300 : 0);
+    	}
+
+    	$('body')
+    	  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
+    	  .on('click', '.dropdown-menu a', toggleDropdown);
+    </script>
+
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<title>Juanata | Registrar usuario</title>
+</head>
+<body>
+	<!--INICIO NAVBAR - MENU-->
+    <div th:replace="fragments/menu :: menu"></div>
+    <!--FIN NAVBAR - MENU-->
+
+	<h1>Registrar Usuario</h1>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div th:if="${param.exito}">
+					<div class="alert alert-info">Se ha registrado exitosamente a la aplicación.</div>
+				</div>
+			</div>
+			
+			<h1>Registrate</h1>
+			<form th:action="@{/usuario/crear}" method="post" th:object="${usuario}">
+				<div class="form-group">
+					<label class="control-label" for="nombre">Nombre:</label>
+					<input id="nombre" type="text" class="form-control" th:field="*{nombre}" required autofocus="autofocus">
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="apellido">Apellido:</label>
+					<input id="apellido" type="text" class="form-control" th:field="*{apellido}" required autofocus="autofocus">
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="email">Email:</label>
+					<input id="email" type="text" class="form-control" th:field="*{correo}" required autofocus="autofocus">
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="contrasenna">Contraseña:</label>
+					<input id="contrasenna" type="password" class="form-control" th:field="*{contrasenna}" required autofocus="autofocus">
+				</div>
+				
+				<div class="form-group">
+					<button type="submit" class="btn btn-success">Registrar usuario</button>
+					<span>Si esta registrado <a th:href="@{/}">Iniciar sesión aquí</a></span>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

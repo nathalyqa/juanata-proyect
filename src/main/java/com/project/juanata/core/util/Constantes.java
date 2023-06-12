@@ -48,4 +48,8 @@ public class Constantes {
 	public static final String LINK_BREADCRUMB_BODY_MUJER = "/producto/bosy/mujer";
 	public static final String LINK_BREADCRUMB_CHAQUETAS_MUJER = "/producto/chaquetas/mujer";
 	
+	
+	public static final  String ROLE_ADMINISTRADOR = "ADMINISTRADOR";
+	public static final  String ROLE_CLENTE = "CLIENTE";
+	
 }

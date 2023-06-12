@@ -26,6 +26,24 @@ public class Color implements Serializable{
 	
 	private String color;
 
+	public Color(Integer id, String claseColor, String color) {
+		super();
+		this.id = id;
+		this.claseColor = claseColor;
+		this.color = color;
+	}
+
+	public Color(String claseColor, String color) {
+		super();
+		this.claseColor = claseColor;
+		this.color = color;
+	}
+
+	public Color() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getId() {
 		return id;
 	}

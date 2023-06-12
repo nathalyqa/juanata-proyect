@@ -23,6 +23,21 @@ public class Talla implements Serializable{
 	
 	private String talla;
 
+	public Talla(Integer id, String talla) {
+		super();
+		this.id = id;
+		this.talla = talla;
+	}
+
+	public Talla(String talla) {
+		super();
+		this.talla = talla;
+	}
+
+	public Talla() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

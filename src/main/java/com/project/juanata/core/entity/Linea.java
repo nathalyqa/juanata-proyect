@@ -23,6 +23,22 @@ public class Linea implements Serializable{
 	
 	private String nombre;
 
+	public Linea(Integer id, String nombre) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+
+	public Linea(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+	
+	public Linea() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getId() {
 		return id;
 	}

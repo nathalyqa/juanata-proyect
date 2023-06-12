@@ -18,7 +18,22 @@ public class Role implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String role;
+	private String perfil;
+
+	public Role(Long id, String perfil) {
+		super();
+		this.id = id;
+		this.perfil = perfil;
+	}
+
+	public Role(String perfil) {
+		super();
+		this.perfil = perfil;
+	}
+
+	public Role() {
+		super();
+	}
 
 	public Long getId() {
 		return id;
@@ -28,11 +43,11 @@ public class Role implements Serializable{
 		this.id = id;
 	}
 
-	public String getRole() {
-		return role;
+	public String getPerfil() {
+		return perfil;
 	}
 
-	public void setRole(String role) {
-		this.role = role;
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
 	}
 }

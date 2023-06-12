@@ -15,7 +15,13 @@ public class ColorDTO {
 	
 	public ColorDTO() {
 	}
-	
+
+	public ColorDTO(String claseColor, String color) {
+		super();
+		this.claseColor = claseColor;
+		this.color = color;
+	}
+
 	public Integer getId() {
 		return id;
 	}

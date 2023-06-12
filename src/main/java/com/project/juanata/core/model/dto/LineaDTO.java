@@ -4,6 +4,16 @@ public class LineaDTO {
 	
 	private Integer id;
 	private String linea;
+
+	public LineaDTO(Integer id, String linea) {
+		super();
+		this.id = id;
+		this.linea = linea;
+	}
+
+	public LineaDTO() {
+		super();
+	}
 	
 	public Integer getId() {
 		return id;

@@ -35,6 +35,29 @@ public class Item implements Serializable{
 	
 	private Integer orden;
 
+	public Item(Integer id, String nombre, String rutaFoto, String link, Categoria categoria, Integer orden) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.rutaFoto = rutaFoto;
+		this.link = link;
+		this.categoria = categoria;
+		this.orden = orden;
+	}
+
+	public Item(String nombre, String rutaFoto, String link, Categoria categoria, Integer orden) {
+		super();
+		this.nombre = nombre;
+		this.rutaFoto = rutaFoto;
+		this.link = link;
+		this.categoria = categoria;
+		this.orden = orden;
+	}
+
+	public Item() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

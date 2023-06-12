@@ -12,7 +12,12 @@ public class TallaDTO {
 	
 	public TallaDTO() {
 	}
-	
+
+	public TallaDTO(String talla) {
+		super();
+		this.talla = talla;
+	}
+
 	public Integer getId() {
 		return id;
 	}
