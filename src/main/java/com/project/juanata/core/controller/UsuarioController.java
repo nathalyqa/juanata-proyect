@@ -1,5 +1,7 @@
 package com.project.juanata.core.controller;
 
+import java.sql.SQLException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,14 +35,16 @@ public class UsuarioController {
 	@PostMapping("/crear")
 	public String registrarUsuario(@ModelAttribute("usuario") UsuarioDTO usuarioDTO) {
 		
-		usuarioServicio.crearUsuario(usuarioDTO);
+		try {
+			usuarioServicio.crearUsuario(usuarioDTO);
+			
+			return "redirect:/usuario/registrar?exito";
+		} catch (SQLException e) {
+	
+			return "redirect:/usuario/registrar?sinExito";
+		}
 		
-		return "redirect:/usuario/registrar?exito";
 		
 	}
-	
-	
-	
-	
 
 }

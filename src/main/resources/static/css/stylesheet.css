@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Big+Shoulders+Display:wght@100&family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Big+Shoulders+Display:wght@100&family=Major+Mono+Display&family=Libre+Baskerville:ital@1&family=Montserrat:wght@300&family=Mohave:wght@400;500&display=swap"');
 
 /*Inicio Tipos de letras */
 /*Tipo de letra cursiva*/
@@ -8,8 +8,19 @@
     font-size: 2em;
 }
 
+.font-libre-baskerville-serif-footer-title{
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    font-size: 1.5em;
+}
+
 .font-Major-Mono-Display-footer{
 	font-family: 'Major Mono Display', monospace;
+	font-size: 12px;
+}
+
+.font-montserrat-footer{
+	font-family: 'Montserrat', sans-serif;
 	font-size: 12px;
 }
 
@@ -20,6 +31,21 @@
 
 .font-dancing-script{
     font-family: 'Dancing Script', cursive;
+}
+
+.font-libre-baskerville-serif{
+	font-family: 'Libre Baskerville', serif;
+}
+
+.font-mohave-menu{
+    font-family: 'Mohave', sans-serif;
+    font-weight:500;
+}
+
+.font-mohave-footer{
+    font-family: 'Mohave', sans-serif;
+    font-weight:400;
+    font-size: 12px;
 }
 
 .font-dancing-script-menu{
@@ -42,6 +68,14 @@
 .font-acme-cuerpo-gris-menu{
     font-family: 'Acme', sans-serif;
     color: rgb(116, 116, 116);
+    font-size: 1em;
+    opacity: 1;
+}
+
+.font-mohave-gris-breadcumb{
+	font-family: 'Mohave', sans-serif;
+    font-weight:400;
+	color: rgb(116, 116, 116);
     font-size: 1em;
     opacity: 1;
 }

@@ -1,13 +1,15 @@
 <!--INICIO NAVBAR - MENU-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm fixed-top" style="opacity: 0.9;" th:fragment="menu">
   <div class="mr-3">
-  	<a th:href="@{/home}"><img th:src="@{/img/logo2.png}"></a>
+  	<!-- <a th:href="@{/home}"><img th:src="@{/img/logo2.png}"></a> -->
+  	<!-- <a th:href="@{/home}"><lottie-player th:src="@{/json/menu/obeja2.json}" src="../static/json/menu/obeja2.json"  background="transparent"  speed="0.5"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player></a> -->
+  	<a th:href="@{/home}"><img th:src="@{/img/logos/imagotipo_circulo_blanco.png}" style="width: 150px; height: 150px;"></a>
   </div>
   <div id="navbarContent" class="collapse navbar-collapse order-sm-12 order-lg-1">
     <ul class="navbar-nav ml-auto">
       <!-- Megamenu-->
-      <li class="nav-item"><a th:href="@{/home}" class="nav-link font-weight-bold text-uppercase margint-top-menu-dispositivo">Inicio</a></li>
-      <li class="nav-item dropdown megamenu"><a id="megamenu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Categorias</a>
+      <li class="nav-item"><a th:href="@{/home}" class="nav-link font-mohave-menu text-uppercase margint-top-menu-dispositivo">Inicio</a></li>
+      <li class="nav-item dropdown megamenu"><a id="megamenu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-mohave-menu text-uppercase">Categorias</a>
         <div aria-labelledby="megamenu" class="dropdown-menu border-0 p-0 m-0">
           <div>
             <div class="row bg-dark text-light rounded-0 m-0 shadow-sm">
@@ -17,7 +19,7 @@
                     <div class="col-sm-6 col-lg-4 mb-4">
                     </div>
                     <div class="col-sm-12 col-lg-2 mb-4 margin-left-menu-dispositivo">
-                      <h6 class="font-weight-bold text-uppercase">Mujer</h6>
+                      <h6 class="font-mohave-menu text-uppercase">Mujer</h6>
                       <ul class="list-unstyled">
                         <li class="nav-item"><a th:href="@{/producto/pijamas/mujer}" class="nav-link text-small pb-0 pl-0">Pijamas</a></li>
                         <li class="nav-item"><a th:href="@{/producto/pantuflas/mujer}" class="nav-link text-small pb-0 pl-0 ">Pantuflas</a></li>
@@ -25,10 +27,9 @@
                       </ul>
                     </div>
                     <div class="col-sm-12 col-lg-2 mb-4 margin-left-menu-dispositivo">
-                      <h6 class="font-weight-bold text-uppercase">Hombre</h6>
+                      <h6 class="font-mohave-menu text-uppercase">Hombre</h6>
                       <ul class="list-unstyled">
                         <li class="nav-item"><a th:href="@{/producto/pijamas/hombre}" class="nav-link text-small pb-0 pl-0">Pijamas</a></li>
-                        <li class="nav-item"><a th:href="@{/producto/pantuflas/hombre}" class="nav-link text-small pb-0 pl-0">Pantuflas</a></li>
                       </ul>
                     </div>
                     <div class="col-sm-6 col-lg-4 col-lg-4-configured mb-4 pl-0">
@@ -41,8 +42,8 @@
           </div>
         </div>
       </li>
-      <li class="nav-item"><a th:href="@{/saludDelSuenno}" class="nav-link font-weight-bold text-uppercase">Salud del Sueño</a></li>
-      <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20quiero%20contactarme%20con%20ustedes." target="_blank" class="nav-link font-weight-bold text-uppercase">Contactanos</a></li>
+      <li class="nav-item"><a th:href="@{/saludDelSuenno}" class="nav-link font-mohave-menu text-uppercase">Salud del Sueño</a></li>
+      <li class="nav-item"><a href="https://api.whatsapp.com/send?phone=573148843364&text=Hola!%20quiero%20contactarme%20con%20ustedes." target="_blank" class="nav-link font-mohave-menu text-uppercase">Contactanos</a></li>
     </ul>
   </div>
   <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler order-md-1">

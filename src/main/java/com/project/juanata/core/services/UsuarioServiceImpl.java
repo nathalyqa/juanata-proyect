@@ -1,5 +1,7 @@
 package com.project.juanata.core.services;
 
+import java.sql.SQLException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -22,7 +24,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 	private RoleRepository roleRepository;
 
 	@Override
-	public void crearUsuario(UsuarioDTO usuarioDTO) {
+	public void crearUsuario(UsuarioDTO usuarioDTO) throws SQLException {
 			
 		
 		Role role = roleRepository.buscarRolePorPerfil(Constantes.ROLE_CLENTE);
@@ -32,7 +34,11 @@ public class UsuarioServiceImpl implements UsuarioService{
 		if(role != null) {
 			usuario = new Usuario(usuarioDTO.getNombre(), usuarioDTO.getApellido(), usuarioDTO.getUsername(), usuarioDTO.getContrasenna(), usuarioDTO.getCorreo(), Boolean.TRUE, role);
 			
-			usuarioRepositorio.save(usuario);
+			if(!existeUsuario(usuarioDTO)) {				
+				usuarioRepositorio.save(usuario);
+			}else {
+				throw new SQLException("El usuario no se pudo crear satisfactoriamente, porque ya existe uno con el mismo nombre de usuario o correo.");
+			}
 		}
 		
 	}
@@ -41,6 +47,18 @@ public class UsuarioServiceImpl implements UsuarioService{
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	private Boolean existeUsuario(UsuarioDTO usuarioDTO) {
+		
+		int cantidadUsuario = usuarioRepositorio.buscarCantidadUsuariosPorUsernameCorreo(usuarioDTO.getUsername(), usuarioDTO.getCorreo());
+		
+		if(cantidadUsuario > 0) {
+			return Boolean.TRUE;
+		}else {
+			return Boolean.FALSE;
+		}
+		
 	}
 
 }

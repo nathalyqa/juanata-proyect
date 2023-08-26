@@ -47,14 +47,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="row" style="margin-top: 140px;">
+                <div class="row" style="margin-top: 200px;">
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb bg-transparent">
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbInicio}" th:text="${tituloBreadcrumbInicio}"></a></li>
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbCategoria}" th:text="${tituloBreadcrumbCategoria}"></a></li>
-                              <li class="breadcrumb-item"><a class="font-acme-cuerpo-gris-menu badge badge-pill badge-colorGris" th:href="${linkBreadcrumbProducto}" th:text="${tituloBreadcrumbProducto}"></a></li>
-                              <li class="breadcrumb-item font-acme-cuerpo-gris-menu active" aria-current="page" th:text="${tituloBreadcrumbDetalleProducto}"></li>
+                              <li class="breadcrumb-item"><a class="font-mohave-gris-breadcumb badge badge-pill badge-colorGris" th:href="${linkBreadcrumbInicio}" th:text="${tituloBreadcrumbInicio}"></a></li>
+                              <li class="breadcrumb-item"><a class="font-mohave-gris-breadcumb badge badge-pill badge-colorGris" th:href="${linkBreadcrumbCategoria}" th:text="${tituloBreadcrumbCategoria}"></a></li>
+                              <li class="breadcrumb-item"><a class="font-mohave-gris-breadcumb badge badge-pill badge-colorGris" th:href="${linkBreadcrumbProducto}" th:text="${tituloBreadcrumbProducto}"></a></li>
+                              <li class="breadcrumb-item font-mohave-gris-breadcumb active" aria-current="page" th:text="${tituloBreadcrumbDetalleProducto}"></li>
                             </ol>
                           </nav>   
                     </div>
@@ -73,17 +73,17 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div>
                             <label class="font-dancing-script color-gris my-0" style="font-size: 2em;" th:text="${producto.nombre}"></label><br>
-                            <label class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;"><strong>Línea: </strong></label>
-                            <label class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;" th:text="${' ' + producto.linea.linea}"></label><br>
-                            <label class="font-acme-cuerpo-gris color-azulJuanata texto-subrayado my-0" style="font-size: 1.5rem;" th:text="${'$' + #numbers.formatDecimal(producto.precio,1,'DEFAULT',0,'DEFAULT')}"></label><br>
-                            <label class="font-acme-cuerpo-gris color-gris mt-2 mb-0" style="font-size: 1em;"><strong>Descripción:</strong></label>
-                            <label class="font-acme-cuerpo-gris color-gris mt-2 mb-0" style="font-size: 1em;" th:text="${' ' + producto.descripcion}"></label><br>
-                            <label class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;" ><strong>Material:</strong></label>
-                            <label class="font-acme-cuerpo-gris color-gris my-0" style="font-size: 1em;" th:text="${' ' + producto.material}"></label><br>
-                            <label th:if="${hayColores}" class="font-acme-cuerpo-gris color-azulJuanata mt-3 mb-0" style="font-size: 1em;">Color</label><br th:if="${hayColores}">
+                            <label class="font-mohave-gris-breadcumb color-gris my-0" style="font-size: 1em;"><strong>Línea: </strong></label>
+                            <label class="font-mohave-gris-breadcumb color-gris my-0" style="font-size: 1em;" th:text="${' ' + producto.linea.linea}"></label><br>
+                            <label class="font-mohave-gris-breadcumb color-azulJuanata texto-subrayado my-0" style="font-size: 1.5rem;" th:text="${'$' + #numbers.formatDecimal(producto.precio,1,'DEFAULT',0,'DEFAULT')}"></label><br>
+                            <label class="font-mohave-gris-breadcumb color-gris mt-2 mb-0" style="font-size: 1em;"><strong>Descripción:</strong></label>
+                            <label class="font-mohave-gris-breadcumb color-gris mt-2 mb-0" style="font-size: 1em;" th:text="${' ' + producto.descripcion}"></label><br>
+                            <label class="font-mohave-gris-breadcumb color-gris my-0" style="font-size: 1em;" ><strong>Material:</strong></label>
+                            <label class="font-mohave-gris-breadcumb color-gris my-0" style="font-size: 1em;" th:text="${' ' + producto.material}"></label><br>
+                            <label th:if="${hayColores}" class="font-mohave-gris-breadcumb color-azulJuanata mt-3 mb-0" style="font-size: 1em;"><strong>Color</strong></label><br th:if="${hayColores}">
                             <i th:if="${hayColores}" th:each="color : ${producto.colores}" class="fa fa-circle" th:classappend="${color.claseColor}" style="margin-right: 1%;" data-toggle="tooltip" th:title="${color.color}"></i><br th:if="${hayColores}">
-                            <label class="font-acme-cuerpo-gris color-azulJuanata mt-3 mb-0" style="font-size: 1em;">Tallas</label><br>
-                            <label th:each="talla : ${producto.tallas}" class="font-acme-cuerpo-gris mr-1 badge badge-pill badge-colorAzulPlata px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
+                            <label class="font-mohave-gris-breadcumb color-azulJuanata mt-3 mb-0" style="font-size: 1em;"><strong>Tallas</strong></label><br>
+                            <label th:each="talla : ${producto.tallas}" class="font-mohave-gris-breadcumb mr-1 badge badge-pill badge-colorAzulPlata px-1" style="font-size: 1em;" th:text="${talla.talla}"></label>
                         </div>
                     </div>
                     <div class="row col-lg-6 col-md-6 col-sm-6 col-xs-12" style="justify-content: center;">
@@ -99,7 +99,7 @@
                 <div class="row" style="justify-content: center;">
                      <div class="row pt-5" style="justify-content: center; align-items: center;">
                          <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                             <label class="font-acme-cuerpo-gris mr-1" style="font-size: 1em;"><strong>OTROS PRODUCTOS</strong></label>
+                             <label class="font-mohave-gris-breadcumb mr-1" style="font-size: 1em;">OTROS PRODUCTOS</label>
                          </div>
                      </div>
                      <div class="row" style="justify-content: center; align-items: center;">
