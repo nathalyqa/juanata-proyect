@@ -37,14 +37,15 @@ public class UsuarioController {
 		
 		try {
 			usuarioServicio.crearUsuario(usuarioDTO);
-			
 			return "redirect:/usuario/registrar?exito";
 		} catch (SQLException e) {
-	
 			return "redirect:/usuario/registrar?sinExito";
 		}
-		
-		
 	}
+
+    @GetMapping("/admin/juanata/login")
+    public ModelAndView mostrarLoginAdmin() {
+        return new ModelAndView(Vistas.LOGIN);
+    }
 
 }

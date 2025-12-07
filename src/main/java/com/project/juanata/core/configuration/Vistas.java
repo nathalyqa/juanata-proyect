@@ -9,5 +9,6 @@ public class Vistas {
 	public static final String SALUD_DEL_SUENNO = "salud-del-suenno";
 	public static final String CARTA_DE_COLORES = "carta-de-colores";
 	public static final String REGISTRAR_USUARIO = "registrar-usuario";
+    public static final String LOGIN = "login-usuario-admin";
 
 }

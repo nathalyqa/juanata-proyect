@@ -40,7 +40,26 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+		http
+			.authorizeRequests()
+				.antMatchers("/", "/home", "/usuario/registrar", "/usuario/crear", "/usuario/admin/juanata/login",
+						"/css/**", "/js/**", "/img/**", "/webjars/**").permitAll()
+				.antMatchers("/usuario/admin/**").hasAuthority("ADMINISTRADOR")
+				.anyRequest().permitAll()
+			.and()
+				.formLogin()
+					.loginPage("/usuario/admin/juanata/login")
+					.loginProcessingUrl("/usuario/admin/login")
+					.usernameParameter("username")
+					.passwordParameter("password")
+					.defaultSuccessUrl("/usuario/admin/panel", true)
+					.failureUrl("/usuario/admin/juanata/login?sinExito")
+					.permitAll()
+			.and()
+				.logout()
+					.logoutUrl("/logout")
+					.logoutSuccessUrl("/home")
+					.permitAll();
 	}
 	
 	

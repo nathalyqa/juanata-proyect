@@ -13,4 +13,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	@Query(value = "select count(usr) from Usuario usr where usr.username = :username or usr.correo = :correo")
 	public int buscarCantidadUsuariosPorUsernameCorreo(@Param("username") String username, @Param("correo") String correo);
 
+	@Query("select usr from Usuario usr where usr.username = :username")
+	Usuario buscarPorUsername(@Param("username") String username);
+
 }
