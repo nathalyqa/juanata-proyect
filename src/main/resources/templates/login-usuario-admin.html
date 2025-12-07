@@ -53,20 +53,19 @@
 				</div>
 			</div>
 
-			<form class="form-group col-md-12" th:action="@{/usuario/crear}" method="post" th:object="${usuario}">
-				<div class="form-group col-md-6">
-					<label class="control-label" for="email">Email:</label>
-					<input id="email" type="text" class="form-control" th:field="*{correo}" required autofocus="autofocus">
-				</div>
-				<div class="form-group col-md-6">
-					<label class="control-label" for="password">Password:</label>
-					<input id="password" type="text" class="form-control" th:field="*{contrasenna}" required autofocus="autofocus">
-				</div>
-				<div class="form-group col-md-6">
-					<button type="submit" class="btn btn-success">Iniciar Sesion</button>
-				</div>
-
-			</form>
+            <form class="form-group col-md-12" th:action="@{/usuario/admin/login}" method="post">
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="username">Usuario:</label>
+                    <input id="username" name="username" type="text" class="form-control" required autofocus="autofocus">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="control-label" for="password">Password:</label>
+                    <input id="password" name="password" type="password" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-success">Iniciar Sesion</button>
+                </div>
+            </form>
 		</div>
 	</div>
 

@@ -53,7 +53,14 @@ public class UsuarioServiceImpl implements UsuarioService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Usuario usuario = usuarioRepositorio.buscarPorUsername(username);
-		
+
+        System.out.println("Buscando usuario: " + username);
+        System.out.println("Encontrado: " + (usuario != null));
+        if (usuario != null) {
+            System.out.println("Activo: " + usuario.getActivo());
+            System.out.println("Rol: " + (usuario.getRole() != null ? usuario.getRole().getPerfil() : "null"));
+        }
+
 		if (usuario == null || usuario.getActivo() == null || !usuario.getActivo()) {
 			throw new UsernameNotFoundException("Usuario no encontrado o inactivo");
 		}

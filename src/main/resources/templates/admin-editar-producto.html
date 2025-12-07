@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar producto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/stylesheet.css}">
+</head>
+<body>
+<div th:replace="fragments/menu :: menu"></div>
+
+<div class="container mt-4" th:if="${producto != null}">
+    <h1>Editar producto</h1>
+
+    <form th:action="@{'/usuario/admin/producto/' + ${producto.id} + '/editar'}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>ID</label>
+            <input type="text" class="form-control" th:value="${producto.id}" readonly>
+        </div>
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" th:value="${producto.nombre}" readonly>
+        </div>
+        <div class="form-group">
+            <label>Precio</label>
+            <input type="number" step="0.01" class="form-control" name="precio" th:value="${producto.precio}">
+        </div>
+        <div class="form-group">
+            <label>Ruta foto actual</label>
+            <input type="text" class="form-control" name="rutaFoto" th:value="${producto.rutaFoto}" readonly>
+        </div>
+        <div class="form-group">
+            <label>Imagen actual</label><br>
+            <img th:if="${producto.rutaFoto != null}" th:src="${producto.rutaFoto}" class="img-thumbnail" style="max-width: 200px;">
+        </div>
+        <div class="form-group">
+            <label>Nueva imagen (opcional)</label>
+            <input type="file" class="form-control-file" name="imagen">
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a th:href="@{/usuario/admin/panel}" class="btn btn-secondary">Volver</a>
+    </form>
+</div>
+
+<div class="container mt-4" th:if="${producto == null}">
+    <div class="alert alert-danger">Producto no encontrado.</div>
+    <a th:href="@{/usuario/admin/panel}" class="btn btn-secondary">Volver</a>
+</div>
+
+</body>
+</html>

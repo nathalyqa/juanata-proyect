@@ -10,5 +10,7 @@ public class Vistas {
 	public static final String CARTA_DE_COLORES = "carta-de-colores";
 	public static final String REGISTRAR_USUARIO = "registrar-usuario";
     public static final String LOGIN = "login-usuario-admin";
+    public static final String ADMIN_PANEL = "admin-panel";
+    public static final String ADMIN_EDITAR_PRODUCTO = "admin-editar-producto";
 
 }
